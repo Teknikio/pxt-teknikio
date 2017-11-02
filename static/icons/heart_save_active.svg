@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="29px" viewBox="0 0 32 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>heart_save</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/Stylized-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0703_Module-Page---Saved-Module" transform="translate(-378.000000, -188.000000)" fill="#F04D3A" stroke="#292041">
+            <g id="heart_save_active" transform="translate(380.000000, 190.000000)">
+                <g id="heart_save">
+                    <path d="M7.41979764,0 C5.51024376,0 3.60076135,0.748219368 2.15992067,2.25670938 C-0.721831529,5.27362863 -0.718114983,10.107981 2.15992067,13.1269165 L13.1598948,24.6673976 C13.3622467,24.879799 13.6427438,25 13.9360453,25 C14.2293467,25 14.5098439,24.879799 14.7121958,24.6673976 C18.3816053,20.8257543 22.0538738,16.9797495 25.7233549,13.1380705 C28.6050355,10.1211012 28.6050355,5.28485051 25.7233549,2.26788121 C22.8416385,-0.749077365 18.0852823,-0.749141715 15.2035659,2.26788121 L13.9416201,3.57498516 L12.67971,2.25670938 C11.2388339,0.748226518 9.32935152,0 7.41979764,0 L7.41979764,0 Z" id="Path" stroke-width="3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

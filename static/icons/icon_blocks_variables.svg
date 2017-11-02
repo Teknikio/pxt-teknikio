@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="36px" viewBox="0 0 39 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Block-Icons" transform="translate(-45.000000, -560.000000)">
+            <g id="Group-2" transform="translate(47.000000, 562.000000)">
+                <path d="M29,32 C33.3333333,27.2243707 35.5,21.8910373 35.5,16 C35.5,10.1089627 33.3333333,4.77562934 29,0" id="Oval" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path>
+                <path d="M0,32 C4.33333333,27.2243707 6.5,21.8910373 6.5,16 C6.5,10.1089627 4.33333333,4.77562934 0,0" id="Oval-Copy" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" transform="translate(3.250000, 16.000000) scale(-1, 1) translate(-3.250000, -16.000000) "></path>
+                <text id="X" font-family="Montserrat-ExtraBoldItalic, Montserrat" font-size="18" font-style="italic" font-weight="600" fill="#FFFFFF">
+                    <tspan x="11.867" y="22">X</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

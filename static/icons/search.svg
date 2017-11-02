@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <g id="search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Group" stroke="#6C6B6B" stroke-width="4">
+            <circle id="Oval" cx="13.5" cy="8" r="8"></circle>
+            <line x1="7.5" y1="14" x2="0.5" y2="21" id="Line"></line>
+        </g>
+    </g>
+</svg>
