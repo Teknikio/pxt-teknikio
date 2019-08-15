@@ -32,7 +32,9 @@
         "libs/storage",
         "libs/datalogger",
         "libs/serial",
-        "libs/jacdac"
+        "libs/jacdac",
+        "libs/teknikio-bluebird",
+        "libs/core---nrf52832"
     ],
     "serial": {
         "useHF2": true,
