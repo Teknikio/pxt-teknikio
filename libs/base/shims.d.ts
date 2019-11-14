@@ -127,6 +127,12 @@ declare namespace control {
     function millis(): int32;
 
     /**
+     * Gets current time in microseconds. Overflows every ~18 minutes.
+     */
+    //% shim=control::micros
+    function micros(): int32;
+
+    /**
      * Used internally
      */
     //% flags.defl=16 shim=control::internalOnEvent
@@ -204,6 +210,12 @@ declare namespace control {
      */
     //% shim=control::setDebugFlags
     function setDebugFlags(flags: int32): void;
+
+    /**
+     * Record a heap snapshot to debug memory leaks.
+     */
+    //% shim=control::heapSnapshot
+    function heapSnapshot(): void;
 
     /**
      * Return true if profiling is enabled in the current build.
