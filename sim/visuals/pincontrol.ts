@@ -12,7 +12,7 @@ namespace pxsim.visuals {
 
             // Init the button events
             this.outerElement = parent.element.getElementById(name) as SVGElement;
-            svg.addClass(this.outerElement, "sim-pin-touch");
+            pxsim.U.addClass(this.outerElement, "sim-pin-touch");
             this.addButtonEvents();
 
             if ((this.pin as pins.CommonPin).used) {
@@ -56,34 +56,44 @@ namespace pxsim.visuals {
         private addButtonEvents() {
             pointerEvents.down.forEach(evid => this.outerElement.addEventListener(evid, ev => {
                 this.pin.touched = true;
-                svg.addClass(this.outerElement, "touched");
+                pxsim.U.addClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(true);
+                const b = pxtcore.getTouchButton(this.id) as CommonButton;
+                if (b)
+                    b.setPressed(true);
             }))
             this.outerElement.addEventListener(pointerEvents.leave, ev => {
                 this.pin.touched = false;
-                svg.removeClass(this.outerElement, "touched");
+                pxsim.U.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
+                const b = pxtcore.getTouchButton(this.id) as CommonButton
+                if (b)
+                    b.setPressed(false);
             })
             this.outerElement.addEventListener(pointerEvents.up, ev => {
                 this.pin.touched = false;
-                svg.removeClass(this.outerElement, "touched");
+                pxsim.U.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
+                const b = pxtcore.getTouchButton(this.id) as CommonButton
+                if (b)
+                    b.setPressed(false);
             })
             accessibility.enableKeyboardInteraction(this.outerElement,
                 () => {
                     this.pin.touched = true;
-                    svg.addClass(this.outerElement, "touched");
+                    pxsim.U.addClass(this.outerElement, "touched");
 
-                    (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(true);
+                    const b = pxtcore.getTouchButton(this.id) as CommonButton;
+                    if (b)
+                        b.setPressed(true);
                 },
                 () => {
                     this.pin.touched = false;
-                    svg.removeClass(this.outerElement, "touched");
+                    pxsim.U.removeClass(this.outerElement, "touched");
 
-                    (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
+                    const b = pxtcore.getTouchButton(this.id) as CommonButton;
+                    if (b)
+                        b.setPressed(false);
                 }
             );
         }
