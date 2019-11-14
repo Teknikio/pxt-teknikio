@@ -1,7 +1,7 @@
 {
     "name": "{0}",
     "dependencies": {
-        "circuit-playground": "file:../circuit-playground"
+        "teknikio-bluebird": "file:../teknikio-bluebird"
     },
     "description": "",
     "files": [
