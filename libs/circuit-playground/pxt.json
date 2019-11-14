@@ -20,6 +20,7 @@
         "lightsensor": "file:../lightsensor",
         "thermometer": "file:../thermometer",
         "mixer---samd": "file:../mixer---samd",
+        "color": "file:../color",
         "light": "file:../light",
         "switch": "file:../switch",
         "pulse": "file:../pulse",
@@ -30,6 +31,7 @@
     "yotta": {
         "config": {
             "HF2_HID": 1,
+            "DEVICE_USB": 1,
             "PXT_SUPPORT_LIS3DH": 1
         }
     },
