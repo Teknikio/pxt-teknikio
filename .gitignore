@@ -26,6 +26,8 @@ videos/**
 *.db
 *.suo
 *.log
+.DS_Store
+.idea/*
 .pioenvs
 .piolibdeps
 lib/
