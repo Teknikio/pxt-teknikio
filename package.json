@@ -1,24 +1,22 @@
 {
-  "name": "pxt-adafruit",
+  "name": "pxt-teknikio",
   "version": "1.5.10",
-  "description": "Adafruit Circuit Playground Express for Microsoft MakeCode",
+  "description": "Teknikio Bluebird uusing  MakeCode",
   "keywords": [
     "JavaScript",
     "education",
-    "adafruit",
+    "teknikio",
     "pxt",
     "MakeCode",
-    "Microsoft",
-    "Adafruit",
-    "Adafruit Circuit Playground"
+    "Teknikio Bluebird"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Microsoft/pxt-adafruit.git"
+    "url": "git+https://github.com/Microsoft/pxt-teknikio.git"
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/Microsoft/pxt-adafruit#readme",
+  "homepage": "https://github.com/Microsoft/pxt-teknikio#readme",
   "files": [
     "README.md",
     "pxtarget.json",
