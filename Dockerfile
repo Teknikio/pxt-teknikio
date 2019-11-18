@@ -6,19 +6,20 @@ ENV PORT 3232
 # ~~~ Bundle app source
 COPY . /
 WORKDIR /
-COPY package*.json ./
 # ~~~
 
-# ~~~ Install app dependencies
+# ~~~ Install app dependencies & create static build
 RUN apt-get update \
   && npm install -g pxt \
+  && npm install -g http-server \
   && npm install \
+  && apt-get clean \
+  && pxt staticpkg \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 # ~~~
 
-
-# ~~~ Run command
+# ~~~ Load static package runninh web server
 EXPOSE ${PORT}
-ENTRYPOINT ["pxt", "serve", "-h", "0.0.0.0", "--noBrowser"]
+ENTRYPOINT ["http-server", "-c-1", "/built/packaged"]
 # ~~~
 
