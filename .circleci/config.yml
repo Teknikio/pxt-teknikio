@@ -1,0 +1,55 @@
+version: 2.1
+machine:
+  timezone: UTC
+
+orbs:
+  aws-ecr: circleci/aws-ecr@6.1.0
+  aws-ecs: circleci/aws-ecs@0.0.8
+
+defaults: &defaults
+  working_directory: ~/pxt-texknikio
+  docker:
+    - image: circleci/node:10-stretch
+
+deploy: &deploy
+  <<: *defaults
+  steps:
+    - checkout
+    - setup_remote_docker:
+        docker_layer_caching: true
+    - aws-ecr/build-and-push-image:
+        checkout: false
+        account-url: AWS_ECR_ACCOUNT_URL
+        aws-access-key-id: AWS_ACCESS_KEY_ID
+        aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+        repo: "${AWS_RESOURCE_NAME_PREFIX}-${AWS_RESOURCE_NAME_SUFFIX}"
+        region: AWS_DEFAULT_REGION
+        tag: "${CIRCLE_SHA1}"
+        extra-build-args: --build-arg mysql_host=${MYSQL_CONNECTION} --build-arg mysql_user=${CXN_MYSQL_USR} --build-arg mysql_pass=${CXN_MYSQL_PWD} --build-arg auth0_domain=${AUTH0_DOMAIN} --build-arg auth0_audience=${AUTH0_AUDIENCE}
+    - aws-ecs/update-service:
+        family: "${AWS_RESOURCE_NAME_PREFIX}-service-${AWS_RESOURCE_NAME_SUFFIX}"
+        cluster-name: "${AWS_RESOURCE_NAME_PREFIX}-cluster-${AWS_RESOURCE_NAME_SUFFIX}"
+        container-image-name-updates: "container=${AWS_RESOURCE_NAME_PREFIX}-service-${AWS_RESOURCE_NAME_SUFFIX},image-and-tag=${AWS_ECR_ACCOUNT_URL}/${AWS_RESOURCE_NAME_PREFIX}-${AWS_RESOURCE_NAME_SUFFIX}:${CIRCLE_SHA1}"
+        verify-revision-is-deployed: true
+
+jobs:
+  deploy-int:
+    <<: *deploy
+  deploy-prod:
+    <<: *deploy
+
+workflows:
+  build_and_deploy:
+    jobs:
+      - deploy-int:
+          context: integration
+          filters:
+            branches:
+              only:
+                - master
+      - deploy-prod:
+          context: production
+          filters:
+            branches:
+              only:
+                - production

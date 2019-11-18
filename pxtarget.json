@@ -1,15 +1,14 @@
 {
-    "id": "adafruit",
+    "id": "bluebird",
     "platformid": "codal",
-    "nickname": "circuitplayground",
-    "name": "Adafruit Circuit Playground Express",
-    "title": "Adafruit Circuit Playground Express - Blocks / Javascript editor",
-    "description": "A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express.",
-    "corepkg": "circuit-playground",
+    "nickname": "bluebird",
+    "name": "Teknikio BlueBird Express",
+    "title": "Teknikio BlueBird Express - Blocks / Javascript editor",
+    "description": "A Blocks / JavaScript code editor for the Teknikio BlueBird Express.",
+    "corepkg": "teknikio-bluebird",
     "bundleddirs": [
         "libs/base",
         "libs/core",
-        "libs/core---samd",
         "libs/buttons",
         "libs/accelerometer",
         "libs/music",
@@ -25,7 +24,6 @@
         "libs/pulse",
         "libs/cable",
         "libs/infrared",
-        "libs/circuit-playground",
         "libs/mouse",
         "libs/keyboard",
         "libs/gamepad",
@@ -33,7 +31,9 @@
         "libs/storage",
         "libs/datalogger",
         "libs/serial",
-        "libs/jacdac"
+        "libs/jacdac",
+        "libs/teknikio-bluebird",
+        "libs/core---nrf52832"
     ],
     "serial": {
         "useHF2": true,
@@ -54,101 +54,9 @@
         "autoRun": true,
         "streams": false,
         "aspectRatio": 1.0,
-        "parts": false,
-        "boardDefinition": {
-            "id": "adafruit-circuit-playground-express",
-            "visual": "circuitplayground",
-            "gpioPinBlocks": [
-                [
-                    "P0"
-                ],
-                [
-                    "P1"
-                ],
-                [
-                    "P2"
-                ],
-                [
-                    "P3"
-                ],
-                [
-                    "P4",
-                    "P5",
-                    "P6",
-                    "P7"
-                ],
-                [
-                    "P8",
-                    "P9",
-                    "P10",
-                    "P11",
-                    "P12"
-                ],
-                [
-                    "P16"
-                ]
-            ],
-            "gpioPinMap": {
-                "P0": "P0",
-                "P1": "P1",
-                "P2": "P2",
-                "P3": "P3",
-                "P4": "P4",
-                "P5": "P5",
-                "P6": "P6",
-                "P7": "P7",
-                "P8": "P8",
-                "P9": "P9",
-                "P10": "P10",
-                "P11": "P11",
-                "P12": "P12",
-                "P13": "P13",
-                "P14": "P14",
-                "P15": "P15",
-                "P16": "P16",
-                "P19": "P19",
-                "P20": "P20"
-            },
-            "i2cPins": {
-                "SDA": "P2",
-                "SCL": "P3"
-            },
-            "analogInPins": [
-                "A0",
-                "A4",
-                "A5"
-            ],
-            "groundPins": [
-                "GND_0",
-                "GND_1",
-                "GND_2"
-            ],
-            "threeVoltPins": [
-                "PWR_0",
-                "PWR_2"
-            ],
-            "attachPowerOnRight": true,
-            "onboardComponents": [
-                "accelerometer",
-                "buttonpair",
-                "speaker",
-                "thermometer",
-                "rgbsensor",
-                "lightsensor",
-                "microphone"
-            ],
-            "useCrocClips": true,
-            "marginWhenBreadboarding": [
-                0,
-                0,
-                80,
-                0
-            ],
-            "bootloaderBaudSwitchInfo": {
-                "vid": "0x239A",
-                "pid": "0x8018"
-            }
-        }
+        "parts": true,
+        "partsAspectRatio": 0.69,
+        "dynamicBoardDefinition": true
     },
     "cloud": {
         "workspace": false,
@@ -177,13 +85,6 @@
         "gc": true,
         "patches": {
             "0.0.0 - 1.1.15": [
-                {
-                    "type": "package",
-                    "map": {
-                        "neopixel": "light",
-                        "adafruit": "circuit-playground"
-                    }
-                },
                 {
                     "type": "api",
                     "map": {
@@ -262,6 +163,40 @@
                 "pid": "0x2402"
             }
         ]
+    },
+    "variants": {
+        "nrf52832": {
+            "serial": {
+                "useHF2": false
+            },
+            "compile": {
+                "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/nrf52.cfg]",
+                "flashChecksumAddr": 0,
+                "deployFileMarker": "MBED.HTM",
+                "vtableShift": 3,
+                "useUF2": false,
+                "webUSB": false,
+                "gc": true
+            },
+            "compileService": {
+                "codalTarget": {
+                    "name": "codal-ble-nano",
+                    "url": "https://github.com/lancaster-university/codal-ble-nano",
+                    "branch": "v0.0.3-jacdac-v0.0",
+                    "type": "git"
+                },
+                "codalBinary": "BLE_NANO",
+                "serviceId": "codal2ble",
+                "dockerImage": "pext/yotta:latest",
+                "yottaConfig": {
+                    "pxt": {
+                        "board": {
+                            "id": "BOARD_ID_NRF52832"
+                        }
+                    }
+                }
+            }
+        }
     },
     "runtime": {
         "mathBlocks": true,
