@@ -35,10 +35,6 @@ deploy: &deploy
 jobs:
   deploy-int:
     <<: *deploy
-  deploy-stage:
-    <<: *deploy
-  deploy-sandbox:
-    <<: *deploy
   deploy-prod:
     <<: *deploy
 
@@ -51,12 +47,6 @@ workflows:
             branches:
               only:
                 - master
-      - deploy-stage:
-          context: staging
-          filters:
-            branches:
-              only:
-                - staging
       - deploy-prod:
           context: production
           filters:
