@@ -3,20 +3,18 @@
 ## @description Links to the documentation, reference and projects.
 
 Welcome to the documentation of the Microsoft MakeCode editor
-for the [Adafruit Circuit Playground Express](https://www.adafruit.com/product/3333).
+for the [Teknikio Bluebird](https://www.teknikio.com/pages/bluebird).
 
-![](https://cdn-shop.adafruit.com/970x728/3333-04.jpg)
+![](https://cdn.shopify.com/s/files/1/1837/7355/files/bluebird_Dissected_graphic_1512x.png?v=1563462627)
 
-## Adafruit Guides
+## Bluebird Guides
 
-* [MakeCode Intro](https://learn.adafruit.com/makecode)
-* [NeoPixels with MakeCode](https://learn.adafruit.com/neopixels-with-makecode)
-* [Sensors in MakeCode](https://learn.adafruit.com/sensors-in-makecode)
+* [Bluebird Intro](https://docs.google.com/presentation/d/1onPm2SEpyNofufs15y_XPkiPJdRcCkVkI7Epel0LU2M)
+* [Programming in the Flock.io App](https://docs.google.com/presentation/d/1onPm2SEpyNofufs15y_XPkiPJdRcCkVkI7Epel0LU2M/#slide=id.g4c744ab613_0_262)
 
 ## Documentation
 
 * [About](/about)
 * [Examples](/examples)
 * [Blocks](/blocks)
-* [JavaScript](/javascript)
 * [Reference](/reference)

@@ -17,15 +17,14 @@
 @grey: #3C444A; /*#4c4b4d;*/ /*#1e1e1e;*/
 @darkGrey: #292F36; /*#2F2F2F;*/ /*#313638;*/
 
-/* Adafruit colors */
-@blue: #0083B7; /*#2EB7ED;*/
-@pink:#FB48C7;
+/* Teknikio colors */
+@blue: #5DBCD2;
 
 @green: #40bf4a; /*#00922B;*/
 @purple:#8073E5;
 @orange:#d25b33; /*#FFA702;*/
 
-@darkBlue: #1c1f2b;
+@darkBlue: #2F5EA8;
 @darkGreen: #092C3A;
 
 @pageBackground: @darkBlue; /*#ecf0f1;*/

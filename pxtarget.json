@@ -1,10 +1,10 @@
 {
-    "id": "bluebird",
+    "id": "teknikio",
     "platformid": "codal",
-    "nickname": "bluebird",
-    "name": "Teknikio BlueBird Express",
-    "title": "Teknikio BlueBird Express - Blocks / Javascript editor",
-    "description": "A Blocks / JavaScript code editor for the Teknikio BlueBird Express.",
+    "nickname": "teknikio-bluebird",
+    "name": "teknikio",
+    "title": "Teknikio Bluebird - Blocks / Javascript Editor",
+    "description": "A Blocks / Javascript code editor for the Teknikio Bluebird",
     "corepkg": "teknikio-bluebird",
     "bundleddirs": [
         "libs/base",
@@ -239,37 +239,33 @@
     },
     "appTheme": {
         "accentColor": "#0089BF",
-        "logoUrl": "https://www.adafruit.com/product/3333",
-        "logo": "./static/logo.svg",
+        "logoUrl": "https://www.teknikio.com/pages/bluebird",
+        "logo": "./static/bluebird-logo.png",
         "docsLogo": "./static/logo.square.svg",
         "portraitLogo": "./static/logo.square.svg",
         "footerLogo": "./static/logo.square.svg",
         "cardLogo": "./static/icons/android-chrome-192x192.png",
         "appLogo": "./static/icons/android-chrome-192x192.png",
-        "organization": "Microsoft MakeCode",
-        "organizationUrl": "https://makecode.com/",
-        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
-        "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
-        "homeUrl": "https://makecode.adafruit.com/",
-        "embedUrl": "https://makecode.adafruit.com/",
-        "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
-        "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
-        "githubUrl": "https://github.com/Microsoft/pxt-adafruit",
+        "organization": "Teknikio",
+        "organizationUrl": "https://www.teknikio.com/",
+        "organizationLogo": "https://cdn.shopify.com/s/files/1/1837/7355/files/logo_larger_600x.png?v=1572991143",
+        "organizationWideLogo": "https://cdn.shopify.com/s/files/1/1837/7355/files/logo_larger_600x.png?v=1572991143",
+        "homeUrl": "https://www.teknikio.com/pages/bluebird",
+        "embedUrl": "https://www.teknikio.com/pages/bluebird",
+        "privacyUrl": "https://www.teknikio.com/pages/privacy-policy",
+        "termsOfUseUrl": "https://www.teknikio.com/pages/terms-and-conditions",
+        "githubUrl": "https://github.com/Teknikio/pxt-teknikio",
         "crowdinProject": "kindscript",
-        "boardName": "Adafruit Circuit Playground Express",
+        "boardName": "Teknikio Bluebird",
         "driveDisplayName": "CPLAYBOOT",
         "docMenu": [
             {
                 "name": "Support",
-                "path": "https://aka.ms/makecodeadafruitforums"
+                "path": "https://www.teknikio.com/pages/faq"
             },
             {
                 "name": "Blocks",
                 "path": "/blocks"
-            },
-            {
-                "name": "JavaScript",
-                "path": "/javascript"
             },
             {
                 "name": "Reference",
@@ -277,11 +273,11 @@
             },
             {
                 "name": "Buy",
-                "path": "https://www.adafruit.com/products/3333"
+                "path": "https://www.teknikio.com/pages/bluebird"
             }
         ],
         "showHomeScreen": true,
-        "homeScreenHero": "./static/getting-started/CN-banner.jpg",
+        "homeScreenHero": "./static/getting-started/banner.png",
         "invertedMenu": true,
         "invertedToolbox": true,
         "invertedMonaco": true,
@@ -312,9 +308,8 @@
             "githubBlocksDiff"
         ],
         "socialOptions": {
-            "twitterHandle": "adafruit",
-            "orgTwitterHandle": "MSMakeCode",
-            "hashtags": "MakeCode"
+            "twitterHandle": "teknikio",
+            "orgTwitterHandle": "teknikio"
         },
         "blocklyOptions": {
             "grid": {
@@ -339,7 +334,6 @@
             "arrays": "#8A1C7C"
         },
         "allowPackageExtensions": true,
-        "appFlashingTroubleshoot": "/device/windows-app/troubleshoot",
         "alwaysGithubItem": true
     },
     "unsupportedBrowsers": [
