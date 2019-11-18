@@ -1,4 +1,8 @@
-# Behind the MakeCode Hardware
+# Behind the Bluebird Hardware
+
+The @boardname@ comes with amazing hardware components on it. For an overview please visit the [Getting Started](https://docs.google.com/presentation/d/1onPm2SEpyNofufs15y_XPkiPJdRcCkVkI7Epel0LU2M/#slide=id.g35f391192_029) guide.
+
+<!---
 
 The @boardname@ comes with amazing hardware components on it. It can connect to external hardware too. Here are some videos to show you how some of these hardware components work and how your code uses them.
 
@@ -46,3 +50,4 @@ The @boardname@ comes with amazing hardware components on it. It can connect to 
     }
 ]
 ```
+--->

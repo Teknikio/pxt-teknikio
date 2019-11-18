@@ -1,18 +1,18 @@
 # About
 
-Welcome to the **Microsoft MakeCode** editor for the **@boardname@**!
+Welcome to the **Teknikio** editor for the **@boardname@**!
 
 ## ~ hint
 
-Heads up! This editor only works for the Circuit Playground **Express**, not the **Classic**.
+Heads up! This editor only works for the Teknikio **Bluebird**.
 
 ## ~
 
-## Circuit Playground Express
+## Bluebird
 
-Check out the awesome hardware spec at **[Adafruit.com](https://www.adafruit.com/product/3333)**.
+Check out the awesome hardware spec at **[Teknikio.com](https://docs.google.com/presentation/d/1onPm2SEpyNofufs15y_XPkiPJdRcCkVkI7Epel0LU2M/#slide=id.g35f391192_029)**.
 
-![@boardname@ image](/static/cp/cpx-about.jpg)
+![@boardname@ image](static/bluebird/bluebird.png)
 
 ## Programming: [Blocks](/blocks) or [JavaScript](/javascript)
 
