@@ -11,11 +11,8 @@ COPY package*.json ./
 
 # ~~~ Install app dependencies
 RUN apt-get update \
- && apt-get -y install libsecret-1-dev libusb-1.0-0-dev \
   && npm install -g pxt \
   && npm install \
-  && pxt target microbit \
-  && apt-get clean \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 # ~~~
 

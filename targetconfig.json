@@ -2,12 +2,12 @@
     "packages": {
         "approvedOrgs": [
             "Microsoft",
-            "Adafruit"
+            "Teknikio"
         ],
         "approvedRepos": [
         ],
         "preferredRepos": [
-            "Adafruit/pxt-crickit"
+            "Teknikio/pxt-teknikio"
         ]
     },
     "languages": [
