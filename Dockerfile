@@ -4,20 +4,24 @@ ENV NODE_ENV production
 ENV PORT 3232
 
 # ~~~ Bundle app source
-WORKDIR /usr/src/app
+COPY . /
+WORKDIR /
 COPY package*.json ./
 # ~~~
 
 # ~~~ Install app dependencies
-RUN npm install
+RUN apt-get update \
+ && apt-get -y install libsecret-1-dev libusb-1.0-0-dev \
+  && npm install -g pxt \
+  && npm install \
+  && pxt target microbit \
+  && apt-get clean \
+  && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 # ~~~
 
-# ~~~ Copying source files
-COPY . .
-# ~~~
 
 # ~~~ Run command
 EXPOSE ${PORT}
-CMD [ "npm", "run", "serve" ]
+ENTRYPOINT ["pxt", "serve", "-h", "0.0.0.0", "--noBrowser"]
 # ~~~
 
