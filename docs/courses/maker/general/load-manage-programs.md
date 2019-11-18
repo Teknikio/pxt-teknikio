@@ -67,10 +67,6 @@ Click the pink **Download** button, then go to your Finder and find the .uf2 fil
 
 ![Drag file to CPLAYBOOT from Downloads on Mac](/static/courses/maker/general/load-manage-programs/mac-finder.png)
 
-### Windows 10 app
-
-If you are on a Windows 10 computer, and using the [MakeCode Windows 10 App](http://aka.ms/adafruitapp), then you simply have to click the pink **Download** button for your program to load correctly onto the board – you don’t need to worry about dragging and dropping files. 
-
 Whichever system you use, you have the ability to find your programs on your MakeCode home page, or else to manage the MakeCode .uf2 files you generate in a folder system. In either case, giving your projects meaningful names is very helpful for finding them in the future.
 
 ## Sharing Projects
