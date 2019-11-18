@@ -50,7 +50,7 @@ resource "aws_cloudformation_stack" "ecs_service_int" {
 parameters = {
     ContainerMemory = 1024
     ContainerPort = 3232
-    ImageUrl = "937787653866.dkr.ecr.us-east-1.amazonaws.com/teknikio-prod:latest"
+    ImageUrl = "937787653866.dkr.ecr.us-east-1.amazonaws.com/teknikio-int:latest"
     StackName = "${local.aws_vpc_stack_name}-int"
     ServiceName = "${local.aws_ecs_service_name}-int"
     UseSSL = "true"
