@@ -32,3 +32,9 @@ videos/**
 .piolibdeps
 lib/
 package-lock.json
+
+.idea/
+libs/core---nrf52832/_locales/*
+libs/teknikio-bluebird/_locales/*
+.terraform/*
+.tfvars
