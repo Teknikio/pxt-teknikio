@@ -4,6 +4,7 @@
             "Teknikio"
         ],
         "approvedRepos": [
+            "Teknikio/pxt-teknikio"
         ],
         "preferredRepos": [
             "Teknikio/pxt-teknikio"
@@ -13,8 +14,6 @@
         "en"
     ],
     "galleries": {
-    },
-    "firmwareUrls": {
-        "teknikio-bluebird": "https://docs.google.com/presentation/d/1onPm2SEpyNofufs15y_XPkiPJdRcCkVkI7Epel0LU2M"
+        "Examples": "examples"
     }
 }
