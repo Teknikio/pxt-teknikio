@@ -32,3 +32,4 @@ videos/**
 .piolibdeps
 lib/
 package-lock.json
+_locales/
