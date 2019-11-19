@@ -1,11 +1,9 @@
 {
-    "id": "teknikio",
-    "platformid": "codal",
-    "nickname": "teknikio-bluebird",
-    "name": "teknikio",
+    "id": "teknikio-bluebird",
+    "name": "bluebird",
+    "corepkg": "teknikio-bluebird",
     "title": "Teknikio Bluebird - Blocks / Javascript Editor",
     "description": "A Blocks / Javascript code editor for the Teknikio Bluebird",
-    "corepkg": "teknikio-bluebird",
     "bundleddirs": [
         "libs/base",
         "libs/core",
@@ -36,167 +34,53 @@
         "libs/core---nrf52832"
     ],
     "serial": {
-        "useHF2": true,
-        "useEditor": true,
-        "log": true,
-        "editorTheme": {
-            "graphBackground": "#d9d9d9",
-            "lineColors": [
-                "#009DDC",
-                "#FB48C7",
-                "#40bf4a",
-                "#8073E5",
-                "#d25b33"
-            ]
-        }
-    },
-    "simulator": {
-        "autoRun": true,
-        "streams": false,
-        "aspectRatio": 1.0,
-        "parts": true,
-        "partsAspectRatio": 0.69,
-        "dynamicBoardDefinition": true
-    },
-    "cloud": {
-        "workspace": false,
-        "packages": true,
-        "sharing": true,
-        "publishing": true,
-        "importing": true,
-        "thumbnails": true,
-        "preferredPackages": [],
-        "githubPackages": true
-    },
-    "compile": {
-        "webUSB": true,
-        "isNative": true,
-        "useUF2": true,
-        "hasHex": true,
-        "deployDrives": ".*",
-        "deployFileMarker": "INFO_UF2.TXT",
-        "driveName": "CPLAYBOOT",
-        "openocdScript": "source [find interface/cmsis-dap.cfg]; set CHIPNAME at91samd51g19; source [find target/at91samdXX.cfg]",
-        "openocdScriptAlt": "source [find interface/stlink-v2.cfg]; set CPUTAPID 0x0bc11477; set CHIPNAME at91samd21g18; source [find target/at91samdXX.cfg]",
-        "flashChecksumAddr": 8372,
-        "flashCodeAlign": 256,
-        "floatingPoint": true,
-        "uf2Family": "0x68ed2b88",
-        "gc": true,
-        "patches": {
-            "0.0.0 - 1.1.15": [
-                {
-                    "type": "api",
-                    "map": {
-                        "Math\\s*\\.random\\s*\\(\\s*(\\d+)\\s*\\)": "Math.randomRange(0, $1)",
-                        "light\\.pixels\\.(__)?setAll": "light.setAll",
-                        "light\\.pixels\\.(__)?graph": "light.graph",
-                        "light\\.pixels\\.(__)?setPixelColor": "light.setPixelColor",
-                        "light\\.pixels\\.(__)?pixelColor": "light.pixelColor",
-                        "light\\.pixels\\.(__)?setBrightness": "light.setBrightness",
-                        "light\\.pixels\\.(__)?photonForward": "light.photonForward",
-                        "light\\.pixels\\.(__)?photonFlip": "light.photonFlip",
-                        "light\\.pixels\\.(__)?setPhotonColor": "light.setPhotonPenHue",
-                        "light\\.pixels\\.(__)?setPhotonMode": "light.setPhotonMode",
-                        "light\\.pixels\\.(__)?showAnimation": "light.showAnimation",
-                        "light\\.pixels\\.(__)?showAnimationFrame": "light.showAnimation",
-                        "light\\.pixels\\.(__)?clear": "light.clear",
-                        "light\\.pixels\\.(__)?stopAllAnimations": "light.stopAllAnimations",
-                        "light\\.createNeoPixelStrip": "light.createStrip",
-                        "light\\.pixels\\.__setPixelWhiteLED": "light.pixels.setPixelWhiteLED",
-                        "light\\.pixels\\.__show": "light.pixels.show",
-                        "light\\.pixels\\.__length": "light.pixels.length",
-                        "light\\.pixels\\.__brightness": "light.pixels.brightness",
-                        "light\\.pixels\\.__range": "light.pixels.range",
-                        "light\\.pixels\\.__move": "light.pixels.move",
-                        "light\\.pixels\\.__setBuffered": "light.pixels.setBuffered",
-                        "light\\.pixels\\.__setMode": "light.pixels.setMode",
-                        "light\\.animation\\(LightAnimation\\.Rainbow\\)": "light.rainbowAnimation",
-                        "light\\.animation\\(LightAnimation\\.RunningLights\\)": "light.runningLightsAnimation",
-                        "light\\.animation\\(LightAnimation\\.Comet\\)": "light.cometAnimation",
-                        "light\\.animation\\(LightAnimation\\.Sparkle\\)": "light.sparkleAnimation",
-                        "light\\.animation\\(LightAnimation\\.TheaterChase\\)": "light.theaterChaseAnimation",
-                        "light\\.animation\\(LightAnimation\\.ColorWipe\\)": "light.colorWipeAnimation"
-                    }
-                }
-            ],
-            "0.0.0 - 1.3.5": [
-                {
-                    "type": "api",
-                    "map": {
-                        "input\\.pinA([1-7])\\.": "input.touchA$1.",
-                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.JumpUp\\)\\)": "music.jumpUp.play$1()",
-                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.JumpDown\\)\\)": "music.jumpDown.play$1()",
-                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.PowerUp\\)\\)": "music.powerUp.play$1()",
-                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.PowerDown\\)\\)": "music.powerDown.play$1()",
-                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.BaDing\\)\\)": "music.baDing.play$1()",
-                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.MagicWand\\)\\)": "music.magicWand.play$1()",
-                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.Siren\\)\\)": "music.siren.play$1()",
-                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.Wawawawaa\\)\\)": "music.wawawawaa.play$1()"
-                    }
-                }
-            ]
-        },
-        "hidSelectors": [
-            {
-                "usagePage": "0xFF97",
-                "usageId": "0x0001",
-                "vid": "0x239A",
-                "pid": "0x0018"
-            },
-            {
-                "usagePage": "0xFF00",
-                "usageId": "0x0001",
-                "vid": "0x239A",
-                "pid": "0x0018"
-            },
-            {
-                "usagePage": "0xFF00",
-                "usageId": "0x0001",
-                "vid": "0x239A",
-                "pid": "0x0019"
-            },
-            {
-                "usagePage": "0xFF97",
-                "usageId": "0x0001",
-                "vid": "0x03EB",
-                "pid": "0x2402"
-            }
+      "useHF2": true,
+      "useEditor": true,
+      "log": true,
+      "editorTheme": {
+        "graphBackground": "#d9d9d9",
+        "lineColors": [
+          "#009DDC",
+          "#FB48C7",
+          "#40bf4a",
+          "#8073E5",
+          "#d25b33"
         ]
+      }
     },
     "variants": {
-        "nrf52832": {
-            "serial": {
-                "useHF2": false
-            },
-            "compile": {
-                "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/nrf52.cfg]",
-                "flashChecksumAddr": 0,
-                "deployFileMarker": "MBED.HTM",
-                "vtableShift": 3,
-                "useUF2": false,
-                "webUSB": false,
-                "gc": true
-            },
-            "compileService": {
-                "codalTarget": {
-                    "name": "codal-ble-nano",
-                    "url": "https://github.com/lancaster-university/codal-ble-nano",
-                    "branch": "v0.0.3-jacdac-v0.0",
-                    "type": "git"
-                },
-                "codalBinary": "BLE_NANO",
-                "serviceId": "codal2ble",
-                "dockerImage": "pext/yotta:latest",
-                "yottaConfig": {
-                    "pxt": {
-                        "board": {
-                            "id": "BOARD_ID_NRF52832"
-                        }
-                    }
-                }
+      "nrf52832": {
+        "serial": {
+          "useHF2": false
+        },
+        "compile": {
+          "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/nrf52.cfg]",
+          "flashChecksumAddr": 0,
+          "deployFileMarker": "MBED.HTM",
+          "vtableShift": 3,
+          "useUF2": false,
+          "webUSB": false,
+          "gc": true
+        },
+        "compileService": {
+          "codalTarget": {
+            "name": "codal-ble-nano",
+            "url": "https://github.com/lancaster-university/codal-ble-nano",
+            "branch": "v0.0.3-jacdac-v0.0",
+            "type": "git"
+          },
+          "codalBinary": "BLE_NANO",
+          "serviceId": "codal2ble",
+          "dockerImage": "pext/yotta:latest",
+          "yottaConfig": {
+            "pxt": {
+              "board": {
+                "id": "BOARD_ID_NRF52832"
+              }
             }
+          }
         }
+      }
     },
     "runtime": {
         "mathBlocks": true,
@@ -207,45 +91,37 @@
         "listsBlocks": true,
         "functionBlocks": true,
         "functionsOptions": {
-            "useNewFunctions": true
+          "useNewFunctions": true
         },
         "onStartNamespace": "loops",
         "onStartColor": "#40bf4a",
         "onStartWeight": 100,
         "bannedCategories": [
-            "jacdac"
+          "jacdac"
         ]
     },
-    "compileService": {
-        "buildEngine": "codal",
-        "codalTarget": {
-            "name": "codal-circuit-playground",
-            "url": "https://github.com/lancaster-university/codal-circuit-playground",
-            "branch": "v2.0.1",
-            "type": "git"
-        },
-        "codalBinary": "CIRCUIT_PLAYGROUND",
-        "yottaConfig": {
-            "pxt": {
-                "board": {
-                    "id": "BOARD_ID_CPLAY"
-                }
-            }
-        },
-        "githubCorePackage": "lancaster-university/codal",
-        "gittag": "v0.6.3",
-        "serviceId": "codal2cp",
-        "dockerImage": "pext/yotta:latest"
+    "simulator": {
+        "autoRun": true,
+        "streams": false,
+        "aspectRatio": 1.0,
+        "parts": true,
+        "partsAspectRatio": 0.69,
+        "dynamicBoardDefinition": true
+    },
+    "cloud": {
+      "workspace": false,
+      "packages": true,
+      "sharing": true,
+      "publishing": true,
+      "importing": true,
+      "thumbnails": true,
+      "preferredPackages": [],
+      "githubPackages": true
     },
     "appTheme": {
         "accentColor": "#0089BF",
-        "logoUrl": "https://www.teknikio.com/pages/bluebird",
-        "logo": "./static/bluebird-logo.png",
-        "docsLogo": "./static/logo.square.svg",
-        "portraitLogo": "./static/logo.square.svg",
-        "footerLogo": "./static/logo.square.svg",
-        "cardLogo": "./static/icons/android-chrome-192x192.png",
-        "appLogo": "./static/icons/android-chrome-192x192.png",
+        "logoUrl": "https://github.com/Teknikio/pxt-teknikio",
+        "logo": "./static/logo.png",
         "organization": "Teknikio",
         "organizationUrl": "https://www.teknikio.com/",
         "organizationLogo": "https://cdn.shopify.com/s/files/1/1837/7355/files/logo_larger_600x.png?v=1572991143",
@@ -255,62 +131,29 @@
         "privacyUrl": "https://www.teknikio.com/pages/privacy-policy",
         "termsOfUseUrl": "https://www.teknikio.com/pages/terms-and-conditions",
         "githubUrl": "https://github.com/Teknikio/pxt-teknikio",
-        "crowdinProject": "kindscript",
         "boardName": "Teknikio Bluebird",
-        "driveDisplayName": "CPLAYBOOT",
         "docMenu": [
             {
-                "name": "Support",
-                "path": "https://www.teknikio.com/pages/faq"
+                "name": "About",
+                "path": "/about"
             },
             {
-                "name": "Blocks",
-                "path": "/blocks"
+                "name": "Docs",
+                "path": "/docs"
             },
             {
-                "name": "Reference",
-                "path": "/reference"
-            },
-            {
-                "name": "Buy",
-                "path": "https://www.teknikio.com/pages/bluebird"
+              "name": "FAQ",
+              "path": "https://www.teknikio.com/pages/faq"
             }
         ],
-        "showHomeScreen": true,
-        "homeScreenHero": "./static/getting-started/banner.png",
+        "coloredToolbox": false,
+        "monacoToolbox": true,
         "invertedMenu": true,
         "invertedToolbox": true,
         "invertedMonaco": true,
-        "monacoToolbox": true,
         "selectLanguage": true,
-        "simAnimationEnter": "roll in",
-        "simAnimationExit": "roll out",
-        "highContrast": true,
-        "greenScreen": true,
-        "enableTrace": true,
-        "print": true,
-        "hasAudio": true,
-        "usbHelp": [],
-        "extendEditor": true,
-        "extendFieldEditors": true,
-        "disableBlockIcons": true,
-        "scriptManager": true,
-        "baseTheme": "dark",
-        "simGifTransparent": "rgba(0,0,0,0)",
-        "qrCode": true,
-        "experiments": [
-            "autoWebUSBDownload",
-            "debugger",
-            "debugExtensionCode",
-            "simScreenshot",
-            "simGif",
-            "python",
-            "githubBlocksDiff"
-        ],
-        "socialOptions": {
-            "twitterHandle": "teknikio",
-            "orgTwitterHandle": "teknikio"
-        },
+        "showHomeScreen": true,
+        "homeScreenHero": "./static/hero.png",
         "blocklyOptions": {
             "grid": {
                 "spacing": 20,
@@ -320,23 +163,43 @@
             }
         },
         "blocklyColors": {
-            "insertionMarker": "#FFFFFF",
-            "insertionMarkerOpacity": 0.5
+          "insertionMarker": "#FFFFFF",
+          "insertionMarkerOpacity": 0.5
         },
         "blockColors": {
-            "loops": "#40bf4a",
-            "logic": "#4cbfe6",
-            "math": "#9966ff",
-            "variables": "#FF6680",
-            "text": "#ffab19",
-            "advanced": "#00272B",
-            "functions": "#005a9e",
-            "arrays": "#8A1C7C"
+          "loops": "#40bf4a",
+          "logic": "#4cbfe6",
+          "math": "#9966ff",
+          "variables": "#FF6680",
+          "text": "#ffab19",
+          "advanced": "#00272B",
+          "functions": "#005a9e",
+          "arrays": "#8A1C7C"
         },
         "allowPackageExtensions": true,
-        "alwaysGithubItem": true
+        "alwaysGithubItem": true,
+        "monacoColors": {
+            "editor.background": "#ecf0f1"
+        },
+        "socialOptions": {
+          "orgTwitterHandle": "teknikio"
+        },
+        "simAnimationEnter": "roll in",
+        "simAnimationExit": "roll out",
+        "debugger": true,
+        "highContrast": true,
+        "greenScreen": true,
+        "enableTrace": true,
+        "print": true,
+        "hasAudio": true,
+        "extendEditor": true,
+        "extendFieldEditors": true,
+        "disableBlockIcons": true,
+        "scriptManager": true,
+        "baseTheme": "dark",
+        "qrCode": true
     },
     "unsupportedBrowsers": [
-        { "id" : "ie" }
+      { "id" : "ie" }
     ]
 }
