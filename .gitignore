@@ -34,7 +34,7 @@ lib/
 package-lock.json
 
 .idea/
-libs/core---nrf52832/_locales/*
-libs/teknikio-bluebird/_locales/*
+libs/core---nrf52832/_locales/*.json
+libs/teknikio-bluebird/_locales/*.json
 .terraform/*
 .tfvars
