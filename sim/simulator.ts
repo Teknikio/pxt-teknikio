@@ -1,21 +1,22 @@
 /// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
-/// <reference path="../node_modules/pxt-core/localtypings/pxtarget.d.ts"/>
-/// <reference path="../built/common-sim.d.ts"/>
 
 namespace pxsim {
-    export let pinIds: Map<number>;
 
-    export function pinByName(name: string) {
-        let v = pinIds[name]
-        if (v == null) {
-            v = getConfig(getConfigKey("PIN_" + name))
+    /**
+     * This function gets called each time the program restarts
+     */
+    initCurrentRuntime = (msg: SimulatorRunMessage) => {
+        runtime.board = new DalBoard(msg.boardDefinition);
+
+        runtime.postError = (e) => {
+            runtime.updateDisplay();
         }
-        let p = pxtcore.getPin(v)
-        if (!p)
-            console.error("missing pin: " + name + "(" + v + ")")
-        return p
-    }
+    };
 
+    /**
+     * Represents the entire state of the executing program.
+     * Do not store state anywhere else!
+     */
     export class DalBoard extends CoreBoard
         implements MusicBoard,
         LightBoard,
@@ -34,7 +35,7 @@ namespace pxsim {
         edgeConnectorState: EdgeConnectorState;
         lightSensorState: AnalogSensorState;
         buttonState: CommonButtonState;
-        lightState: pxt.Map<CommonNeoPixelState>;
+        lightState: Map<CommonNeoPixelState>;
         audioState: AudioState;
         neopixelPin: Pin;
         touchButtonState: TouchButtonState;
@@ -48,6 +49,8 @@ namespace pxsim {
 
         constructor(public boardDefinition: BoardDefinition) {
             super();
+
+            this.bus = new EventBus(runtime);
 
             const pinList: number[] = []
             const servos: Map<number> = {}
@@ -136,7 +139,7 @@ namespace pxsim {
             this.builtinParts["lcd"] =  this.lcdState;
             this.builtinVisuals["lcd"] = () => new visuals.LCDView();
             this.builtinPartVisuals["lcd"] = (xy: visuals.Coord) => visuals.mkLCDPart(xy);
-            
+
             this.builtinParts["pixels"] = (pin: Pin) => { return this.neopixelState(undefined); };
             this.builtinVisuals["pixels"] = () => new visuals.NeoPixelView();
             this.builtinPartVisuals["pixels"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
@@ -159,7 +162,7 @@ namespace pxsim {
             this.builtinVisuals["screen"] = () => new visuals.ScreenView();
             this.builtinPartVisuals["screen"] = (xy: visuals.Coord) => visuals.mkScreenPart(xy);
 
-            
+
             const neopixelPinCfg = getConfig(DAL.CFG_PIN_NEOPIXEL) ||
                 getConfig(DAL.CFG_PIN_DOTSTAR_DATA);
             if (neopixelPinCfg !== null)
@@ -197,8 +200,6 @@ namespace pxsim {
 
         initAsync(msg: SimulatorRunMessage): Promise<void> {
             super.initAsync(msg);
-
-            const options = (msg.options || {}) as pxt.RuntimeOptions;
 
             const boardDef = msg.boardDefinition;
             const cmpsList = msg.parts;
@@ -255,18 +256,21 @@ namespace pxsim {
         }
     }
 
-    export function initRuntimeWithDalBoard(msg: SimulatorRunMessage) {
-        U.assert(!runtime.board);
-        let b = new DalBoard(msg.boardDefinition);
-        runtime.board = b;
-        runtime.postError = (e) => {
-            // TODO
-            runtime.updateDisplay();
-        }
-    }
+    /**
+     * Helper Functions
+     */
 
-    if (!pxsim.initCurrentRuntime) {
-        pxsim.initCurrentRuntime = initRuntimeWithDalBoard;
+    export let pinIds: Map<number>;
+
+    export function pinByName(name: string) {
+        let v = pinIds[name];
+        if (v == null) {
+            v = getConfig(getConfigKey("PIN_" + name))
+        }
+        let p = pxtcore.getPin(v);
+        if (!p)
+            console.log("missing pin: " + name + "(" + v + ")");
+        return p
     }
 
     export function parsePinString(pinString: string): Pin {
