@@ -13,6 +13,7 @@ RUN apt-get update \
   && npm install -g pxt \
   && npm install -g http-server \
   && npm install \
+  && rm -rf /node_modules/pxt-core/common-docs/* /node_modules/pxt-core/docfiles/* /node_modules/pxt-core/tests/* \
   && apt-get clean \
   && pxt staticpkg \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
