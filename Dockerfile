@@ -1,25 +1,27 @@
-FROM node:10-stretch
+FROM alpine:3.10.3
 
 ENV NODE_ENV production
 ENV PORT 3232
 
 # ~~~ Bundle app source
-COPY . /
-WORKDIR /
+WORKDIR /usr/src/app/tmp
+COPY . ./
 # ~~~
 
 # ~~~ Install app dependencies & create static build
-RUN apt-get update \
-  && npm install -g pxt \
-  && npm install -g http-server \
+RUN apk update  \
+  && apk add --update nodejs-current-npm \
+
+  && npm install -g pxt && npm install -g http-server \
   && npm install \
-  && apt-get clean \
+
   && pxt staticpkg \
-  && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+  && mv built/packaged/* /usr/src/app && rm -rf /usr/src/app/tmp
 # ~~~
+
+WORKDIR /usr/src/app
 
 # ~~~ Load static package runninh web server
 EXPOSE ${PORT}
-ENTRYPOINT ["http-server", "-c-1", "/built/packaged"]
+ENTRYPOINT ["http-server", "-c-1", "."]
 # ~~~
-

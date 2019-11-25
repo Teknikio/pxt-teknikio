@@ -136,13 +136,6 @@
 @homeCardImageBorderRadius: 5px;
 
 /*-------------------
-   Docs
---------------------*/
-
-@avatarImageUrl: "../docs/static/avatar.png";
-@docsAvatarImageUrl: "../docs/static/avatar-inverted.svg";
-
-/*-------------------
    Tutorial
 --------------------*/
 

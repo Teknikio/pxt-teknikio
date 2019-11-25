@@ -1,5 +1,6 @@
 /// <reference path="../../node_modules/pxt-core/built/pxtsim.d.ts"/>
 /// <reference path="../../libs/core/dal.d.ts"/>
+/// <reference path="../../built/common-sim.d.ts"/>
 
 namespace pxsim.visuals {
     export class ButtonView implements IBoardPart<CommonButtonState> {
@@ -27,7 +28,6 @@ namespace pxsim.visuals {
         }
 
         public moveToCoord(xy: Coord) {
-            let btnWidth = PIN_DIST * 3;
             let [x, y] = xy;
             translateEl(this.btn, [x, y])
         }
@@ -40,29 +40,6 @@ namespace pxsim.visuals {
 
         private mkBtn() {
             this.btn = mkBtnSvg([0, 0]).el;
-
-            const mkVirtualBtn = () => {
-                const numPins = 2;
-                const w = PIN_DIST * 2.8;
-                const offset = (w - (numPins * PIN_DIST)) / 2;
-                const corner = PIN_DIST / 2;
-                const cx = 0 - offset + w / 2;
-                const cy = cx;
-                const txtSize = PIN_DIST * 1.3;
-                const x = -offset;
-                const y = -offset;
-                const txtXOff = PIN_DIST / 7;
-                const txtYOff = PIN_DIST / 10;
-
-                let btng = <SVGGElement>svg.elt("g");
-                let btn = svg.child(btng, "rect", { class: "sim-button-virtual", x: x, y: y, rx: corner, ry: corner, width: w, height: w});
-                let btnTxt = mkTxt(cx + txtXOff, cy + txtYOff, txtSize, 0, "A+B");
-                pxsim.U.addClass(btnTxt, "sim-text")
-                pxsim.U.addClass(btnTxt, "sim-text-virtual");
-                btng.appendChild(btnTxt);
-
-                return btng;
-            }
 
             let el = svg.elt("g");
             pxsim.U.addClass(el, "sim-buttonpair")

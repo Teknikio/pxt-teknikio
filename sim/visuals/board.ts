@@ -4,12 +4,6 @@ namespace pxsim.visuals {
     export const VIEW_WIDTH = 372.3404255319149;
     export const VIEW_HEIGHT = 361.70212765957444;
     const TOP_MARGIN = 20;
-    const MID_MARGIN = 40;
-    const BOT_MARGIN = 20;
-    const PIN_LBL_SIZE = PIN_DIST * 0.7;
-    const PIN_LBL_HOVER_SIZE = PIN_LBL_SIZE * 1.5;
-    const SQUARE_PIN_WIDTH = PIN_DIST * 0.66666;
-    const SQUARE_PIN_HOVER_WIDTH = PIN_DIST * 0.66666 + PIN_DIST / 3.0;
 
     const STYLE = `
 .sim-board-pin {
@@ -154,7 +148,7 @@ namespace pxsim.visuals {
             for (const l of props.visualDef.touchPads || []) {
                 const pin = pxsim.pinIds[l.label];
                 if (!pin) {
-                    console.error(`touch pin ${pin} not found`)
+                    console.log(`touch pin ${pin} not found`)
                     continue;
                 }
                 const tp = new BoardTouchButton(l, pin);
