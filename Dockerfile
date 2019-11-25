@@ -10,8 +10,6 @@ COPY . ./
 
 # ~~~ Install app dependencies & create static build
 RUN apk update  \
-  && apk add --update nodejs-current-npm \
-
   && npm install -g pxt && npm install -g http-server \
   && npm install \
 
