@@ -157,6 +157,8 @@ Resources:
       Port: !Ref 'ContainerPort'
       Protocol: HTTP
       UnhealthyThresholdCount: 2
+      Matcher:
+        HttpCode: '200-399'
       VpcId:
         Fn::ImportValue:
           !Join [':', [!Ref 'StackName', 'VPCId']]

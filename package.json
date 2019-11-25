@@ -1,7 +1,7 @@
 {
   "name": "pxt-teknikio",
   "version": "1.5.10",
-  "description": "Teknikio Bluebird uusing  MakeCode",
+  "description": "Teknikio Bluebird Target for PXT (using MakeCode)",
   "keywords": [
     "JavaScript",
     "education",
