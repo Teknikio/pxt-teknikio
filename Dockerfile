@@ -9,9 +9,9 @@ COPY . ./
 # ~~~
 
 # ~~~ Install app dependencies & create static build
-RUN npm install -g pxt && npm install -g http-server \
+RUN npm install -g pxt \
+  && npm install -g http-server \
   && npm install \
-
   && pxt staticpkg \
   && mv built/packaged/* /usr/src/app && rm -rf /usr/src/app/tmp
 # ~~~
