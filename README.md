@@ -1,6 +1,6 @@
-# MakeCode for Adafruit Circuit Playground Express [![Build Status](https://travis-ci.org/Microsoft/pxt-adafruit.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-adafruit)
+# MakeCode for Teknikio BlueBird [![Build Status](https://circleci.com/gh/Teknikio/pxt-teknikio)](https://circleci.com/gh/Teknikio/pxt-teknikio)
 
-This repo contains the editor hosted at https://makecode.adafruit.com .
+This repo contains the editor hosted at https://bluebird-prod.teknikio.com .
 
 * (optional) install [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -12,7 +12,7 @@ This setup gives you a local version of the editor and the ability to load packa
 
 * install [Node.js 8+](https://nodejs.org/en/download/)
 * clone https://github.com/Microsoft/pxt-adafruit to ``pxt-adafruit`` folder
-* go to ``pxt-adafruit`` and run
+* go to ``pxt-teknikio`` and run
 
 ```
 npm install
@@ -30,15 +30,15 @@ npm run serve
 
 ### Creating and editing a package
 
-* go to ``/projects`` under the ``pxt-adafruit`` folder
+* go to ``/projects`` under the ``pxt-teknikio`` folder
 * clone your package repo, say ``pxt-helloworld``
-* launch the server with ``npm run serve`` from the ``pxt-adafruit`` folder using ``npm serve``
+* launch the server with ``npm run serve`` from the ``pxt-teknikio`` folder using ``npm serve``
 * create a new project
 * go to **project settings** and click on **Edit settings as text**
 * add an entry in the dependency section that points to your project
 ```
     "dependencies": {
-        "circuit-playground": "*",
+        "teknikio-bluebird": "*",
         "helloworld": "file:../pxt-helloworld"
     },
 ```
@@ -49,7 +49,7 @@ Once this project is setup, simply reload the editor after making changes on dis
 ## Local Dev setup
 
 This setup is needed if you plan to make changes in PXT itself. In most cases, it's a bit of an overkill
-if you are building a package for the Adafruit editor.
+if you are building a package for the Bluebird editor.
 
 * install [Node.js 8+](https://nodejs.org/en/download/)
 * install the PXT command line
@@ -61,7 +61,7 @@ In a common folder,
 
 * clone https://github.com/Microsoft/pxt to ``pxt`` folder
 * clone https://github.com/Microsoft/pxt-common-packages to ``pxt-common-packages`` folder
-* clone https://github.com/Microsoft/pxt-adafruit to ``pxt-adafruit`` folder
+* clone https://github.com/Microsoft/pxt-teknikio to ``pxt-teknikio`` folder
 * go to ``pxt`` and run
 
 ```
@@ -76,7 +76,7 @@ npm install
 npm link ../pxt
 ```
 
-* go to ``pxt-adafruit`` and run
+* go to ``pxt-teknikio`` and run
 
 ```
 npm install
@@ -89,7 +89,7 @@ npm link ../pxt-common-packages
 From root github folder,
 
 ```
-cd pxt-adafruit
+cd pxt-teknikio
 pxt serve
 ```
 
