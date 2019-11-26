@@ -1,4 +1,4 @@
-FROM alpine:3.10.3
+FROM node:10-stretch
 
 ENV NODE_ENV production
 ENV PORT 3232
@@ -9,8 +9,7 @@ COPY . ./
 # ~~~
 
 # ~~~ Install app dependencies & create static build
-RUN apk update  \
-  && npm install -g pxt && npm install -g http-server \
+RUN npm install -g pxt && npm install -g http-server \
   && npm install \
 
   && pxt staticpkg \
