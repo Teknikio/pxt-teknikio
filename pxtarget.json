@@ -116,7 +116,7 @@
       "githubPackages": true
     },
     "appTheme": {
-        "accentColor": "#0089BF",
+        "accentColor": "#E4BD7C",
         "logoUrl": "https://github.com/Teknikio/pxt-teknikio",
         "logo": "./static/logo.png",
         "organization": "Teknikio",

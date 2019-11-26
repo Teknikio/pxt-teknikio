@@ -5,7 +5,6 @@
 /* Home screen cards */
 .projectsdialog {
     .ui.card {
-
         background: @blue !important;
         margin-right: 10px !important;
         padding: 0.5rem;
