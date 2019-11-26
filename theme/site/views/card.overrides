@@ -5,8 +5,15 @@
 /* Home screen cards */
 .projectsdialog {
     .ui.card {
+
+        background: #5DBCD2 !important;
         margin-right: 10px !important;
         padding: 0.5rem;
+
+        .newprojectcard {
+            background: #5DBCD2 !important;
+        }
+
     }
 }
 
