@@ -4,21 +4,23 @@ ENV NODE_ENV production
 ENV PORT 3232
 
 # ~~~ Bundle app source
-WORKDIR /usr/src/app/tmp
-COPY . ./
+COPY . /
+WORKDIR /
 # ~~~
 
 # ~~~ Install app dependencies & create static build
-RUN npm install -g pxt \
+RUN apt-get update \
+  && npm install -g pxt \
   && npm install -g http-server \
   && npm install \
+  && rm -rf /node_modules/pxt-core/common-docs/* /node_modules/pxt-core/docfiles/* /node_modules/pxt-core/tests/* \
+  && apt-get clean \
   && pxt staticpkg \
-  && mv built/packaged/* /usr/src/app && rm -rf /usr/src/app/tmp
+  && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 # ~~~
-
-WORKDIR /usr/src/app
 
 # ~~~ Load static package runninh web server
 EXPOSE ${PORT}
-ENTRYPOINT ["http-server", "-c-1", "."]
+ENTRYPOINT ["http-server", "-c-1", "/built/packaged"]
 # ~~~
+
