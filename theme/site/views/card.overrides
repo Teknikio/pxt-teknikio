@@ -6,15 +6,14 @@
 .projectsdialog {
     .ui.card {
 
-        background: #5DBCD2 !important;
+        background: @blue !important;
         margin-right: 10px !important;
         padding: 0.5rem;
-
-        .newprojectcard {
-            background: #5DBCD2 !important;
-        }
-
     }
+}
+
+.ui.card.link.newprojectcard {
+  background: @blue !important;
 }
 
 /* File card */
