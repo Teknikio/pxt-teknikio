@@ -37,7 +37,9 @@
 @orange           : #d25b33;
 @mustard          : #E4BD7C;
 @pink             : #fd79a8;
+@lightPurple      : #a599cc;
 @purple           : #8073E5;
+@darkPurple       : #27203F;
 @red              : #ff7675;
 @teal             : #81ecec;
 @yellow           : #ffeaa7;
@@ -46,8 +48,8 @@
     Brand Colors
 --------------------*/
 
-@primaryColor        : @blue;
-@secondaryColor      : @darkBlue;
+@primaryColor        : @mustard;
+@secondaryColor      : @darkPurple;
 
 @lightPrimaryColor   : @lightBlue;
 @lightSecondaryColor : @lightGrey;
@@ -64,7 +66,7 @@
 @highlightColor: @grey;
 @inputHighlightColor: @inputColor;
 
-@linkColor: #3eb1d0;
+@linkColor: @lightPurple;
 
 /*******************************
      PXT Variables

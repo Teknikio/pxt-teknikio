@@ -27,9 +27,10 @@
 
 #editortoggle {
   border-radius: 5px !important;
+  border: 3px solid black;
 
   .ui.item.link.blocks-menuitem, .ui.item.link.javascript-menuitem {
-    color: black;
+    color: black !important;
     border-radius: 0px !important;
     background: transparent !important;
   }
@@ -70,6 +71,14 @@
 #downloadArea {
   background: transparent !important; // covers top left area of footer
   display: none; // stop pushing other elements to the right
+}
+
+/* Javascript/Monaco View */
+
+#filelist {
+  .ui.tiny:nth-child(5), .ui.tiny:nth-child(6) {
+    background-color: @mustard;
+  }
 }
 
 /* Icons */
