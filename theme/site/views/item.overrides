@@ -1,3 +1,12 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+.ui.item.logo .name {
+    font-size: 20px;
+    font-family: @headerFont;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 1rem;
+}

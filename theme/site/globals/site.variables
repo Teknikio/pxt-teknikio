@@ -2,62 +2,89 @@
      User Global Variables
 *******************************/
 
-@fontName  : 'Open Sans';
+/*--------------
+      Page
+---------------*/
 
-@primaryColor: @blue;
-@secondaryColor: @pink;
+@pageBackground      : @grey;
 
-@red:#CC2936;
-@yellow:#FFC914;
-@teal:#08415C;
-@violet:#C200C0;
-@brown:#2E282A;
-@grey:#4d5055;
+/*-------------------
+     Fonts
+--------------------*/
 
-@grey: #3C444A; /*#4c4b4d;*/ /*#1e1e1e;*/
-@darkGrey: #292F36; /*#2F2F2F;*/ /*#313638;*/
+@fontName          : 'Open Sans';
 
-/* Teknikio colors */
-@blue: #5DBCD2;
+@headerFont        : 'Open Sans', sans-serif;
+@pageFont          : 'Open Sans', sans-serif;
+@googleFontName    : 'Open Sans';
+@importGoogleFonts : true;
 
-@green: #40bf4a; /*#00922B;*/
-@purple:#8073E5;
-@orange:#d25b33; /*#FFA702;*/
+@docsHeaderFont: @headerFont;
+@docsPageFont: @pageFont;
 
-@darkBlue: #2F5EA8;
-@darkGreen: #092C3A;
+/*-------------------
+      Site Colors
+--------------------*/
 
-@pageBackground: @darkBlue; /*#ecf0f1;*/
-@lightTextColor: rgba(255, 255, 255, 0.68);
+/*---  Colors  ---*/
+@black            : #2d3436;
+@blue             : #5DBCD2;
+@darkBlue         : #2F5EA8;
+@green            : #40bf4a;
+@darkGreen        : #092C3A;
+@grey             : #3C444A;
+@darkGrey         : #292F36;
+@orange           : #d25b33;
+@mustard          : #E4BD7C;
+@pink             : #fd79a8;
+@lightPurple      : #a599cc;
+@purple           : #8073E5;
+@darkPurple       : #27203F;
+@red              : #ff7675;
+@teal             : #81ecec;
+@yellow           : #ffeaa7;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : @mustard;
+@secondaryColor      : @darkPurple;
+
+@lightPrimaryColor   : @lightBlue;
+@lightSecondaryColor : @lightGrey;
 
 /*--------------
    Form Input
 ---------------*/
 
 /* This adjusts the default form input across all elements */
-@inputBackground        : #333940;
+@inputBackground      : #333940;
 
 /* Input Text Color */
 @inputColor: white;
 @highlightColor: @grey;
 @inputHighlightColor: @inputColor;
 
-@linkColor: #3eb1d0;
+@linkColor: @lightPurple;
 
 /*******************************
-         PXT Overrides
+     PXT Variables
 *******************************/
 
 /*-------------------
    Menu
 --------------------*/
 
-@mainMenuInvertedBackground: @blue;
-@mainMenuTutorialBackground: @orange;
+@mainMenuBackground: #FFFFFF;
+@mainMenuInvertedBackground: @mainMenuBackground;
+@mainMenuTutorialBackground: @mustard;
 
-@mainMenuBlocksJsToggleColor: @black;
+@mainMenuHeight: 5.5rem;
 
-@tutorialSelectedMenuColor: @blue;
+@mainMenuBlocksJsToggleColor: @primaryColor;
+
+@tutorialSelectedMenuColor: @primaryColor;
 
 /*-------------------
    Layout
@@ -73,14 +100,24 @@
 
 @simulatorBackground: @darkGrey;
 @editorToolsBackground: @simulatorBackground;
-@blocklySvgColor: #424a51;
+@blocklySvgColor: @grey;
+
+@homeScreenBackground: #ecf0f1;
+@contentBackground: @grey;
 
 /*-------------------
    Full screen
 --------------------*/
 
 @fullscreenBackgroundGradientStart: @mainMenuInvertedBackground;
-@fullscreenBackgroundGradientEnd: #fff;
+@fullscreenBackgroundGradientEnd: @simulatorBackground;
+
+/*-------------------
+   Editor
+--------------------*/
+
+@blocklyToolboxColor: @grey;
+@trashIconColor: @primaryColor;
 
 /*-------------------
    Side Docs
@@ -90,23 +127,15 @@
 @sidedocsButtonsRight: 4.25rem;
 
 /*-------------------
-   Editor
---------------------*/
-
-@blocklyToolboxColor: #424A51;
-@trashIconColor: @primaryColor;
-
-
-/*-------------------
    Blockly
 --------------------*/
 
+@blocklyFont: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 @blocklyRowWidthWide: 160px;
 @blocklyRowWidthComputer: 140px;
 
 @blocklyScrollbarColor: lighten(@grey, 20%);
 @blocklyScrollbarOpacity: 0.5;
-
 
 /*-------------------
    Scrollbars

@@ -1,3 +1,12 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.button {
+  border-radius: -1px !important;
+}
+
+/* import dialog button */
+.ui.button.import-dialog-btn {
+  &:extend(.ui.inverted.button all);
+}

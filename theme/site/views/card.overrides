@@ -5,9 +5,15 @@
 /* Home screen cards */
 .projectsdialog {
     .ui.card {
+
+        background: @blue !important;
         margin-right: 10px !important;
         padding: 0.5rem;
     }
+}
+
+.ui.card.link.newprojectcard {
+  background: @blue !important;
 }
 
 /* File card */
