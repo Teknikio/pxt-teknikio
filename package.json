@@ -31,8 +31,7 @@
     "docs/static/*.svg",
     "docs/static/*.png"
   ],
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "typescript": "2.6.1",
     "react": "16.8.3",
