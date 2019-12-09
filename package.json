@@ -33,18 +33,18 @@
   ],
   "devDependencies": {},
   "dependencies": {
-    "typescript": "2.6.1",
-    "react": "16.8.3",
-    "pxt-common-packages": "6.16.15",
-    "pxt-core": "5.26.11",
-    "semantic-ui-less": "2.2.14",
     "@types/bluebird": "2.0.33",
     "@types/jquery": "3.2.16",
     "@types/marked": "0.3.0",
     "@types/node": "8.0.53",
     "@types/react": "16.0.25",
     "@types/react-dom": "16.0.3",
-    "@types/web-bluetooth": "0.0.4"
+    "@types/web-bluetooth": "0.0.4",
+    "pxt-common-packages": "6.16.15",
+    "pxt-core": "^5.30.15",
+    "react": "16.8.3",
+    "semantic-ui-less": "2.2.14",
+    "typescript": "2.6.1"
   },
   "scripts": {
     "serve": "node node_modules/pxt-core/built/pxt.js serve",
