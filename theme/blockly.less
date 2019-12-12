@@ -6,5 +6,33 @@
 @import 'fieldeditors';
 
 /*******************************
-    Cutom Blockly CSS
+    Custom Blockly CSS
 *******************************/
+
+// Blocks / Javascript Toggle
+
+#editortoggle {
+  border-radius: 5px !important;
+  border: 3px solid #6C6B6B;
+
+  .toggle {
+    border-radius:0!important;
+  }
+
+  .blocks-menuitem, .javascript-menuitem {
+    background: @midGrey;
+    color: white !important;
+    text-transform: lowercase;
+    font-weight: bold;
+    border-radius:0!important;
+
+    i { display: none; }
+  }
+
+  .blocks-menuitem:not(.active), .javascript-menuitem:not(.active) {
+    background: white;
+    color: black !important;
+    opacity: 1 !important;
+  }
+
+}

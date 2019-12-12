@@ -155,7 +155,7 @@
             "grid": {
                 "spacing": 20,
                 "length": 2,
-                "colour": "rgba(189, 195, 199, 0.20)",
+                "colour": "#fdf4e8",
                 "snap": true
             }
         },

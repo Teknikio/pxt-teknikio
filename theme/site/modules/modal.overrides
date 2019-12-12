@@ -2,6 +2,24 @@
          Site Overrides
 *******************************/
 
+#projectNameInput {
+  color: white;
+}
+
+/* Tutorial hint dialog */
+.ui.modal.hintdialog {
+  background: #1d6434;
+  border: solid 25px #6f4324;
+  border-radius: 0px;
+  .header, .content, .actions {
+    background: transparent;
+  }
+}
+
+.ui.info.message {
+  color: white;
+}
+
 .ui.button, .collapse-button.ui.button {
   &:extend(.ui.grey.button all);
 }

@@ -9,6 +9,53 @@
 /* Reference import */
 @import (reference) "semantic.less";
 
+/****************************************
+    Custom Javascript/Monaco Editor CSS
+*****************************************/
+
+#filelist {
+  .ui.tiny:nth-child(5), .ui.tiny:nth-child(6) {
+    background-color: @mustard;
+  }
+}
+
+/* Javascript Text Styling */
+
+.mtk23 {
+  color: #00cc44;
+}
+
+.mtk9 {
+  color: #8585ad;
+}
+
+.mtk1 {
+  color: #a6a6a6;
+}
+
+/**********************************
+    Custom Home/Landing Page CSS
+***********************************/
+
+.ui.home {
+  color: #2F5EA8 !important;
+}
+
+.ui.home.projectsdialog {
+  .tabsegment  {
+    padding-top: 0 !important;
+  }
+  .ui.inverted.menu {
+    background: #FFFFFF;
+  }
+  .getting-started-segment {
+    margin-top: 3rem !important;
+    background-position: 50% 75%;
+    background-color: #FFFFFF;
+    background-size: contain;
+  }
+}
+
 /*******************************
     Custom editor CSS
 *******************************/
@@ -25,26 +72,6 @@
 
 /* Header */
 
-#editortoggle {
-  border-radius: 5px !important;
-  border: 3px solid black;
-
-  .ui.item.link.blocks-menuitem, .ui.item.link.javascript-menuitem {
-    color: black !important;
-    border-radius: 0px !important;
-    background: transparent !important;
-  }
-
-  .ui.item.toggle {
-    border-radius: 0px !important;
-    background: transparent !important;
-  }
-
-  .menubar .ui.menu.fixed .item.editor-menuitem .ui.grid {
-    background: black;
-  }
-}
-
 #mainmenu {
   .ui.logo {
     display: none;
@@ -59,7 +86,7 @@
   .ui.icon.small.buttons {
     button {
       background-color: #FFFFFF;
-      border: 2px solid @grey;
+      border: 2px solid @darkGrey;
       opacity: 1 !important;
 
       &:last-child {
@@ -74,24 +101,11 @@
   display: none; // stop pushing other elements to the right
 }
 
-/* Javascript/Monaco View */
-
-#filelist {
-  .ui.tiny:nth-child(5), .ui.tiny:nth-child(6) {
-    background-color: @mustard;
-  }
-}
-
 /* Icons */
 
-/* Tutorial hint dialog */
-.ui.modal.hintdialog {
-  background: #1d6434;
-  border: solid 25px #6f4324;
-  border-radius: 0px;
-  .header, .content, .actions {
-    background: transparent;
-  }
+.projectname-computer > .ui.button.editortools-github-btn {
+  // github icon in footer
+  background-color: #FFFFFF;
 }
 
 .avatar-container .tooltip {
@@ -101,26 +115,6 @@
 /* Side docs and simulator collapse toggles */
 #togglesim, #sidedocstoggle {
   background: @primaryColor;
-}
-
-
-.ui.home {
-    color: #2F5EA8 !important;
-}
-
-.ui.home.projectsdialog {
-    .tabsegment  {
-        padding-top: 0 !important;
-    }
-    .ui.inverted.menu {
-        background: #FFFFFF;
-    }
-    .getting-started-segment {
-        margin-top: 3rem !important;
-        background-position: 50% 75%;
-        background-color: #FFFFFF;
-        background-size: contain;
-    }
 }
 
 /* PXT Json */

@@ -27,11 +27,14 @@
 --------------------*/
 
 /*---  Colors  ---*/
+@white            : #FFFFFF;
 @black            : #2d3436;
 @blue             : #5DBCD2;
 @darkBlue         : #2F5EA8;
 @green            : #40bf4a;
 @darkGreen        : #092C3A;
+@lightGrey        : #C1C1C1;
+@midGrey          : #6C6B6B;
 @grey             : #3C444A;
 @darkGrey         : #292F36;
 @orange           : #d25b33;
@@ -52,7 +55,7 @@
 @secondaryColor      : @darkPurple;
 
 @lightPrimaryColor   : @lightBlue;
-@lightSecondaryColor : @lightGrey;
+@lightSecondaryColor : @grey;
 
 /*--------------
    Form Input
@@ -100,7 +103,7 @@
 
 @simulatorBackground: @darkGrey;
 @editorToolsBackground: @simulatorBackground;
-@blocklySvgColor: @grey;
+@blocklySvgColor: @lightGrey;
 
 @homeScreenBackground: #ecf0f1;
 @contentBackground: @grey;
@@ -116,7 +119,7 @@
    Editor
 --------------------*/
 
-@blocklyToolboxColor: @grey;
+@blocklyToolboxColor: @midGrey;
 @trashIconColor: @primaryColor;
 
 /*-------------------
