@@ -4,16 +4,20 @@
 
 #mainmenu {
   .icon {
-    color: @grey !important;
+    color: @darkGrey !important;
 
     span {
-      color: @grey !important;
+      color: @darkGrey !important;
     }
   }
 }
 
 #editortools {
   .icon {
-    color: @grey;
+    color: @darkGrey;
   }
+}
+
+.icon {
+  opacity: 1 !important;
 }

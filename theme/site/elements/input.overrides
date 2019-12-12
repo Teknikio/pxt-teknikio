@@ -4,20 +4,26 @@
 
 #projectNameArea {
 
+  opacity: 1 !important;
+
   button {
-    border: 2px solid @grey;
+    border: 2px solid @darkGrey;
   }
 
   #fileNameInput2 {
     background: #FFFFFF !important;
-    color: @grey !important;
-    border: 2px solid @grey;
+    color: @darkGrey !important;
+    border: 2px solid @darkGrey;
   }
 
   button.small {
     background-color: #FFFFFF;
-    color: @grey;
+    color: @darkGrey;
   }
 
+}
+
+input.ui {
+  color: white !important;
 }
 

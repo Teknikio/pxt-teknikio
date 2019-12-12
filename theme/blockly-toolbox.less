@@ -22,16 +22,20 @@ div.blocklyTreeRow {
 /* Search box */
 #blocklySearchArea {
     margin: 0.1rem 0.5rem 0.5rem;
+
+    .ui.icon.input > .i.icon::after, .ui.icon.input > i.icon::before {
+        top: 59%;
+    }
 }
 #blocklySearchInput {
     padding-top: 10px;
 }
 .blocklySearchInputField {
-    border: 1px solid @darkGrey !important;
+    border: 1px solid @midGrey !important;
     border-radius: 2.5rem !important;
 }
 .blocklySearchInputField:focus {
-    border: 1px solid @grey !important;
+    border: 1px solid @lightGrey !important;
 }
 
 /* Blocks */
