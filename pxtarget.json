@@ -164,12 +164,15 @@
           "insertionMarkerOpacity": 0.5
         },
         "blockColors": {
-          "loops": "#40bf4a",
-          "logic": "#4cbfe6",
-          "math": "#9966ff",
-          "variables": "#FF6680",
+          "pins": "#185C87",
+          "mixer": "#185C87",
+          "light": "#185C87",
+          "variables": "#E6B901",
+          "math": "#E6B901",
+          "loops": "#7ED321",
+          "logic": "#7ED321",
           "text": "#ffab19",
-          "advanced": "#00272B",
+          "advanced": "#F04D3A",
           "functions": "#005a9e",
           "arrays": "#8A1C7C"
         },
