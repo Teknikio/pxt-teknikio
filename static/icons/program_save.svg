@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>program_save</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="program_save" transform="translate(1.000000, 1.000000)" stroke="#6C6B6B">
+            <g id="Shape">
+                <g id="Group" transform="translate(0.942857, 0.942857)">
+                    <circle id="Oval" stroke-width="3" cx="15.0857143" cy="21.6857143" r="4.71428571"></circle>
+                    <path d="M25.0413939,0.671282279 L30.5435107,6.17339909 C30.9185834,6.54847185 31.1292971,7.05717967 31.1292971,7.58761265 L31.1292971,29.190367 C31.1292971,30.2949365 30.2338666,31.190367 29.1292971,31.190367 L2,31.190367 C0.8954305,31.190367 1.3527075e-16,30.2949365 0,29.190367 L0,2.08549584 C-1.3527075e-16,0.980926342 0.8954305,0.0854958413 2,0.0854958413 L23.6271803,0.0854958413 C24.1576133,0.0854958413 24.6663211,0.296209522 25.0413939,0.671282279 Z" id="Path-4" stroke-width="3"></path>
+                    <path d="M5.65714286,0 L5.65714286,8.37142857 C5.65714286,9.47599807 6.55257336,10.3714286 7.65714286,10.3714286 L21.5714286,10.3714286 C22.6759981,10.3714286 23.5714286,9.47599807 23.5714286,8.37142857 L23.5714286,0 L23.5714286,0" id="Path-5" stroke-width="3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

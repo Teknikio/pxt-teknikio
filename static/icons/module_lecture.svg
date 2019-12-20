@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="26px" viewBox="0 0 31 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>module_lecture</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/Stylized-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="0702_Module-Page" transform="translate(-39.000000, -1410.000000)" stroke="#000000">
+            <g id="module_lecture" transform="translate(41.000000, 1412.000000)">
+                <g id="Group-4">
+                    <path d="M13.454333,2.58594507 L13.454333,21.6994181 C11.4884599,20.0218554 9.05186053,19.183074 6.14453488,19.183074 C3.23720923,19.183074 1.18903094,20.0218554 0,21.6994181 L0,2.58594507 C1.3104716,0.861981691 3.35864989,0 6.14453488,0 C8.93041987,0 11.3670192,0.861981691 13.454333,2.58594507 Z" id="Path-2" stroke-width="3"></path>
+                    <path d="M26.8661765,2.58594507 L26.8661765,21.6994181 C24.9003035,20.0218554 22.4637041,19.183074 19.5563785,19.183074 C16.6490528,19.183074 14.6008745,20.0218554 13.4118436,21.6994181 L13.4118436,2.58594507 C14.7223152,0.861981691 16.7704935,0 19.5563785,0 C22.3422634,0 24.7788628,0.861981691 26.8661765,2.58594507 Z" id="Path-2-Copy" stroke-width="3" transform="translate(20.139010, 10.849709) scale(-1, 1) translate(-20.139010, -10.849709) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

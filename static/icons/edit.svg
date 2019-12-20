@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>UI_download_controlcenter</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/Stylized-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0303_My-Profile---Teacher---Bluebird-Activity---Expanded-Accordion-Not-Connected" transform="translate(-510.000000, -695.000000)" stroke="#6C6B6B" stroke-width="2">
+            <g id="UI_download_controlcenter" transform="translate(511.000000, 696.000000)">
+                <g id="pencil-copy">
+                    <line x1="11.2" y1="2.11111111" x2="15.8153846" y2="6.98290598" id="Shape"></line>
+                    <line x1="1.6" y1="12.6666667" x2="6.21538462" y2="17.5384615" id="Shape"></line>
+                    <path d="M5.35402233,18.0580887 L1.3794792,18.7573138 C0.835547635,18.8530055 0.317030555,18.4896353 0.221338891,17.9457037 C0.202193003,17.8368744 0.2012172,17.7256244 0.218451151,17.616476 L0.892337056,13.348532 L0.892337056,13.348532 L13.0156283,0.551724565 C13.7125435,-0.183908188 14.8422422,-0.183908188 15.5391575,0.551724565 L17.4773136,2.59755599 C18.1742288,3.33318874 18.1742288,4.52564849 17.4773136,5.26128125 L5.35402233,18.0580887 Z" id="Shape" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
