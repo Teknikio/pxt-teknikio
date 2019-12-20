@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="17px" viewBox="0 0 15 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>icon_blocks_audio</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/Stylized-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0503_Tools---Program-Makecode-Integration" transform="translate(-353.000000, -355.000000)" fill="#FFFFFF">
+            <g id="Group-2-Copy" transform="translate(339.000000, 345.000000)">
+                <g id="icon_blocks_audio" transform="translate(14.000000, 10.000000)">
+                    <path d="M15,13 C15,14.6568542 13.6568542,16 12,16 C10.3431458,16 9,14.6568542 9,13 C9,11.3431458 10.3431458,10 12,10 C12.350972,10 12.6878673,10.0602698 13.0009007,10.1710242 L13,3 L6,3 L6,14 C6,15.5976809 4.75108004,16.9036609 3.17627279,16.9949073 L3,17 C1.34314575,17 0,15.6568542 0,14 C0,12.3431458 1.34314575,11 3,11 C3.35097203,11 3.6878673,11.0602698 4.00090072,11.1710242 L4,1.98933499 L4,2 C4,0.8954305 4.8954305,2.02906125e-16 6,0 L13,0 C14.1045695,-2.02906125e-16 15,0.8954305 15,2 Z" id="audio-copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

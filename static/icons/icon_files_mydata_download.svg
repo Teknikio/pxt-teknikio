@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="36px" viewBox="0 0 34 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/Stylized-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="0206_My-Profile---Student----My-Data---Hover-File" transform="translate(-233.000000, -807.000000)" stroke="#2C3F99" stroke-width="3">
+            <g id="Group-3" transform="translate(174.000000, 809.000000)">
+                <g id="Group" transform="translate(61.000000, 0.000000)">
+                    <polyline id="Path" points="0 23.2727273 0 32 30.0606061 32 30.0606061 23.2727273"></polyline>
+                    <polyline id="Path" points="5.81818182 13.5757576 15.030303 22.3030303 24.2424242 13.5757576"></polyline>
+                    <line x1="15.0588235" y1="0" x2="15.0588235" y2="22.3030303" id="Path"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

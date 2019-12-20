@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="18px" viewBox="0 0 31 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>module_handson_code</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/Stylized-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="0702_Module-Page" transform="translate(-82.000000, -1414.000000)" stroke="#000000">
+            <g id="module_handson_code" transform="translate(83.000000, 1414.000000)">
+                <g id="Group-5">
+                    <polyline id="Rectangle" stroke-width="3" transform="translate(19.500000, 8.939340) rotate(-45.000000) translate(-19.500000, -8.939340) " points="23.3180195 3 25.4393398 14.8786797 13.5606602 12.7573593"></polyline>
+                    <polyline id="Rectangle-Copy-2" stroke-width="3" transform="translate(8.939340, 8.939340) scale(-1, 1) rotate(-45.000000) translate(-8.939340, -8.939340) " points="12.7573593 3 14.8786797 14.8786797 3 12.7573593"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

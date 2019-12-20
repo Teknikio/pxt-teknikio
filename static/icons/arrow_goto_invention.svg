@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="34px" viewBox="0 0 40 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/Stylized-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="0203_My-Profile---Student---Invention-Hover-(Published-Invention)" transform="translate(-843.000000, -751.000000)" stroke="#6C6B6B" stroke-width="6">
+            <g id="Group" transform="translate(863.000000, 768.000000) rotate(270.000000) translate(-863.000000, -768.000000) translate(849.000000, 751.000000)">
+                <polyline id="Path" points="-7.73070497e-12 21 14 34 28 21"></polyline>
+                <line x1="14" y1="0" x2="14" y2="34" id="Path"></line>
+            </g>
+        </g>
+    </g>
+</svg>
