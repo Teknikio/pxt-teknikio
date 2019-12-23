@@ -19,46 +19,6 @@
  * Custom blocks
  */
 
-// //% weight=50 color=#185C87 icon=""
-// namespace custom {
-//
-//
-//   // Sample Block Definition:
-//   //
-//   // /**
-//   //  * TODO: describe your function here
-//   //  * @param n describe parameter here, eg: 5
-//   //  * @param s describe parameter here, eg: "Hello"
-//   //  * @param e describe parameter here
-//   //  */
-//   // //% block
-//   // export function foo(n: number, s: string, e: MyEnum): void {
-//   //   // Add code here
-//   // }
-//
-//   /**
-//    * Given a number, "n" print the fibonacci sequence up to the n-th number.
-//    * @param n user-defined number, eg: 5
-//    */
-//   //% block
-//   export function fib(n: number): number {
-//     return n <= 1 ? n : fib(n -1) + fib(n - 2);
-//   }
-// }
-//
-// //% weight=90 color=#81ecec icon="" block="Custom Two"
-// namespace custom_two {
-//
-//   /**
-//    * Print a message
-//    * @param msg user defined message, eg: "Hello"
-//    */
-//   //% block
-//   export function print(msg: string): void {
-//     console.log(msg);
-//   }
-//
-// }
 
 //% weight=50 color=#51031D icon="" block="DEVICES"
 namespace devices {

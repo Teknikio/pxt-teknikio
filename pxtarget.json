@@ -1,8 +1,8 @@
 {
     "id": "teknikio-bluebird",
     "name": "bluebird",
-    "corepkg": "teknikio-bluebird",
     "title": "Teknikio Bluebird - Blocks / Javascript Editor",
+    "corepkg": "teknikio-bluebird",
     "description": "A Blocks / Javascript code editor for the Teknikio Bluebird",
     "bundleddirs": [
         "libs/base",
@@ -90,9 +90,9 @@
         "functionsOptions": {
           "useNewFunctions": true
         },
-        "onStartNamespace": "loops",
-        "onStartColor": "#40bf4a",
         "onStartWeight": 100,
+        "onStartNamespace": "pins",
+        "onStartColor": "#40bf4a",
         "bannedCategories": [
           "jacdac"
         ]
@@ -186,6 +186,10 @@
         },
         "simAnimationEnter": "roll in",
         "simAnimationExit": "roll out",
+        "allowParentController": true,
+        "hideMenuBar": true,
+        "hideEditorToolbar": true,
+        "hideCookieNotice": true,
         "debugger": true,
         "highContrast": true,
         "greenScreen": true,
