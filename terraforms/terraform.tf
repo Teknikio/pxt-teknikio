@@ -2,7 +2,7 @@ provider "aws" {
   access_key = "${var.aws_access_key}"
   secret_key = "${var.aws_secret_key}"
   region     = "${var.aws_region}"
-  version = "~> 2.7"
+  version    = "~> 2.7"
 }
 
 locals {
@@ -30,61 +30,61 @@ resource "aws_ecr_repository" "service-repository-prod" {
 }
 
 resource "aws_cloudformation_stack" "vpc_int" {
-  name = "${local.aws_vpc_stack_name}-int"
+  name          = "${local.aws_vpc_stack_name}-int"
   template_body = "${file("cloudformations/public-vpc.yml")}"
-  capabilities = ["CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"]
+  capabilities  = ["CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"]
 
   parameters = {
-    ClusterName = "${local.aws_ecs_cluster_name}-int"
-    ExecutionRoleName = "${local.aws_ecs_execution_role_name}-int"
-    LoadBalancerCertificateArn = "arn:aws:acm:us-east-1:937787653866:certificate/e8a15f53-0056-48e8-b4c1-7c255cd3a862"
+    ClusterName                = "${local.aws_ecs_cluster_name}-int"
+    ExecutionRoleName          = "${local.aws_ecs_execution_role_name}-int"
+    LoadBalancerCertificateArn = "arn:aws:acm:us-east-1:487619204073:certificate/52b0dcae-a232-40a1-87ba-780d62243087"
   }
 }
 
 # Note: creates task definition and task definition family with the same name as the ServiceName parameter value
 resource "aws_cloudformation_stack" "ecs_service_int" {
-  name = "${local.aws_ecs_service_stack_name}-int"
+  name          = "${local.aws_ecs_service_stack_name}-int"
   template_body = "${file("cloudformations/public-service.yml")}"
-  depends_on = ["aws_cloudformation_stack.vpc_int"]
+  depends_on    = ["aws_cloudformation_stack.vpc_int"]
 
-parameters = {
+  parameters = {
     ContainerMemory = 1024
-    ContainerPort = 3232
-    ImageUrl = "937787653866.dkr.ecr.us-east-1.amazonaws.com/teknikio-int:latest"
-    StackName = "${local.aws_vpc_stack_name}-int"
-    ServiceName = "${local.aws_ecs_service_name}-int"
-    UseSSL = "true"
+    ContainerPort   = 3232
+    ImageUrl        = "937787653866.dkr.ecr.us-east-1.amazonaws.com/pxt-tek-int:latest"
+    StackName       = "${local.aws_vpc_stack_name}-int"
+    ServiceName     = "${local.aws_ecs_service_name}-int"
+    UseSSL          = "true"
     # Note: Since ImageUrl parameter is not specified, the Service
     # will be deployed with the nginx image when created
   }
 }
 
 resource "aws_cloudformation_stack" "vpc_prod" {
-  name = "${local.aws_vpc_stack_name}-prod"
+  name          = "${local.aws_vpc_stack_name}-prod"
   template_body = "${file("cloudformations/public-vpc.yml")}"
-  capabilities = ["CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"]
+  capabilities  = ["CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"]
 
   parameters = {
-    ClusterName = "${local.aws_ecs_cluster_name}-prod"
-    ExecutionRoleName = "${local.aws_ecs_execution_role_name}-prod"
-    LoadBalancerCertificateArn = "arn:aws:acm:us-east-1:937787653866:certificate/e8a15f53-0056-48e8-b4c1-7c255cd3a862"
+    ClusterName                = "${local.aws_ecs_cluster_name}-prod"
+    ExecutionRoleName          = "${local.aws_ecs_execution_role_name}-prod"
+    LoadBalancerCertificateArn = "	arn:aws:acm:us-east-1:487619204073:certificate/52b0dcae-a232-40a1-87ba-780d62243087"
   }
 }
 
 # Note: creates task definition and task definition family with the same name as the ServiceName parameter value
 resource "aws_cloudformation_stack" "ecs_service_prod" {
-  name = "${local.aws_ecs_service_stack_name}-prod"
+  name          = "${local.aws_ecs_service_stack_name}-prod"
   template_body = "${file("cloudformations/public-service.yml")}"
-  depends_on = ["aws_cloudformation_stack.vpc_prod"]
+  depends_on    = ["aws_cloudformation_stack.vpc_prod"]
 
   parameters = {
     ContainerMemory = 1024
-    ContainerPort = 3232
-    ImageUrl = "937787653866.dkr.ecr.us-east-1.amazonaws.com/teknikio-prod:latest"
-    StackName = "${local.aws_vpc_stack_name}-prod"
-    ServiceName = "${local.aws_ecs_service_name}-prod"
-    UseSSL = true
-    DesiredCount = 3
+    ContainerPort   = 3232
+    ImageUrl        = "937787653866.dkr.ecr.us-east-1.amazonaws.com/teknikio-prod:latest"
+    StackName       = "${local.aws_vpc_stack_name}-prod"
+    ServiceName     = "${local.aws_ecs_service_name}-prod"
+    UseSSL          = true
+    DesiredCount    = 3
     # Note: Since ImageUrl parameter is not specified, the Service
     # will be deployed with the nginx image when created
   }
