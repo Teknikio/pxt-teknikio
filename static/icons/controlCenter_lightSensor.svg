@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>controlCenter_lightSensor</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,10.8911498 C0,16.8518761 4.84340724,21.6831902 10.817707,21.6831902 L10.817707,21.6831902 C16.7920067,21.6831902 21.6365055,16.8518761 21.6365055,10.8911498 L21.6365055,10.8911498 C21.6365055,4.92933441 16.7920067,0.0969312334 10.817707,0.0969312334 L10.817707,0.0969312334 C4.84340724,0.0969312334 0,4.92933441 0,10.8911498 L0,10.8911498 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="V1_UI_ControlCenter_Active-Copy" transform="translate(-723.000000, -604.000000)">
+            <g id="controlCenter_lightSensor" transform="translate(725.000000, 606.000000)">
+                <g id="Light-Sensor-(New)">
+                    <g id="Group-3">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <polygon id="Fill-1" fill="#6C6B6B" mask="url(#mask-2)" points="10.817707 22.6209182 23.4474617 22.6209182 23.4474617 -1.02376808 10.817707 -1.02376808"></polygon>
+                    </g>
+                    <path d="M10.817707,0 C16.7920067,0 21.6354139,4.83240318 21.6354139,10.7931295 C21.6354139,16.7538558 16.7920067,21.586259 10.817707,21.586259 C4.84340724,21.586259 0,16.7538558 0,10.7931295 C0,4.83240318 4.84340724,0 10.817707,0 Z" id="Stroke-4" stroke="#6C6B6B" stroke-width="2.16" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

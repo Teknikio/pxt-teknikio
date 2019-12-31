@@ -5,128 +5,140 @@
 @import 'themes/default/globals/site.variables';
 @import 'themes/pxt/globals/site.variables';
 @import 'site/globals/site.variables';
-@import 'themes/default/collections/menu.variables';
 
 /* Reference import */
 @import (reference) "semantic.less";
 
-@font-face  {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Regular'), local('OpenSans-Regular')
+/****************************************
+    Custom Javascript/Monaco Editor CSS
+*****************************************/
+
+#filelist {
+  .ui.tiny:nth-child(5), .ui.tiny:nth-child(6) {
+    background-color: @mustard;
+  }
+}
+
+/* Javascript Text Styling */
+
+.mtk23 {
+  color: #00cc44;
+}
+
+.mtk9 {
+  color: #8585ad;
+}
+
+.mtk1 {
+  color: #a6a6a6;
+}
+
+/**********************************
+    Custom Home/Landing Page CSS
+***********************************/
+
+.ui.home {
+  color: #2F5EA8 !important;
+}
+
+.ui.home.projectsdialog {
+  .tabsegment  {
+    padding-top: 0 !important;
+  }
+  .ui.inverted.menu {
+    background: #FFFFFF;
+  }
+  .getting-started-segment {
+    margin-top: 3rem !important;
+    background-position: 50% 75%;
+    background-color: #FFFFFF;
+    background-size: contain;
+  }
 }
 
 /*******************************
-    Add your custom CSS here
+    Custom editor CSS
 *******************************/
 
-.ui.button.download-button {
-    &:extend(.ui.secondary.button all);
+.simtoolbar {
+  &:extend(.ui.grey.button all);
 }
 
-.ui.button.editortools-btn {
-    &:extend(.ui.blue.button all);
+/* Simulator */
+
+#boardview {
+  padding-top: 30px !important;
 }
 
-.projectname-input {
-    &:extend(.inverted all);
+/* Header */
+
+#mainmenu {
+  .ui.logo {
+    display: none;
+  }
 }
 
-.ui.button.getting-started-btn {
-    &:extend(.ui.green.button all);
-}
+/* Footer */
 
-.ui.button.exit-tutorial-btn {
-    &:extend(.ui.blue.button all);
-}
+#editortools { // #editorTools = footer
+  background-color: #FFFFFF;
 
-.simtoolbar .ui.button, .collapse-button.ui.button {
-    &:extend(.ui.grey.button all);
-}
+  .ui.icon.small.buttons {
+    button {
+      background-color: #FFFFFF;
+      border: 2px solid @darkGrey;
+      opacity: 1 !important;
 
-/* Editor menu toggle */
-.ui.menu .item.editor-menuitem .ui.grid {
-    background: fade(@black, 20%) !important;
-}
-
-.ui.home {
-    color: #2F5EA8 !important;
-}
-
-.ui.card {
-    background: #5DBCD2 !important;
-
-    .newprojectcard {
-        background: #5DBCD2 !important;
+      &:last-child {
+        border-left: none;
+      }
     }
+  }
 }
 
-.sandboxfooter a:not(.thin) {
-    color:white !important;
+#downloadArea {
+  background: transparent !important; // covers top left area of footer
+  display: none; // stop pushing other elements to the right
 }
 
-/* Home screen */
-.ui.home.projectsdialog {
-    .tabsegment  {
-        padding-top: 0 !important;
-    }
-    .ui.inverted.menu {
-        background: #FFFFFF;
-    }
-    .getting-started-segment {
-        margin-top: 3rem !important;
-        background-position: 50% 75%;
-        background-color: #FFFFFF;
-        background-size: contain;
-    }
-}
+/* Icons */
 
-/* import dialog button */
-.ui.button.import-dialog-btn {
-    &:extend(.ui.inverted.button all);
-}
-
-/* Tutorial hint dialog */
-.ui.modal.hintdialog {
-    background: #1d6434;
-    border: solid 25px #6f4324;
-    border-radius: 0px;
-    .header, .content, .actions {
-        background: transparent;
-    }
-}
-
-.tutorialhint {
-    background: #394148;
+.projectname-computer > .ui.button.editortools-github-btn {
+  // github icon in footer
+  background-color: #FFFFFF;
 }
 
 .avatar-container .tooltip {
-    color: @white;
+  color: @white;
 }
 
 /* Side docs and simulator collapse toggles */
 #togglesim, #sidedocstoggle {
-    background: @primaryColor;
+  background: @primaryColor;
 }
 
 /* PXT Json */
 #pxtJsonEditor {
-    .ui.header {
-        color: @invertedTextColor;
-    }
+  .ui.header {
+    color: @invertedTextColor;
+  }
 }
+
+.sandboxfooter a:not(.thin) {
+  color:white !important;
+}
+
 
 /* Mobile */
 @media only screen and (max-width: @largestMobileScreen) {
-    #filelist {
-        background: transparent;
+  #filelist {
+    background: transparent;
+  }
+  .ui.home.projectsdialog {
+    .getting-started-segment {
+      background-size: cover;
     }
-    .ui.home.projectsdialog {
-        .getting-started-segment {
-            background-size: cover;
-        }
-    }
+  }
 }
 
 /* Tablet */
@@ -140,47 +152,10 @@
 /* Large Monitor */
 @media only screen and (min-width: @largeMonitorBreakpoint) {
 }
+
 /* Mobile, Tablet AND thin screen */
 @media only screen and (max-width: @largestTabletScreen) and (max-height: @thinEditorBreakpoint) {
-    .sandboxfooter a:not(.thin) {
-        color: @black !important;
-    }
-}
-
-/* >= Small Monitor (Small Monitor + Large Monitor + Wide Monitor) */
-@media only screen and (min-width: @computerBreakpoint) {
-
-    /* Tutorial hint dialog */
-    .ui.modal.hintdialog {
-        .header, .content, .actions {
-            padding-left: 120px;
-        }
-    }
-    .ui.modal.hintdialog:before {
-        content: " ";
-        position: absolute;
-        z-index: -1;
-        top: -6px;
-        left: -6px;
-        right: -6px;
-        bottom: -6px;
-        border: 2px solid #7A512E;
-    }
-    .ui.modal.hintdialog:after {
-        content: " ";
-        position: absolute;
-        z-index: 1;
-        top: -6px;
-        left: -20px;
-        right: -6px;
-        bottom: -6px;
-        width: 130px;
-        background-repeat: no-repeat;
-    }
-}
-
-// download dialog
-img.download-step {
-    height:182px;
-    width:300px
+  .sandboxfooter a:not(.thin) {
+    color: @black !important;
+  }
 }

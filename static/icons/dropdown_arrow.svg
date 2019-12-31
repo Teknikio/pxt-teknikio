@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Dropdown </title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/Stylized-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="My-Profile---Inventions" transform="translate(-913.000000, -263.000000)" fill="#6C6B6B" fill-rule="nonzero">
+            <g id="Group" transform="translate(559.000000, 246.000000)">
+                <path d="M359.276406,28.0864637 L354.20389,19.3907216 C353.727874,18.5746948 354.113761,17.5824142 355.065792,17.1744008 C355.333405,17.0597098 355.628495,17 355.927695,17 L366.072727,17 C367.137131,17 368,17.7396023 368,18.651948 C368,18.9084048 367.930339,19.1613397 367.796532,19.3907216 L362.724016,28.0864637 C362.248001,28.9024905 361.09034,29.2332507 360.138309,28.8252373 C359.765328,28.6653887 359.462896,28.4061609 359.276406,28.0864637 Z" id="Dropdown-"></path>
+            </g>
+        </g>
+    </g>
+</svg>
