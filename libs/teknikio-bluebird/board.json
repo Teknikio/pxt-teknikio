@@ -7,49 +7,119 @@
     "height": 300,
     "pinDist": 10,
     "pinBlocks": [{
-            "x": 33,
-            "y": 75,
-            "labels": ["3.3IN"]
-        },
-        {
             "x": 115,
             "y": 34,
-            "labels": ["GPIO2"]
+            "labels": ["D2/A2"]
         },
         {
             "x": 231,
             "y": 47,
-            "labels": ["GPIO1"]
+            "labels": ["D1/A1"]
         },
         {
-            "x": 170,
-            "y": 34,
+            "x": 175,
+            "y": 33,
             "labels": ["3.3VOUT"]
+        },
+        {
+            "x": 176,
+            "y": 255,
+            "labels": ["3.3VOUT"]
+        },
+        {
+            "x": 206,
+            "y": 159,
+            "labels": ["3.3VIN"]
+        },
+        {
+            "x": 206,
+            "y": 148,
+            "labels": ["D14"]
+        },
+        {
+            "x": 206,
+            "y": 137,
+            "labels": ["D13"]
+        },
+        {
+            "x": 206,
+            "y": 126,
+            "labels": ["D12"]
+        },
+        {
+            "x": 206,
+            "y": 115,
+            "labels": ["D11"]
+        },
+        {
+            "x": 206,
+            "y": 104,
+            "labels": ["D10"]
+        },
+        {
+            "x": 218,
+            "y": 159,
+            "labels": ["GND"]
+        },
+        {
+            "x": 218,
+            "y": 148,
+            "labels": ["D9"]
+        },
+        {
+            "x": 218,
+            "y": 137,
+            "labels": ["D8"]
+        },
+        {
+            "x": 218,
+            "y": 126,
+            "labels": ["D7"]
+        },
+        {
+            "x": 218,
+            "y": 115,
+            "labels": ["D6/A6"]
+        },
+        {
+            "x": 218,
+            "y": 104,
+            "labels": ["D5/A5"]
         },
         {
             "x": 233,
             "y": 240,
-            "labels": ["GPIO4"]
+            "labels": ["D4/A4"]
         },
         {
             "x": 117,
             "y": 253,
-            "labels": ["GPIO3"]
+            "labels": ["D3/A3"]
         },
         {
-            "x": 32,
-            "y": 215,
+            "x": 69,
+            "y": 228,
+            "labels": ["GND"]
+        },
+        {
+            "x": 67,
+            "y": 62,
+            "labels": ["GND"]
+        },
+        {
+            "x": 288,
+            "y": 211,
+            "labels": ["GND"]
+        },
+        {
+            "x": 288,
+            "y": 78,
             "labels": ["GND"]
         }
     ],
     "leds": [{
-            "x": 380,
-            "y": 250,
-            "color": "#ff4545",
-            "label": "LED"
-        },{
-            "x": 420,
-            "y": 210,
+            "x": 231,
+            "y": 173,
             "w": 25,
             "color": "neopixel",
             "label": "NEOPIXEL"
@@ -62,10 +132,12 @@
         "A0": "GPIO1",
         "A1": "GPIO4",
         "A2": "GPIO3",
-        "A3": "GPIO2"
+        "A3": "GPIO2",
+        "A4": "D14",
+        "A5": "D13"
   },
   "groundPins": ["GND"],
-  "threeVoltPins": ["3.3IN", "3.3VOUT"],
+  "threeVoltPins": ["3.3VIN", "3.3VOUT"],
   "onboardComponents": [],
   "marginWhenBreadboarding": [
     0,
