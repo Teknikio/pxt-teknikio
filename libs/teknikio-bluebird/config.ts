@@ -18,7 +18,6 @@ namespace config {
     export const PIN_D14 = DAL.P0_11;
 
     export const PIN_LIGHT = DAL.P0_28;
-    export const PIN_LIHGT_ENABLE = DAL.P0_30;
 
     export const PIN_NEOPIXEL = DAL.P0_26;
 

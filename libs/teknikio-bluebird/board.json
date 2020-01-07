@@ -141,7 +141,7 @@
         "D10": "D10",
         "D12": "D11",
         "D13": "D12",
-        "D14": "D13",
+        "D14": "D13"
   },
   "groundPins": ["GND"],
   "threeVoltPins": ["3.3VIN", "3.3VOUT"],
