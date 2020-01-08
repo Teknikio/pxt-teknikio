@@ -28,7 +28,8 @@
         "libs/serial",
         "libs/jacdac",
         "libs/teknikio-bluebird",
-        "libs/core---nrf52832"
+        "libs/core---nrf52832",
+        "libs/core---nrf52840"
     ],
     "serial": {
       "useHF2": true,
