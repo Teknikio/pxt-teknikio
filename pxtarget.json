@@ -47,28 +47,28 @@
       }
     },
     "compile": {
-      "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/nrf52.cfg]",
+      "openocdScript": "source [find board/nrf52-dk.cfg]",
       "flashChecksumAddr": 0,
       "deployFileMarker": "MBED.HTM",
-      "vtableShift": 3,
+      "vtableShift": 4,
       "useUF2": false,
       "webUSB": false,
-      "gc": true
+      "uf2Family": "0x1b57745f"
     },
     "compileService": {
       "codalTarget": {
-      "name": "codal-ble-nano",
-      "url": "https://github.com/lancaster-university/codal-ble-nano",
-      "branch": "v0.0.3-jacdac-v0.0",
-      "type": "git"
-    },
-      "codalBinary": "BLE_NANO",
-      "serviceId": "codal2ble",
+        "name": "codal-nrf52840-dk",
+        "url": "https://github.com/mmoskal/codal-nrf52840-dk",
+        "branch": "v0.0.12",
+        "type": "git"
+      },
+      "codalBinary": "NRF52840_DK",
+      "serviceId": "codal2nrf52840",
       "dockerImage": "pext/yotta:latest",
       "yottaConfig": {
-      "pxt": {
+        "pxt": {
           "board": {
-            "id": "BOARD_ID_NRF52832"
+              "id": "BOARD_ID_NRF52840"
           }
         }
       }
@@ -123,6 +123,8 @@
         "termsOfUseUrl": "https://www.teknikio.com/pages/terms-and-conditions",
         "githubUrl": "https://github.com/Teknikio/pxt-teknikio",
         "boardName": "Teknikio Bluebird",
+        "driveDisplayName": "Bluebird",
+        "uploadMessage": "Download",
         "docMenu": [
             {
                 "name": "About",
@@ -180,7 +182,7 @@
         },
         "simAnimationEnter": "roll in",
         "simAnimationExit": "roll out",
-        "allowParentController": true,
+        "allowParentController": false,
         "hideMenuBar": false,
         "hideEditorToolbar": false,
         "hideCookieNotice": true,
