@@ -5,11 +5,12 @@
 #include "NRF52Microphone.h"
 #include "NRF52Pin.h"
 #include "NRF52PWM.h"
-#include "MbedI2C.h"
-#include "MbedPin.h"
+// #include "MbedI2C.h"
+// #include "MbedPin.h"
 #include "MultiButton.h"
-#include "MbedTimer.h"
+//#include "MbedTimer.h"
 #include "NRF52SPI.h"
+#include "NRF52Timer.h"
 
 #define PAGE_SIZE 4096
 
@@ -21,10 +22,10 @@
 // Codal doesn't yet distinguish between PWM and AIN
 #define DEV_ANALOG_PINS (DEV_PWM_PINS | DEV_AIN_PINS)
 
-#define CODAL_MBED codal::_mbed
+//#define CODAL_MBED codal::_mbed
 #define CODAL_PIN NRF52Pin
 #define CODAL_SPI NRF52SPI
-// #define CODAL_TIMER NRF52Timer
+#define CODAL_TIMER NRF52Timer
 
 #define IMAGE_BITS 4
 

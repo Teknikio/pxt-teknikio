@@ -9,9 +9,8 @@
         "board.json",
         "board.svg"
     ],
-    "core": true,
     "dependencies": {
-        "core---nrf52832": "file:../core---nrf52832",
+        "core---nrf52840": "file:../core---nrf52840",
         "buttons": "file:../buttons",
         "mixer": "file:../mixer",
         "light": "file:../light"
