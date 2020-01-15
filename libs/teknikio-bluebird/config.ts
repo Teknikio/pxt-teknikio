@@ -20,6 +20,7 @@ namespace config {
     export const PIN_LIGHT = DAL.P0_28;
 
     export const PIN_NEOPIXEL = DAL.P0_26;
+    export const PIN_LED = DAL.P0_27;
 
     export const PIN_ACCELEROMETER_SCL = DAL.P1_11;
     export const PIN_ACCELEROMETER_SDA = DAL.P1_12;

@@ -10,10 +10,7 @@
         "board.svg"
     ],
     "dependencies": {
-        "core---nrf52840": "file:../core---nrf52840",
-        "buttons": "file:../buttons",
-        "mixer": "file:../mixer",
-        "light": "file:../light"
+        "core---nrf52840": "file:../core---nrf52840"
     },
     "public": true,
     "features": [

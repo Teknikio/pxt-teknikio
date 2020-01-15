@@ -5,13 +5,15 @@
 #include "NRF52Microphone.h"
 #include "NRF52Pin.h"
 #include "NRF52PWM.h"
+#include "NRF52I2C.h"
 // #include "MbedI2C.h"
 // #include "MbedPin.h"
 #include "MultiButton.h"
 //#include "MbedTimer.h"
 #include "NRF52SPI.h"
-#include "NRF52Timer.h"
+#include "Timer.h"
 
+#define NRF52
 #define PAGE_SIZE 4096
 
 #define DEV_NUM_PINS 32
@@ -25,10 +27,11 @@
 //#define CODAL_MBED codal::_mbed
 #define CODAL_PIN NRF52Pin
 #define CODAL_SPI NRF52SPI
-#define CODAL_TIMER NRF52Timer
+#define CODAL_I2C NRF52I2C
+#define CODAL_TIMER Timer
 
 #define IMAGE_BITS 4
-
+typedef uint8_t PinName;
 // The parameters below needs tuning!
 
 /*
