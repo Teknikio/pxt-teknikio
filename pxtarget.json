@@ -5,6 +5,7 @@
     "corepkg": "teknikio-bluebird",
     "description": "A Blocks / Javascript code editor for the Teknikio Bluebird",
     "bundleddirs": [
+        "libs/base",
         "libs/core",
         "libs/buttons",
         "libs/accelerometer",
@@ -24,7 +25,6 @@
         "libs/serial",
         "libs/jacdac",
         "libs/teknikio-bluebird",
-        "libs/core---nrf52832",
         "libs/core---nrf52840"
     ],
     "serial": {

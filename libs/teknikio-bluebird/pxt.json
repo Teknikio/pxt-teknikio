@@ -12,6 +12,9 @@
     "dependencies": {
         "core---nrf52840": "file:../core---nrf52840"
     },
+    "dalDTS": {
+      "corePackage": "../core---nrf52840"
+    },
     "public": true,
     "features": [
         "pina0",
