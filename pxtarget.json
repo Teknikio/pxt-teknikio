@@ -49,7 +49,7 @@
       "vtableShift": 4,
       "useUF2": false,
       "webUSB": false,
-      "hasHex": true,
+      "hasHex": false,
       "gc": true,
       "uf2Family": "0x1b57745f"
     },

@@ -24,4 +24,6 @@ namespace config {
 
     export const PIN_ACCELEROMETER_SCL = DAL.P1_11;
     export const PIN_ACCELEROMETER_SDA = DAL.P1_12;
+
+    export const PIN_MICROPHONE = DAL.P1_15;
 }

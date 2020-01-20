@@ -17,7 +17,5 @@
     },
     "public": true,
     "features": [
-        "pina0",
-        "pina1"
     ]
 }
