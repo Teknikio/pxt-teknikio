@@ -10,10 +10,10 @@
         "board.svg"
     ],
     "dependencies": {
-        "core---nrf52840": "file:../core---nrf52840"
+        "core---nrf52840": "file:../core---nrf52"
     },
     "dalDTS": {
-      "corePackage": "../core---nrf52840"
+      "corePackage": "../core---nrf52"
     },
     "public": true,
     "features": [
