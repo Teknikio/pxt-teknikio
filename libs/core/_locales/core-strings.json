@@ -5,7 +5,7 @@
   "DigitalInOutPin.digitalWrite|block": "digital write|pin %name|to %value=toggleHighLow",
   "DigitalInOutPin.onEvent|block": "on|pin %pin|%event",
   "DigitalInOutPin.onPulsed|block": "on|pin %pin|pulsed %pulse",
-  "DigitalInOutPin.pulseIn|block": "pulse in (µs)|pin %name|pulsed %high||timeout %maxDuration (us)",
+  "DigitalInOutPin.pulseIn|block": "pulse in (µs)|pin %name|pulsed %high||timeout %maxDuration (µs)",
   "DigitalInOutPin.setPull|block": "set pull|pin %pin|to %pull",
   "PinEvent.Fall|block": "fall",
   "PinEvent.PulseHigh|block": "pulse high",
@@ -51,6 +51,7 @@
   "{id:category}I2C": "I2C",
   "{id:category}Light": "Light",
   "{id:category}Pins": "Pins",
+  "{id:category}PwmOnlyPin": "PwmOnlyPin",
   "{id:category}SPI": "SPI",
   "{id:group}Servo": "Servo",
   "{id:group}i2c": "i2c"

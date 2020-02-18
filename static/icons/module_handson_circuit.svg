@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="26px" viewBox="0 0 27 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI/Stylized-Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0702_Module-Page" transform="translate(-124.000000, -1410.000000)">
+            <g id="Group-7" transform="translate(126.000000, 1412.000000)">
+                <path d="M3,9 L3.00362393,8.73463775 C3.13619699,3.88681368 6.88940856,0 11.5,0 C16.1944204,0 20,4.02943725 20,9 L20,9 L20,18 L22,18 C22.5522847,18 23,18.4477153 23,19 L23,21 C23,21.5522847 22.5522847,22 22,22 L1,22 C0.44771525,22 6.76353751e-17,21.5522847 0,21 L0,19 C-6.76353751e-17,18.4477153 0.44771525,18 1,18 L3,18 L3,9 Z" id="LED" stroke="#000000" stroke-width="3"></path>
+                <path d="M12,9.25 C11.3096441,9.25 10.75,8.69035594 10.75,8 C10.75,7.30964406 11.3096441,6.75 12,6.75 C13.5187831,6.75 14.75,5.51878306 14.75,4 C14.75,3.30964406 15.3096441,2.75 16,2.75 C16.6903559,2.75 17.25,3.30964406 17.25,4 C17.25,6.89949494 14.8994949,9.25 12,9.25 Z" id="Oval-3" fill="#000000" transform="translate(14.000000, 6.000000) rotate(-90.000000) translate(-14.000000, -6.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

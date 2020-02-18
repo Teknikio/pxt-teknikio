@@ -1,3 +1,23 @@
 /*******************************
          Site Overrides
 *******************************/
+
+#mainmenu {
+  .icon {
+    color: @darkGrey !important;
+
+    span {
+      color: @darkGrey !important;
+    }
+  }
+}
+
+#editortools {
+  .icon {
+    color: @darkGrey;
+  }
+}
+
+.icon {
+  opacity: 1 !important;
+}
