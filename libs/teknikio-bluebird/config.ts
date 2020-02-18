@@ -16,13 +16,13 @@ namespace config {
     export const PIN_D12 = DAL.P0_8;
     export const PIN_D13 = DAL.P1_8;
     export const PIN_D14 = DAL.P0_11;
+    export const PIN_D15 = DAL.P0_30;
 
     export const PIN_LIGHT = DAL.P0_28;
-
     export const PIN_SPEAKER_AMP = DAL.P1_14;
 
     export const ACCELEROMETER_TYPE = DAL.ACCELEROMETER_TYPE_MPU6050;
     export const PIN_ACCELEROMETER_SCL = DAL.P1_11;
     export const PIN_ACCELEROMETER_SDA = DAL.P1_12;
-    export const PIN_ACCELEROMETER_INT = DAL.P0_10;
+    export const PIN_ACCELEROMETER_INT = DAL.P1_10;
 }

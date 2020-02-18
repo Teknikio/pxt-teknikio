@@ -15,7 +15,9 @@
         "light": "file:../light",
         "pulse": "file:../pulse",
         "jacdac": "file:../jacdac",
-        "accelerometer": "file:../accelerometer"
+        "accelerometer": "file:../accelerometer",
+        "lightsensor": "file:../lightsensor"
+
     },
     "public": true,
     "features": [
@@ -24,7 +26,6 @@
       "pina1",
       "music",
       "pinled",
-      "light",
       "jacdac",
       "accelerometer"
     ]

@@ -27,6 +27,8 @@ declare namespace pins {
     const D13: DigitalInOutPin;
     //% fixedInstance shim=pxt::getPin(PIN_D14)
     const D14: DigitalInOutPin;
+    //% fixedInstance shim=pxt::getPin(PIN_D15)
+    const LIGHT_ENABLE: DigitalInOutPin;
 
     //% fixedInstance shim=pxt::getPin(PIN_NEOPIXEL)
     const NEOPIXEL: DigitalInOutPin;
@@ -34,5 +36,5 @@ declare namespace pins {
 }
 
 declare namespace sensors{
-  
+
 }
