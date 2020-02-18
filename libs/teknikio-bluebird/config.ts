@@ -1,5 +1,5 @@
 namespace config {
-
+    export const PIN_NEOPIXEL = DAL.P1_15;
     export const NUM_NEOPIXELS = 1;
 
     export const PIN_A1 = DAL.P0_29;
@@ -19,11 +19,10 @@ namespace config {
 
     export const PIN_LIGHT = DAL.P0_28;
 
-    export const PIN_NEOPIXEL = DAL.P0_26;
-    export const PIN_LED = DAL.P0_27;
+    export const PIN_SPEAKER_AMP = DAL.P1_14;
 
+    export const ACCELEROMETER_TYPE = DAL.ACCELEROMETER_TYPE_MPU6050;
     export const PIN_ACCELEROMETER_SCL = DAL.P1_11;
     export const PIN_ACCELEROMETER_SDA = DAL.P1_12;
-
-    export const PIN_MICROPHONE = DAL.P1_15;
+    export const PIN_ACCELEROMETER_INT = DAL.P0_10;
 }
