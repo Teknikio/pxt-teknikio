@@ -34,7 +34,7 @@ namespace devices {
 
 }
 
-/* 
+/*
  * Blocks Added Via Extensions
  *     Add required libraries to libs/ folder and reference as a dependency in libs/teknikio-bluebird/pxt.json
  *
@@ -66,4 +66,5 @@ namespace logic {}
 //% advanced=true
 namespace input {}
 
-
+//% weight=100 color=#185C87 icon=""
+namespace sensors {}

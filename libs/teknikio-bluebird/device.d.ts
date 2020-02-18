@@ -1,5 +1,7 @@
 declare namespace pins {
 
+    //% fixedInstance shim=pxt::getPin(PIN_A0)
+    const A0: PwmOnlyPin;
     //% fixedInstance shim=pxt::getPin(PIN_A1)
     const A1: PwmPin;
     //% fixedInstance shim=pxt::getPin(PIN_A2)
@@ -27,55 +29,14 @@ declare namespace pins {
     const D13: DigitalInOutPin;
     //% fixedInstance shim=pxt::getPin(PIN_D14)
     const D14: DigitalInOutPin;
+    //% fixedInstance shim=pxt::getPin(PIN_D15)
+    const LIGHT_ENABLE: DigitalInOutPin;
+
+    //% fixedInstance shim=pxt::getPin(PIN_NEOPIXEL)
+    const NEOPIXEL: DigitalInOutPin;
 
 }
 
-declare namespace input {
-    /**
-     * Button connecting A0 to GND.
-     */
-    //% block="button A0" fixedInstance
-    //% shim=pxt::getButtonByPin(PIN_A0,BUTTON_ACTIVE_LOW_PULL_UP)
-    //% parts="buttons"
-    const buttonA0: Button;
+declare namespace sensors{
 
-    /**
-     * Button connecting A1 to GND.
-     */
-    //% block="button A1" fixedInstance
-    //% shim=pxt::getButtonByPin(PIN_A1,BUTTON_ACTIVE_LOW_PULL_UP)
-    //% parts="buttons"
-    const buttonA1: Button;
-
-    /**
-     * Button connecting A2 to GND.
-     */
-    //% block="button A2" fixedInstance
-    //% shim=pxt::getButtonByPin(PIN_A2,BUTTON_ACTIVE_LOW_PULL_UP)
-    //% parts="buttons"
-    const buttonA2: Button;
-
-    /**
-     * Button connecting A3 to GND.
-     */
-    //% block="button A3" fixedInstance
-    //% shim=pxt::getButtonByPin(PIN_A3,BUTTON_ACTIVE_LOW_PULL_UP)
-    //% parts="buttons"
-    const buttonA3: Button;
-
-    /**
-     * Button connecting A4 to GND.
-     */
-    //% block="button A4" fixedInstance
-    //% shim=pxt::getButtonByPin(PIN_A4,BUTTON_ACTIVE_LOW_PULL_UP)
-    //% parts="buttons"
-    const buttonA4: Button;
-
-    /**
-     * Button connecting A5 to GND.
-     */
-    //% block="button A5" fixedInstance
-    //% shim=pxt::getButtonByPin(PIN_A5,BUTTON_ACTIVE_LOW_PULL_UP)
-    //% parts="buttons"
-    const buttonA5: Button;
 }
