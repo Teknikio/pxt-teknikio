@@ -9,17 +9,24 @@
         "board.json",
         "board.svg"
     ],
-    "core": true,
-    "compileServiceVariant": "nrf52832",
     "dependencies": {
-        "core---nrf52832": "file:../core---nrf52832",
-        "buttons": "file:../buttons",
-        "mixer": "file:../mixer",
-        "light": "file:../light"
+        "core---nrf52": "file:../core---nrf52",
+        "mixer---nrf52": "file:../mixer---nrf52",
+        "light": "file:../light",
+        "pulse": "file:../pulse",
+        "jacdac": "file:../jacdac",
+        "accelerometer": "file:../accelerometer",
+        "lightsensor": "file:../lightsensor"
+
     },
     "public": true,
     "features": [
-        "pina0",
-        "pina1"
+      "uf2",
+      "pina0",
+      "pina1",
+      "music",
+      "pinled",
+      "jacdac",
+      "accelerometer"
     ]
 }

@@ -1,0 +1,12 @@
+{
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/core---nrf52",
+    "cppDependencies": {
+        "accelerometer": "file:../accelerometer",
+        "buttons": "file:../buttons",
+        "jacdac": "file:../jacdac",
+        "light": "file:../light",
+        "lightsensor": "file:../lightsensor",
+        "switch": "file:../switch",
+        "mixer---nrf52": "file:../mixer---nrf52"
+    }
+}
