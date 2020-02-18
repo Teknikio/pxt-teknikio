@@ -48,11 +48,11 @@
       "flashChecksumAddr": 0,
       "deployFileMarker": "MBED.HTM",
       "vtableShift": 4,
-      "useUF2": false,
+      "useUF2": true,
       "webUSB": false,
       "hasHex": true,
       "gc": true,
-      "uf2Family": "0x1b57745f"
+      "uf2Family": "0xada52840"
     },
     "compileService": {
       "buildEngine" : "codal",
