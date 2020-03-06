@@ -19,8 +19,14 @@ namespace config {
     export const PIN_D14 = DAL.P0_11;
     export const PIN_D15 = DAL.P0_30;
 
+    export const PIN_FLASH_MISO = PIN_D11;
+    export const PIN_FLASH_MOSI = PIN_D12;
+    export const PIN_FLASH_SCK = PIN_D13;
+
     export const PIN_LIGHT = DAL.P0_28;
     export const PIN_JACK_SND = PIN_A0;
+    export const PIN_RX = PIN_D7;
+    export const PIN_TX = PIN_D8;
 
     export const ACCELEROMETER_TYPE = DAL.ACCELEROMETER_TYPE_MPU6050;
     export const PIN_ACCELEROMETER_SCL = DAL.P1_11;

@@ -197,7 +197,9 @@
         "disableBlockIcons": true,
         "scriptManager": true,
         "baseTheme": "dark",
-        "qrCode": true
+        "qrCode": true,
+        "python": true,
+        "pythonToolbox": true
     },
     "unsupportedBrowsers": [
       { "id" : "ie" }

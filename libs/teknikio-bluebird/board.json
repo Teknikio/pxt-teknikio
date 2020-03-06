@@ -120,7 +120,8 @@
     "leds": [{
             "x": 231,
             "y": 173,
-            "w": 25,
+            "w": 14.748972445423053,
+            "h": 14.748815073829538,
             "color": "neopixel",
             "label": "NEOPIXEL"
         }
@@ -141,11 +142,18 @@
         "D10": "D10",
         "D12": "D11",
         "D13": "D12",
-        "D14": "D13"
+        "D14": "D13",
+        "NEOPIXEL" : "NEOPIXEL"
+  },
+  "spiPins": {
   },
   "groundPins": ["GND"],
   "threeVoltPins": ["3.3VIN", "3.3VOUT"],
-  "onboardComponents": ["NEOPIXEL"],
+  "onboardComponents": [
+    "lightsensor",
+    "accelerometer",
+    "neopixel"
+  ],
   "marginWhenBreadboarding": [
     0,
     0,

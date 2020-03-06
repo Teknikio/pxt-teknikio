@@ -35,7 +35,7 @@ namespace pxsim {
         edgeConnectorState: EdgeConnectorState;
         lightSensorState: AnalogSensorState;
         buttonState: CommonButtonState;
-        lightState: Map<CommonNeoPixelState>;
+        lightState: Map<CommonNeoPixelState> = {};
         audioState: AudioState;
         neopixelPin: Pin;
         touchButtonState: TouchButtonState;
@@ -100,7 +100,8 @@ namespace pxsim {
                 }
             }
 
-            this.lightState = {};
+
+            //this.lightState = {};
             this.microphoneState = new AnalogSensorState(DAL.DEVICE_ID_MICROPHONE, 52, 120, 75, 96);
             this.storageState = new StorageState();
             this.jacdacState = new JacDacState(this);
@@ -172,6 +173,8 @@ namespace pxsim {
         receiveMessage(msg: SimulatorMessage) {
             super.receiveMessage(msg);
             if (!runtime || runtime.dead) return;
+            console.log("====> Simulator Message");
+            console.log(msg);
 
             switch (msg.type || "") {
                 case "eventbus":
@@ -200,7 +203,8 @@ namespace pxsim {
 
         initAsync(msg: SimulatorRunMessage): Promise<void> {
             super.initAsync(msg);
-
+            console.log("====> Simulator Message");
+            console.log(msg);
             const boardDef = msg.boardDefinition;
             const cmpsList = msg.parts;
             cmpsList.sort();
@@ -250,8 +254,13 @@ namespace pxsim {
             if (pinId === undefined) {
                 pinId = pxtcore.getConfig(DAL.CFG_PIN_MOSI, -1);
             }
+            console.log("====> PinID for neopixel");
+            console.log(pinId);
+            console.log(this.lightState);
             let state = this.lightState[pinId];
             if (!state) state = this.lightState[pinId] = new CommonNeoPixelState();
+            console.log("State");
+            console.log(this.lightState);
             return state;
         }
     }
