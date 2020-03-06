@@ -119,8 +119,11 @@ namespace pxsim.visuals {
             // neopixels/leds
             for (const l of props.visualDef.leds || []) {
                 if (l.color == "neopixel") {
+                    console.log("===> Found neopixel");
                     const onBoardNeopixel = new BoardNeopixel(l.label, l.x, l.y, l.w || 0);
+                    console.log(l.label);
                     this.onBoardNeopixels.push(onBoardNeopixel);
+                    console.log(this.onBoardNeopixels);
                     el.appendChild(onBoardNeopixel.element);
                 } else {
                     const pin = pinByName(l.label);
@@ -179,6 +182,7 @@ namespace pxsim.visuals {
         }
 
         public updateState() {
+            console.log("====> Update state");
             this.onBoardLeds.forEach(l => l.updateState());
             if (this.board.neopixelPin) {
                 const state = this.board.neopixelState(this.board.neopixelPin.id);
@@ -186,9 +190,13 @@ namespace pxsim.visuals {
                     for (let i = 0; i < this.onBoardNeopixels.length; ++i) {
                         const rgb = state.pixelColor(i)
                         if (rgb !== null)
+                            console.log("====> Try to set neopixel color")
                             this.onBoardNeopixels[i].setColor(rgb as any);
                     }
                 }
+            }
+            else {
+              console.log("====> No neopixel board pin set");
             }
         }
 
@@ -274,9 +282,12 @@ namespace pxsim.visuals {
             this.name = name;
             this.element = svg.elt("circle", { cx: x + r / 2, cy: y + r / 2, r: 10 }) as SVGCircleElement
             svg.title(this.element, name);
+            this.setColor([0,255,0]);
         }
 
         setColor(rgb: [number, number, number]) {
+            console.log("Set Neopixel Color");
+            console.log(rgb);
             const hsl = visuals.rgbToHsl(rgb);
             let [h, s, l] = hsl;
             const lx = Math.max(l * 1.3, 85);

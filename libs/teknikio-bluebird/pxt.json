@@ -16,17 +16,19 @@
         "pulse": "file:../pulse",
         "jacdac": "file:../jacdac",
         "accelerometer": "file:../accelerometer",
-        "lightsensor": "file:../lightsensor"
-
+        "lightsensor": "file:../lightsensor",
+        "serial": "file:../serial"
     },
     "public": true,
     "features": [
       "uf2",
       "pina0",
+      "serial",
       "pina1",
       "music",
       "pinled",
       "jacdac",
+      "neopixel",
       "accelerometer"
     ]
 }
