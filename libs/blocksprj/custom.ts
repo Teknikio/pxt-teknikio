@@ -68,3 +68,27 @@ namespace input {}
 
 //% weight=100 color=#185C87 icon=""
 namespace sensors {}
+
+//% weight=90 color=#185C87 icon="" block="RGB"
+namespace rgb {
+
+  //%block
+  export function setColor(rgb: number): void {
+
+  }
+
+  //%block
+  export function setBrightness(setBrightness: number): void {
+
+  }
+  //%block
+  export function dim(rgb: number, level: number): void {
+
+  }
+
+  //%block
+  export function rgb(red: number, green: number, blue: number): void {
+
+  }
+
+}

@@ -42,3 +42,7 @@ declare namespace pins {
 declare namespace sensors{
 
 }
+
+declare namespace rgb {
+
+}
