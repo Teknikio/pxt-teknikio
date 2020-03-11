@@ -226,6 +226,7 @@ namespace pxsim.visuals {
             svg.hydrate(this.part.el, { transform: `translate(${x} ${y})` }); //TODO: update part's l,h, etc.
         }
         public updateState(): void {
+          console.log("====> Update NeoPixel state");
             let colors: number[][] = [];
             for (let i = 0; i < this.state.length; i++) {
                 colors.push(this.state.pixelColor(i));

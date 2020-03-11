@@ -51,10 +51,13 @@ namespace music {}
 //% weight=90 color=#185C87 icon="" block="LED"
 namespace light {}
 
-//% weight=85 icon=""
+//% weight=85 color=#185C87 block="Sensors"
+namespace input {}
+
+//% weight=80 icon=""
 namespace variables {}
 
-//% weight=80 icon="f698"
+//% weight=75 icon="f698"
 namespace math {}
 
 //% weight=65 icon="f01e"
@@ -62,9 +65,6 @@ namespace loops {}
 
 //% weight=60
 namespace logic {}
-
-//% advanced=true
-namespace input {}
 
 //% weight=100 color=#185C87 icon=""
 namespace sensors {}
