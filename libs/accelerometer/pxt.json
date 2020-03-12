@@ -1,4 +1,27 @@
 {
+    "name": "accelerometer",
+    "description": "The accelerometer library",
+    "dependencies": {
+        "core": "file:../core",
+        "jacdac": "file:../jacdac"
+    },
+    "files": [
+        "README.md",
+        "accelerometer.cpp",
+        "accelhw.cpp",
+        "axis.h",
+        "gesture.ts",
+        "shims.d.ts",
+        "enums.d.ts",
+        "ns.ts",
+        "pxtparts.json",
+        "part.svg",
+        "jacdac.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/accelerometer",
     "yotta": {
         "optionalConfig": {

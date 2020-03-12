@@ -1,3 +1,21 @@
 {
+    "name": "lightsensor",
+    "description": "Onboard light level sensor",
+    "dependencies": {
+        "core": "file:../core",
+        "jacdac": "file:../jacdac"
+    },
+    "files": [
+        "README.md",
+        "lightsensor.cpp",
+        "jacdac.ts",
+        "ns.ts",
+        "shims.d.ts",
+        "enums.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/lightsensor"
 }

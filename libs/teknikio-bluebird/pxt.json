@@ -1,14 +1,6 @@
 {
     "name": "teknikio-bluebird",
     "description": "Support for Teknikio Bluebird - beta",
-    "files": [
-        "README.md",
-        "device.d.ts",
-        "config.ts",
-        "ns.ts",
-        "board.json",
-        "board.svg"
-    ],
     "dependencies": {
         "core---nrf52": "file:../core---nrf52",
         "mixer---nrf52": "file:../mixer---nrf52",
@@ -19,16 +11,24 @@
         "lightsensor": "file:../lightsensor",
         "serial": "file:../serial"
     },
+    "files": [
+        "README.md",
+        "device.d.ts",
+        "config.ts",
+        "ns.ts",
+        "board.json",
+        "board.svg"
+    ],
     "public": true,
     "features": [
-      "uf2",
-      "pina0",
-      "serial",
-      "pina1",
-      "music",
-      "pinled",
-      "jacdac",
-      "neopixel",
-      "accelerometer"
+        "uf2",
+        "pina0",
+        "serial",
+        "pina1",
+        "music",
+        "pinled",
+        "jacdac",
+        "neopixel",
+        "accelerometer"
     ]
 }

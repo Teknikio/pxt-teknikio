@@ -19,7 +19,6 @@
  * Custom blocks
  */
 
-
 //% weight=50 color=#51031D icon="" block="DEVICES"
 namespace devices {
 
@@ -68,3 +67,24 @@ namespace logic {}
 
 //% weight=100 color=#185C87 icon=""
 namespace sensors {}
+
+//% weight=90 color=#185C87 icon="" block="RGB"
+namespace rgb {
+
+  //% block="Set NeoPixel color %rgb=colorNumberPicker"
+  export function setColor(rgb: number): void {
+      light.setAll(rgb);
+  }
+
+  //%block="Set NeoPixel brightness %brightness"
+  export function setBrightness(brightness: number): void {
+      light.setBrightness(brightness);
+  }
+
+  //% red.min=0 red.max=255 green.min=0 green.max=255 blue.min=0 blue.max=255
+  //%block="red %red|green %green|blue %blue"
+  export function rgb(red: number, green: number, blue: number): void {
+    light.setAll(((red & 0xFF) << 16) | ((green & 0xFF) << 8) | (blue & 0xFF));
+  }
+
+}

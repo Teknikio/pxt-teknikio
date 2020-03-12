@@ -21,42 +21,42 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
     const downloadAgain = !pxt.BrowserUtils.isIE() && !pxt.BrowserUtils.isEdge();
     const docUrl = pxt.appTarget.appTheme.usbDocs;
 
-    const jsx = <div className="ui three column grid stackable">
+    const jsx = <div className="ui three column grid stackable center aligned">
         <div className="column">
             <div className="ui">
-                <div className="image">
-                    <img className="ui medium rounded image download-step" src="./static/download/connect.png" />
+                <div className="image" style={{'margin-bottom': '10px'}}>
+                    <img className="ui medium rounded" style={{height:'200px'}} src="./static/download/connect.png" />
                 </div>
                 <div className="content">
                     <div className="description">
-                        <span className="ui blue circular label">1</span>
-                        {lf("Take the USB cable you connected to your computer. Plug it into your Circuit Playground Express.")}
+                        {lf("1. Connect the bluebird to your computer with a USB cable.\n" +
+                            "Use the microUSB port on the top of the bluebird.")}
                     </div>
                 </div>
             </div>
         </div>
         <div className="column">
             <div className="ui">
-                <div className="image">
-                    <img className="ui medium rounded image download-step" src="./static/download/reset.png" />
+                <div className="image" style={{'margin-bottom': '10px'}}>
+                    <img className="ui medium rounded" style={{height:'200px'}} src="./static/download/reset.png" />
                 </div>
                 <div className="content">
                     <div className="description">
-                        <span className="ui blue circular label">2</span>
-                        {lf("Press the RESET button to go into programming mode. When the lights turn green, you're ready to go.")}
+                        {lf("2. Push the reset button on the bluebird twice quickly.\n" +
+                            "LED gets green and you can see the bluebird drive in your computer.")}
                     </div>
                 </div>
             </div>
         </div>
         <div className="column">
             <div className="ui">
-                <div className="image">
-                    <img className="ui medium rounded image download-step" src="./static/download/transfer.png" />
+                <div className="image" style={{'margin-bottom': '10px'}}>
+                    <img className="ui medium rounded" style={{height:'200px'}} src="./static/download/transfer.png" />
                 </div>
                 <div className="content">
                     <div className="description">
-                        <span className="ui blue circular label">3</span>
-                        {lf("Click and drag the file you downloaded onto {0}.", boardDriveName)}
+                        {lf("3. Download the BLEmode_bluebird.uf2 file.\n" +
+                            "Locate the downloaded .uf2 file and drag it to the bluebird drive.")}
                     </div>
                 </div>
             </div>
