@@ -1,3 +1,20 @@
 {
+    "name": "buttons",
+    "description": "Button A and B drivers",
+    "dependencies": {
+        "core": "file:../core",
+        "jacdac": "file:../jacdac"
+    },
+    "files": [
+        "README.md",
+        "buttons.cpp",
+        "jacdac.ts",
+        "shims.d.ts",
+        "enums.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/buttons"
 }

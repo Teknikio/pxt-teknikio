@@ -1,9 +1,10 @@
 {
     "name": "{0}",
-    "dependencies": {
-        "teknikio-bluebird": "file:../teknikio-bluebird"
-    },
     "description": "",
+    "dependencies": {
+        "teknikio-bluebird": "file:../teknikio-bluebird",
+        "light": "file:../../node_modules/pxt-common-packages/libs/light"
+    },
     "files": [
         "main.blocks",
         "main.ts",
