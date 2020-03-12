@@ -1,4 +1,52 @@
 {
+    "name": "core---nrf52",
+    "description": "The core library for Codal-based targets",
+    "dependencies": {
+        "base": "file:../base"
+    },
+    "files": [
+        "README.md",
+        "dal.d.ts",
+        "codal.cpp",
+        "usb.cpp",
+        "pxt.h",
+        "platform.h",
+        "platform.cpp",
+        "pxtcore.h",
+        "pins.h",
+        "pins.cpp",
+        "pinsAnalog.cpp",
+        "pinsDigital.cpp",
+        "pinsPWM.cpp",
+        "pins.ts",
+        "pinscompat.ts",
+        "control.cpp",
+        "i2c.cpp",
+        "i2c.ts",
+        "spi.cpp",
+        "spi.ts",
+        "shims.d.ts",
+        "enums.d.ts",
+        "hf2.cpp",
+        "hf2.h",
+        "hf2dbg.h",
+        "uf2format.h",
+        "uf2hid.h",
+        "ns.ts",
+        "dmac.cpp",
+        "dmac.h",
+        "timer.ts",
+        "light.cpp",
+        "light.h",
+        "keyvaluestorage.cpp",
+        "keyvaluestorage.ts",
+        "leveldetector.ts",
+        "pxtparts.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/core---nrf52",
     "cppDependencies": {
         "accelerometer": "file:../accelerometer",
@@ -8,5 +56,29 @@
         "lightsensor": "file:../lightsensor",
         "switch": "file:../switch",
         "mixer---nrf52": "file:../mixer---nrf52"
+    },
+    "yotta": {
+        "config": {
+            "codal": {
+                "component_count": 64,
+                "dmesg_buffer_size": 1024
+            }
+        }
+    },
+    "dalDTS": {
+        "includeDirs": [
+            "libraries/codal-core/inc",
+            "pxtapp"
+        ],
+        "excludePrefix": [
+            "USB_",
+            "REQUEST_",
+            "LIS3DH_",
+            "FXOS8700_",
+            "HF2_",
+            "PXT_REF_TAG_",
+            "MS_",
+            "SCSI_"
+        ]
     }
 }
