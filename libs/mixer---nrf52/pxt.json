@@ -1,26 +1,3 @@
 {
-    "name": "mixer---nrf52",
-    "description": "The music library with a mixer",
-    "dependencies": {
-        "core": "file:../core"
-    },
-    "files": [
-        "SoundOutput.h",
-        "sound.cpp",
-        "melody.h",
-        "melody.cpp",
-        "melody.ts",
-        "piano.ts",
-        "legacy.ts",
-        "ns.ts",
-        "targetoverrides.ts",
-        "music.ts",
-        "pxtparts.json",
-        "headphone.svg"
-    ],
-    "testFiles": [
-        "test.ts"
-    ],
-    "public": true,
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/mixer---nrf52"
 }

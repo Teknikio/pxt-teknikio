@@ -76,6 +76,7 @@ namespace rgb {
       light.setAll(rgb);
   }
 
+<<<<<<< HEAD
   //%block="Set NeoPixel brightness %brightness"
   export function setBrightness(brightness: number): void {
       light.setBrightness(brightness);
@@ -88,3 +89,7 @@ namespace rgb {
   }
 
 }
+=======
+//% weight=100 color=#185C87 icon=""
+namespace sensors {}
+>>>>>>> joe_develop

@@ -19,6 +19,7 @@
         "board.json",
         "board.svg"
     ],
+<<<<<<< HEAD
     "public": true,
     "features": [
         "uf2",
@@ -30,5 +31,28 @@
         "jacdac",
         "neopixel",
         "accelerometer"
+=======
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52",
+        "mixer---nrf52": "file:../mixer---nrf52",
+        "light": "file:../light",
+        "pulse": "file:../pulse",
+        "jacdac": "file:../jacdac",
+        "accelerometer": "file:../accelerometer",
+        "lightsensor": "file:../lightsensor",
+        "serial": "file:../serial"
+    },
+    "public": true,
+    "features": [
+      "uf2",
+      "pina0",
+      "serial",
+      "pina1",
+      "music",
+      "pinled",
+      "jacdac",
+      "neopixel",
+      "accelerometer"
+>>>>>>> joe_develop
     ]
 }

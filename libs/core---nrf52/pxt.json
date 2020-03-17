@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "core---nrf52",
     "description": "The core library for Codal-based targets",
     "dependencies": {
@@ -47,6 +48,8 @@
         "test.ts"
     ],
     "public": true,
+=======
+>>>>>>> joe_develop
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/core---nrf52",
     "cppDependencies": {
         "accelerometer": "file:../accelerometer",
@@ -56,6 +59,7 @@
         "lightsensor": "file:../lightsensor",
         "switch": "file:../switch",
         "mixer---nrf52": "file:../mixer---nrf52"
+<<<<<<< HEAD
     },
     "yotta": {
         "config": {
@@ -80,5 +84,7 @@
             "MS_",
             "SCSI_"
         ]
+=======
+>>>>>>> joe_develop
     }
 }
