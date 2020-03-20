@@ -68,7 +68,7 @@ namespace logic {}
 //% weight=100 color=#185C87 icon=""
 namespace sensors {}
 
-//% weight=90 color=#185C87 icon="" block="RGB"
+//% weight=80 color=#185C87 icon="" block="RGB"
 namespace rgb {
 
   //% block="Set NeoPixel color %rgb=colorNumberPicker"
