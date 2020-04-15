@@ -19,20 +19,6 @@
  * Custom blocks
  */
 
-//% weight=50 color=#51031D icon="" block="DEVICES"
-namespace devices {
-
-  /**
-   //    * [PLACEHOLDER] Print a message
-   //    * @param msg user defined message, eg: "Hello"
-   //    */
-   //% block
-   export function print(msg: string): void {
-     console.log(msg);
-   }
-
-}
-
 /*
  * Blocks Added Via Extensions
  *     Add required libraries to libs/ folder and reference as a dependency in libs/teknikio-bluebird/pxt.json
@@ -46,9 +32,6 @@ namespace pins {}
 
 //% weight=95 color=#185C87 icon="" block="MUSIC"
 namespace music {}
-
-//% weight=90 color=#185C87 icon="" block="LED"
-namespace light {}
 
 //% weight=85 color=#185C87 block="Sensors"
 namespace input {}
@@ -68,7 +51,11 @@ namespace logic {}
 //% weight=100 color=#185C87 icon=""
 namespace sensors {}
 
+<<<<<<< HEAD
 //% weight=80 color=#185C87 icon="" block="RGB"
+=======
+//% weight=90 color=#185C87 icon="" block="LED"
+>>>>>>> 280414c6262bbf79ffe600768ef45edbcfed5a69
 namespace rgb {
 
   //% block="Set NeoPixel color %rgb=colorNumberPicker"
