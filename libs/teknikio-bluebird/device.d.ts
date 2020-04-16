@@ -43,6 +43,6 @@ declare namespace rgb {
 
 }
 
-declare namespace sensors { 
+declare namespace sensors{
 
 }
