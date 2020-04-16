@@ -8,8 +8,16 @@ namespace pxsim.visuals {
     const STYLE = `
 .sim-board-pin {
     stroke: #404040;
-    fill: #000000;
+    fill: #ffffff;
+    opacity: 0;
 }
+
+.sim-board-pin-hover {
+    stroke: #404040;
+    fill: #ffffff;
+    opacity: 0;
+}
+
 .sim-board-button {
     stroke: #aaa;
     stroke-width: 3px;
