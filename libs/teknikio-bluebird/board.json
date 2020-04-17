@@ -126,7 +126,14 @@
             "label": "NEOPIXEL"
         }
     ],
-    "touchPads": [],
+    "touchPads": [{
+          "x": 117,
+          "y": 253,
+          "w": 15.679958098734177,
+          "h": 15.679998444579105,
+          "label": "A3"
+        }
+    ],
     "buttons": []
   },
   "gpioPinMap": {
