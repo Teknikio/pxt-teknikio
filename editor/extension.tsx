@@ -25,12 +25,11 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
         <div className="column">
             <div className="ui">
                 <div className="image" style={{'margin-bottom': '10px'}}>
-                    <img className="ui medium rounded" style={{height:'200px'}} src="./static/download/connect.png" />
+                    <img className="ui medium rounded" style={{height:'200px'}} src="./docs/static/download/connect.png" />
                 </div>
                 <div className="content">
                     <div className="description">
-                        {lf("1. Connect the bluebird to your computer with a USB cable.\n" +
-                            "Use the microUSB port on the top of the bluebird.")}
+                        {lf("1. Connect the bluebird to your computer with a USB cable.\nUse the microUSB port on the top of the bluebird.")}
                     </div>
                 </div>
             </div>
@@ -38,12 +37,11 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
         <div className="column">
             <div className="ui">
                 <div className="image" style={{'margin-bottom': '10px'}}>
-                    <img className="ui medium rounded" style={{height:'200px'}} src="./static/download/reset.png" />
+                    <img className="ui medium rounded" style={{height:'200px'}} src="./docs/static/download/reset.png" />
                 </div>
                 <div className="content">
                     <div className="description">
-                        {lf("2. Push the reset button on the bluebird twice quickly.\n" +
-                            "LED gets green and you can see the bluebird drive in your computer.")}
+                        {lf("2. Push the reset button on the bluebird twice quickly.\nLED gets green and you can see the bluebird drive in your computer.")}
                     </div>
                 </div>
             </div>
@@ -51,12 +49,11 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
         <div className="column">
             <div className="ui">
                 <div className="image" style={{'margin-bottom': '10px'}}>
-                    <img className="ui medium rounded" style={{height:'200px'}} src="./static/download/transfer.png" />
+                    <img className="ui medium rounded" style={{height:'200px'}} src="./docs/static/download/transfer.png" />
                 </div>
                 <div className="content">
                     <div className="description">
-                        {lf("3. Download the BLEmode_bluebird.uf2 file.\n" +
-                            "Locate the downloaded .uf2 file and drag it to the bluebird drive.")}
+                        {lf("3. Download the BLEmode_bluebird.uf2 file.\nLocate the downloaded .uf2 file and drag it to the bluebird drive.")}
                     </div>
                 </div>
             </div>

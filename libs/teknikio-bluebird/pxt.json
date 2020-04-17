@@ -4,7 +4,6 @@
     "dependencies": {
         "core---nrf52": "file:../core---nrf52",
         "mixer---nrf52": "file:../mixer---nrf52",
-        "light": "file:../light",
         "pulse": "file:../pulse",
         "jacdac": "file:../jacdac",
         "accelerometer": "file:../accelerometer",
