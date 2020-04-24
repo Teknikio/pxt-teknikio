@@ -1,7 +1,5 @@
 declare namespace pins {
 
-    //% fixedInstance shim=pxt::getPin(PIN_A0)
-    const A0: PwmOnlyPin;
     //% fixedInstance shim=pxt::getPin(PIN_A1)
     const A1: PwmPin;
     //% fixedInstance shim=pxt::getPin(PIN_A2)
@@ -43,6 +41,6 @@ declare namespace rgb {
 
 }
 
-declare namespace sensors{
+declare namespace sensors {
 
 }

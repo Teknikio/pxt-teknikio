@@ -2,13 +2,13 @@
   "driveDisplayName": "",
   "visual": {
     "image": "pkg://board.svg",
-    "useCrocClips": false,
+    "useCrocClips": true,
     "width": 400,
     "height": 300,
     "pinDist": 10,
     "pinBlocks": [{
-            "x": 104,
-            "y": 21,
+            "x": 103,
+            "y": 20,
             "labels": ["A2"]
         },
         {
@@ -18,12 +18,12 @@
         },
         {
             "x": 171,
-            "y": 18,
+            "y": 17,
             "labels": ["3.3VOUT"]
         },
         {
             "x": 172,
-            "y": 272,
+            "y": 271,
             "labels": ["3.3VOUT"]
         },
         {
@@ -97,13 +97,13 @@
             "labels": ["A3"]
         },
         {
-            "x": 50,
-            "y": 241,
+            "x": 51,
+            "y": 242,
             "labels": ["GND"]
         },
         {
-            "x": 50,
-            "y": 52,
+            "x": 49,
+            "y": 51,
             "labels": ["GND1"]
         },
         {
@@ -112,7 +112,7 @@
             "labels": ["GND2"]
         },
         {
-            "x": 300,
+            "x": 299,
             "y": 65,
             "labels": ["GND3"]
         }
@@ -213,6 +213,10 @@
         "D12": "D11",
         "D13": "D12",
         "D14": "D13",
+        "GND1": "GND1",
+        "GND2": "GND2",
+        "GND3": "GND3",
+        "GND": "GND",
         "NEOPIXEL" : "NEOPIXEL"
   },
   "spiPins": {
