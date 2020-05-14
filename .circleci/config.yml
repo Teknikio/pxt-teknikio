@@ -16,7 +16,7 @@ deploy: &deploy
   steps:
     - checkout
     - setup_remote_docker:
-        docker_layer_caching: true
+        docker_layer_caching: false
     - aws-ecr/build-and-push-image:
         checkout: false
         account-url: AWS_ECR_ACCOUNT_URL
@@ -52,4 +52,4 @@ workflows:
           filters:
             branches:
               only:
-                - production
+                - deployment
