@@ -58,8 +58,13 @@
       "buildEngine" : "codal",
       "codalTarget": {
         "name": "codal-nrf52840-dk",
+<<<<<<< HEAD
         "url": "https://github.com/mmoskal/codal-nrf52840-dk",
         "branch": "v1.1.7",
+=======
+        "url": "https://github.com/Teknikio/codal-nrf52840-dk",
+        "branch": "v1.1.8",
+>>>>>>> joe_development
         "type": "git"
       },
       "codalBinary": "NRF52840_DK",
@@ -88,7 +93,6 @@
         "onStartNamespace": "pins",
         "onStartColor": "#40bf4a",
         "bannedCategories": [
-          "jacdac",
           "light"
         ]
     },
@@ -149,7 +153,26 @@
         "availableLocales": [
             "en",
             "de",
-            "ja"
+            "ja",
+            "es-ES",
+            "fi",
+            "fr",
+            "hu",
+            "is",
+            "it",
+            "ko",
+            "nl",
+            "no",
+            "pt-BR",
+            "pt-PT",
+            "ru",
+            "si-LK",
+            "sk",
+            "sv-SE",
+            "tr",
+            "uk",
+            "zh-CN",
+            "zh-TW"
         ],
         "showHomeScreen": true,
         "homeScreenHero": "./static/hero.png",
