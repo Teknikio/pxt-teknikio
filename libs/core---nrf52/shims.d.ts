@@ -11,7 +11,6 @@ declare namespace light {
     //% shim=light::sendBuffer
     function sendBuffer(data: DigitalInOutPin, clk: DigitalInOutPin, mode: int32, buf: Buffer): void;
 }
-
 declare namespace control {
 
     /**
@@ -123,7 +122,7 @@ declare interface DigitalInOutPin {
     onPulsed(pulse: PulseValue, body: () => void): void;
 
     /**
-     * Register code to run when a pin event occurs.
+     * Register code to run when a pin event occurs. 
      */
     //% help=pins/on-event weight=20 blockGap=8
     //% blockId=pinsonevent block="on|pin %pin|%event"

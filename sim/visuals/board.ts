@@ -289,7 +289,7 @@ namespace pxsim.visuals {
             this.name = name;
             this.element = svg.elt("circle", { cx: x + r / 2, cy: y + r / 2, r: 15 }) as SVGCircleElement
             svg.title(this.element, name);
-            this.setColor([0,255,0]);
+            this.setColor([0,0,0]);
         }
 
         setColor(rgb: [number, number, number]) {
