@@ -61,7 +61,6 @@
   "pins.createBuffer|param|size": "number of bytes in the buffer",
   "pins.createI2C": "Opens a Serial communication driver",
   "pins.createSPI": "Opens a SPI driver",
-  "pins.createSlaveSPI": "Opens a slave SPI driver",
   "pins.i2c": "Gets the default I2C bus",
   "pins.i2cReadBuffer": "Read `size` bytes from a 7-bit I2C `address`.",
   "pins.i2cReadNumber": "Read one number from an I2C address.",
