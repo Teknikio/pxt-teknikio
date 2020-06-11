@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../DKCodal/codal-nrf52840-dk"
+		},
+		{
+			"path": "../../../../codal/codal-core"
+		},
+		{
+			"path": "../../../../codal/codal-nrf52"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "./node_modules/typescript/lib"
+	}
+}
