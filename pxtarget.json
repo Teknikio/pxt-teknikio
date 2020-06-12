@@ -59,7 +59,7 @@
       "codalTarget": {
         "name": "codal-nrf52840-dk",
         "url": "https://github.com/Teknikio/codal-nrf52840-dk",
-        "branch": "v1.1.11",
+        "branch": "master",
         "type": "git"
       },
       "codalBinary": "NRF52840_DK",
