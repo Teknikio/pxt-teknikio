@@ -32,25 +32,25 @@ locals {
 }
 
 resource "aws_ecr_repository" "service-repository" {
-  name = "${local.aws_ecr_repository_name}-${env}"
+  name = "${local.aws_ecr_repository_name}-${var.env}"
 }
 
 
 resource "aws_cloudformation_stack" "vpc" {
-  name          = "${local.aws_vpc_stack_name}-${env}"
+  name          = "${local.aws_vpc_stack_name}-${var.env}"
   template_body = "${file("cloudformations/public-vpc.yml")}"
   capabilities  = ["CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"]
 
   parameters = {
-    ClusterName                = "${local.aws_ecs_cluster_name}-${env}"
-    ExecutionRoleName          = "${local.aws_ecs_execution_role_name}-${env}"
+    ClusterName                = "${local.aws_ecs_cluster_name}-${var.env}"
+    ExecutionRoleName          = "${local.aws_ecs_execution_role_name}-${var.env}"
     LoadBalancerCertificateArn = "arn:aws:acm:us-east-1:487619204073:certificate/52b0dcae-a232-40a1-87ba-780d62243087"
   }
 }
 
 # Note: creates task definition and task definition family with the same name as the ServiceName parameter value
 resource "aws_cloudformation_stack" "ecs_service" {
-  name          = "${local.aws_ecs_service_stack_name}-${env}"
+  name          = "${local.aws_ecs_service_stack_name}-${var.env}"
   template_body = "${file("cloudformations/public-service.yml")}"
   depends_on    = ["aws_cloudformation_stack.vpc"]
 
