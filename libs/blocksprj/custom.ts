@@ -34,7 +34,11 @@ namespace pins {}
 namespace music {}
 
 //% weight=85 color=#185C87 block="Sensors"
-namespace input {}
+namespace input {
+
+
+
+}
 
 //% weight=80 icon=""
 namespace variables {}
@@ -54,6 +58,11 @@ namespace sensors {}
 //% weight=90 color=#185C87 icon="" block="LED"
 namespace rgb {
 
+  //% block.loc.es-ES="Elige el brillo del NeoPixel"
+  //% block.loc.es="Elige el brillo del NeoPixel 2"
+  //% block.loc.ES="Elige el brillo del NeoPixel 3"
+  //% block.loc.[es-ES]="Elige el brillo del NeoPixel 4"
+  //% block.loc[es-ES]="Elige el brillo del NeoPixel 5"
   //% block="Set NeoPixel color %rgb=colorNumberPicker"
   export function setColor(rgb: number): void {
       light.setAll(rgb);
@@ -69,5 +78,6 @@ namespace rgb {
   export function rgb(red: number, green: number, blue: number): void {
     light.setAll(((red & 0xFF) << 16) | ((green & 0xFF) << 8) | (blue & 0xFF));
   }
+
 
 }
