@@ -23,6 +23,12 @@
 		},
 		{
 			"path": "../../../../../Embedded/Customers/Teknikio/Adafruit_nRF52_Bootloader"
+		},
+		{
+			"path": "../../../../TeknikioWebBlue/WebFrontEnd"
+		},
+		{
+			"path": "../../../../Maker/pxt-maker"
 		}
 	],
 	"settings": {

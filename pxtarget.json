@@ -55,7 +55,7 @@
       "uf2Family": "0xada52840"
     },
     "compileService": {
-      "buildEngine" : "codal",
+      "buildEngine" : "dockercodal",
       "codalTarget": {
         "name": "codal-nrf52840-dk",
         "url": "https://github.com/Teknikio/codal-nrf52840-dk",
