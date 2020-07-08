@@ -29,6 +29,9 @@
 		},
 		{
 			"path": "../../../../Maker/pxt-maker"
+		},
+		{
+			"path": "../../../../../Embedded/BluebirdProv"
 		}
 	],
 	"settings": {

@@ -3,7 +3,7 @@ declare namespace pins {
     //% fixedInstance shim=pxt::getPin(PIN_A1)
     const A1: AnalogInPin;
     //% fixedInstance shim=pxt::getPin(PIN_A2)
-    const A2: PwmPin;
+    const A2: AnalogInPin;
     //% fixedInstance shim=pxt::getPin(PIN_A3)
     const A3: PwmPin;
     //% fixedInstance shim=pxt::getPin(PIN_A4)

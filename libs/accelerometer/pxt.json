@@ -22,7 +22,7 @@
         "test.ts"
     ],
     "public": true,
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/accelerometer",
+    "additionalFilePath": "../accelerometer_custom",
     "yotta": {
         "optionalConfig": {
             "PXT_SUPPORT_LIS3DH": 1,
