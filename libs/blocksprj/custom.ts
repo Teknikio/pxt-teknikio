@@ -36,15 +36,6 @@ namespace music {}
 //% weight=85 color=#185C87 block="Sensors"
 namespace input {
 
-    /**
-     * Get the temperature in Celsius or Fahrenheit degrees.
-     */
-    //% help=input/temperature
-    //% blockId=device_temperature block="temperature in %unit"
-    //% parts="accelerometer"
-    function temperature(): int32 {
-      return input.temperature();
-    }
 
 }
 

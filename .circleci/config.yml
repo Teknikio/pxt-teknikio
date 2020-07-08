@@ -22,14 +22,14 @@ deploy: &deploy
         account-url: AWS_ECR_ACCOUNT_URL
         aws-access-key-id: AWS_ACCESS_KEY_ID
         aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-        repo: "${AWS_RESOURCE_NAME_PREFIX}-${AWS_RESOURCE_NAME_SUFFIX}"
+        repo: "${AWS_RESOURCE_NAME_PREFIX}-${ENV}"
         region: AWS_DEFAULT_REGION
         tag: "${CIRCLE_SHA1}"
-        extra-build-args: --build-arg mysql_host=${MYSQL_CONNECTION} --build-arg mysql_user=${CXN_MYSQL_USR} --build-arg mysql_pass=${CXN_MYSQL_PWD} --build-arg auth0_domain=${AUTH0_DOMAIN} --build-arg auth0_audience=${AUTH0_AUDIENCE}
+        extra-build-args: --build-arg auth0_domain=${AUTH0_DOMAIN} --build-arg auth0_audience=${AUTH0_AUDIENCE}
     - aws-ecs/update-service:
-        family: "${AWS_RESOURCE_NAME_PREFIX}-service-${AWS_RESOURCE_NAME_SUFFIX}"
-        cluster-name: "${AWS_RESOURCE_NAME_PREFIX}-cluster-${AWS_RESOURCE_NAME_SUFFIX}"
-        container-image-name-updates: "container=${AWS_RESOURCE_NAME_PREFIX}-service-${AWS_RESOURCE_NAME_SUFFIX},image-and-tag=${AWS_ECR_ACCOUNT_URL}/${AWS_RESOURCE_NAME_PREFIX}-${AWS_RESOURCE_NAME_SUFFIX}:${CIRCLE_SHA1}"
+        family: "${AWS_RESOURCE_NAME_PREFIX}-service-${ENV}"
+        cluster-name: "${AWS_RESOURCE_NAME_PREFIX}-cluster-${ENV}"
+        container-image-name-updates: "container=${AWS_RESOURCE_NAME_PREFIX}-service-${ENV},image-and-tag=${AWS_ECR_ACCOUNT_URL}/${AWS_RESOURCE_NAME_PREFIX}-${ENV}:${CIRCLE_SHA1}"
         verify-revision-is-deployed: true
 
 jobs:
