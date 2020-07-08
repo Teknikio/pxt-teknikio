@@ -36,7 +36,6 @@ namespace music {}
 //% weight=85 color=#185C87 block="Sensors"
 namespace input {
 
-
 }
 
 //% weight=80 icon=""
