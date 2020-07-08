@@ -1,9 +1,24 @@
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
-variable "aws_account_id" {}
-variable "aws_region" {
+variable "region" {
   description = "AWS region e.g. us-east-1 (Please specify a region supported by the Fargate launch type)"
+
+  type = string
+  default = "us-east-1"
 }
-variable "aws_resource_prefix" {
-  description = "Prefix to be used in the naming of some of the created AWS resources e.g. demo-webapp"
+
+variable "resource_name" {
+  description = " Resource name for AWS resources created e.g. webapp"
+  type = string
+  default = ""
+}
+
+variable "env" {
+  description = "Application environment, will be used to suffix resources"
+  type = string
+  default = "dev"
+}
+
+variable "image_url" {
+  description = "The service image to run"
+  type = string
+  default = "nginx"
 }
