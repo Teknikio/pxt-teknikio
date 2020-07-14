@@ -1,230 +1,220 @@
 {
-    "id": "teknikio-bluebird",
-    "name": "bluebird",
-    "title": "Teknikio Bluebird - Blocks / Javascript Editor",
-    "corepkg": "teknikio-bluebird",
-    "description": "A Blocks / Javascript code editor for the Teknikio Bluebird",
-    "bundleddirs": [
-        "libs/base",
-        "libs/core",
-        "libs/buttons",
-        "libs/accelerometer",
-        "libs/music",
-        "libs/lightsensor",
-        "libs/color",
-        "libs/light",
-        "libs/touch",
-        "libs/switch",
-        "libs/pulse",
-        "libs/cable",
-        "libs/infrared",
-        "libs/mouse",
-        "libs/keyboard",
-        "libs/gamepad",
-        "libs/storage",
-        "libs/serial",
-        "libs/jacdac",
-        "libs/teknikio-bluebird",
-        "libs/core---nrf52",
-        "libs/mixer---nrf52"
-    ],
-    "serial": {
-      "useHF2": true,
-      "useEditor": true,
-      "log": true,
-      "editorTheme": {
-        "graphBackground": "#d9d9d9",
-        "lineColors": [
-          "#009DDC",
-          "#FB48C7",
-          "#40bf4a",
-          "#8073E5",
-          "#d25b33"
-        ]
-      }
+  "id": "teknikio-bluebird",
+  "name": "bluebird",
+  "title": "Teknikio Bluebird - Blocks / Javascript Editor",
+  "corepkg": "teknikio-bluebird",
+  "description": "A Blocks / Javascript code editor for the Teknikio Bluebird",
+  "bundleddirs": [
+    "libs/base",
+    "libs/core",
+    "libs/buttons",
+    "libs/accelerometer",
+    "libs/music",
+    "libs/lightsensor",
+    "libs/color",
+    "libs/light",
+    "libs/touch",
+    "libs/switch",
+    "libs/pulse",
+    "libs/cable",
+    "libs/infrared",
+    "libs/mouse",
+    "libs/keyboard",
+    "libs/gamepad",
+    "libs/storage",
+    "libs/serial",
+    "libs/jacdac",
+    "libs/teknikio-bluebird",
+    "libs/core---nrf52",
+    "libs/mixer---nrf52"
+  ],
+  "serial": {
+    "useHF2": true,
+    "useEditor": true,
+    "log": true,
+    "editorTheme": {
+      "graphBackground": "#d9d9d9",
+      "lineColors": ["#009DDC", "#FB48C7", "#40bf4a", "#8073E5", "#d25b33"]
+    }
+  },
+  "compile": {
+    "openocdScript": "source [find board/nrf52-dk.cfg]",
+    "flashChecksumAddr": 0,
+    "deployFileMarker": "MBED.HTM",
+    "vtableShift": 4,
+    "useUF2": true,
+    "webUSB": false,
+    "hasHex": true,
+    "gc": true,
+    "uf2Family": "0xada52840"
+  },
+  "compileService": {
+    "buildEngine": "dockercodal",
+    "codalTarget": {
+      "name": "codal-nrf52840-dk",
+      "url": "https://github.com/Teknikio/codal-nrf52840-dk",
+      "branch": "master",
+      "type": "git"
     },
-    "compile": {
-      "openocdScript": "source [find board/nrf52-dk.cfg]",
-      "flashChecksumAddr": 0,
-      "deployFileMarker": "MBED.HTM",
-      "vtableShift": 4,
-      "useUF2": true,
-      "webUSB": false,
-      "hasHex": true,
-      "gc": true,
-      "uf2Family": "0xada52840"
-    },
-    "compileService": {
-      "buildEngine" : "dockercodal",
-      "codalTarget": {
-        "name": "codal-nrf52840-dk",
-        "url": "https://github.com/Teknikio/codal-nrf52840-dk",
-        "branch": "master",
-        "type": "git"
-      },
-      "codalBinary": "NRF52840_DK",
-      "serviceId": "codal2nrf52840",
-      "dockerImage": "pext/yotta:latest",
-      "yottaConfig": {
-        "pxt": {
-          "board": {
-              "id": "BOARD_ID_NRF52840"
-          }
+    "codalBinary": "NRF52840_DK",
+    "serviceId": "codal2nrf52840",
+    "dockerImage": "pext/yotta:latest",
+    "yottaConfig": {
+      "pxt": {
+        "board": {
+          "id": "BOARD_ID_NRF52840"
         }
       }
+    }
+  },
+  "runtime": {
+    "mathBlocks": true,
+    "loopsBlocks": true,
+    "logicBlocks": true,
+    "variablesBlocks": true,
+    "textBlocks": true,
+    "listsBlocks": true,
+    "functionBlocks": true,
+    "functionsOptions": {
+      "useNewFunctions": true
     },
-    "runtime": {
-        "mathBlocks": true,
-        "loopsBlocks": true,
-        "logicBlocks": true,
-        "variablesBlocks": true,
-        "textBlocks": true,
-        "listsBlocks": true,
-        "functionBlocks": true,
-        "functionsOptions": {
-          "useNewFunctions": true
-        },
-        "onStartWeight": 100,
-        "onStartNamespace": "pins",
-        "onStartColor": "#40bf4a",
-        "bannedCategories": [
-          "light"
-        ]
+    "onStartWeight": 100,
+    "onStartNamespace": "pins",
+    "onStartColor": "#40bf4a",
+    "bannedCategories": ["light"]
+  },
+  "simulator": {
+    "autoRun": true,
+    "streams": false,
+    "aspectRatio": 1.0,
+    "parts": true,
+    "partsAspectRatio": 0.69,
+    "dynamicBoardDefinition": true
+  },
+  "cloud": {
+    "workspace": false,
+    "packages": true,
+    "sharing": true,
+    "publishing": true,
+    "importing": true,
+    "thumbnails": true,
+    "preferredPackages": [],
+    "githubPackages": true
+  },
+  "appTheme": {
+    "accentColor": "#0089BF",
+    "logoUrl": "https://github.com/Teknikio/pxt-teknikio",
+    "logo": "./static/logo.png",
+    "organization": "Teknikio",
+    "organizationUrl": "https://www.teknikio.com/",
+    "organizationLogo": "https://cdn.shopify.com/s/files/1/1837/7355/files/logo_larger_600x.png?v=1572991143",
+    "organizationWideLogo": "https://cdn.shopify.com/s/files/1/1837/7355/files/logo_larger_600x.png?v=1572991143",
+    "homeUrl": "https://www.teknikio.com/pages/bluebird",
+    "embedUrl": "https://www.teknikio.com/pages/bluebird",
+    "privacyUrl": "https://www.teknikio.com/pages/privacy-policy",
+    "termsOfUseUrl": "https://www.teknikio.com/pages/terms-and-conditions",
+    "githubUrl": "https://github.com/Teknikio/pxt-teknikio",
+    "boardName": "Teknikio Bluebird",
+    "driveDisplayName": "Bluebird",
+    "uploadMessage": "Download",
+    "docMenu": [
+      {
+        "name": "About",
+        "path": "/about"
+      },
+      {
+        "name": "Docs",
+        "path": "/docs"
+      },
+      {
+        "name": "FAQ",
+        "path": "https://www.teknikio.com/pages/faq"
+      }
+    ],
+    "coloredToolbox": false,
+    "monacoToolbox": true,
+    "invertedMenu": true,
+    "invertedToolbox": true,
+    "invertedMonaco": true,
+    "selectLanguage": true,
+    "availableLocales": [
+      "en",
+      "de",
+      "ja",
+      "es-ES",
+      "fi",
+      "fr",
+      "hu",
+      "is",
+      "it",
+      "ko",
+      "nl",
+      "no",
+      "pt-BR",
+      "pt-PT",
+      "ru",
+      "si-LK",
+      "sk",
+      "sv-SE",
+      "tr",
+      "uk",
+      "zh-CN",
+      "zh-TW"
+    ],
+    "showHomeScreen": true,
+    "homeScreenHero": "./static/hero.png",
+    "blocklyOptions": {
+      "grid": {
+        "spacing": 20,
+        "length": 2,
+        "colour": "#fdf4e8",
+        "snap": true
+      }
     },
-    "simulator": {
-        "autoRun": true,
-        "streams": false,
-        "aspectRatio": 1.0,
-        "parts": true,
-        "partsAspectRatio": 0.69,
-        "dynamicBoardDefinition": true
+    "blocklyColors": {
+      "insertionMarker": "#FFFFFF",
+      "insertionMarkerOpacity": 0.5
     },
-    "cloud": {
-      "workspace": false,
-      "packages": true,
-      "sharing": true,
-      "publishing": true,
-      "importing": true,
-      "thumbnails": true,
-      "preferredPackages": [],
-      "githubPackages": true
+    "blockColors": {
+      "pins": "#185C87",
+      "mixer": "#185C87",
+      "variables": "#E6B901",
+      "math": "#E6B901",
+      "loops": "#7ED321",
+      "logic": "#7ED321",
+      "text": "#ffab19",
+      "advanced": "#F04D3A",
+      "functions": "#005a9e",
+      "arrays": "#8A1C7C"
     },
-    "appTheme": {
-        "accentColor": "#0089BF",
-        "logoUrl": "https://github.com/Teknikio/pxt-teknikio",
-        "logo": "./static/logo.png",
-        "organization": "Teknikio",
-        "organizationUrl": "https://www.teknikio.com/",
-        "organizationLogo": "https://cdn.shopify.com/s/files/1/1837/7355/files/logo_larger_600x.png?v=1572991143",
-        "organizationWideLogo": "https://cdn.shopify.com/s/files/1/1837/7355/files/logo_larger_600x.png?v=1572991143",
-        "homeUrl": "https://www.teknikio.com/pages/bluebird",
-        "embedUrl": "https://www.teknikio.com/pages/bluebird",
-        "privacyUrl": "https://www.teknikio.com/pages/privacy-policy",
-        "termsOfUseUrl": "https://www.teknikio.com/pages/terms-and-conditions",
-        "githubUrl": "https://github.com/Teknikio/pxt-teknikio",
-        "boardName": "Teknikio Bluebird",
-        "driveDisplayName": "Bluebird",
-        "uploadMessage": "Download",
-        "docMenu": [
-            {
-                "name": "About",
-                "path": "/about"
-            },
-            {
-                "name": "Docs",
-                "path": "/docs"
-            },
-            {
-              "name": "FAQ",
-              "path": "https://www.teknikio.com/pages/faq"
-            }
-        ],
-        "coloredToolbox": false,
-        "monacoToolbox": true,
-        "invertedMenu": true,
-        "invertedToolbox": true,
-        "invertedMonaco": true,
-        "selectLanguage": true,
-        "availableLocales": [
-            "en",
-            "de",
-            "ja",
-            "es-ES",
-            "fi",
-            "fr",
-            "hu",
-            "is",
-            "it",
-            "ko",
-            "nl",
-            "no",
-            "pt-BR",
-            "pt-PT",
-            "ru",
-            "si-LK",
-            "sk",
-            "sv-SE",
-            "tr",
-            "uk",
-            "zh-CN",
-            "zh-TW"
-        ],
-        "showHomeScreen": true,
-        "homeScreenHero": "./static/hero.png",
-        "blocklyOptions": {
-            "grid": {
-                "spacing": 20,
-                "length": 2,
-                "colour": "#fdf4e8",
-                "snap": true
-            }
-        },
-        "blocklyColors": {
-          "insertionMarker": "#FFFFFF",
-          "insertionMarkerOpacity": 0.5
-        },
-        "blockColors": {
-          "pins": "#185C87",
-          "mixer": "#185C87",
-          "variables": "#E6B901",
-          "math": "#E6B901",
-          "loops": "#7ED321",
-          "logic": "#7ED321",
-          "text": "#ffab19",
-          "advanced": "#F04D3A",
-          "functions": "#005a9e",
-          "arrays": "#8A1C7C"
-        },
-        "allowPackageExtensions": true,
-        "alwaysGithubItem": true,
-        "monacoColors": {
-            "editor.background": "#ecf0f1"
-        },
-        "socialOptions": {
-          "orgTwitterHandle": "teknikio"
-        },
-        "simAnimationEnter": "roll in",
-        "simAnimationExit": "roll out",
-        "allowParentController": false,
-        "hideMenuBar": false,
-        "hideEditorToolbar": false,
-        "hideCookieNotice": true,
-        "debugger": true,
-        "highContrast": true,
-        "greenScreen": true,
-        "enableTrace": true,
-        "print": true,
-        "hasAudio": true,
-        "extendEditor": true,
-        "extendFieldEditors": true,
-        "disableBlockIcons": true,
-        "scriptManager": true,
-        "baseTheme": "dark",
-        "qrCode": true,
-        "python": true,
-        "pythonToolbox": true
+    "allowPackageExtensions": true,
+    "alwaysGithubItem": true,
+    "monacoColors": {
+      "editor.background": "#ecf0f1"
     },
-    "unsupportedBrowsers": [
-      { "id" : "ie" }
-    ]
+    "socialOptions": {
+      "orgTwitterHandle": "teknikio"
+    },
+    "simAnimationEnter": "roll in",
+    "simAnimationExit": "roll out",
+    "allowParentController": false,
+    "hideMenuBar": false,
+    "hideEditorToolbar": false,
+    "hideCookieNotice": true,
+    "debugger": true,
+    "highContrast": true,
+    "greenScreen": true,
+    "enableTrace": true,
+    "print": true,
+    "hasAudio": true,
+    "extendEditor": true,
+    "extendFieldEditors": true,
+    "disableBlockIcons": true,
+    "scriptManager": true,
+    "baseTheme": "dark",
+    "qrCode": true,
+    "python": true,
+    "pythonToolbox": true
+  },
+  "unsupportedBrowsers": [{ "id": "ie" }]
 }
