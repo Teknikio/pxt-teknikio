@@ -13,7 +13,7 @@
   #fileNameInput2 {
     background: #FFFFFF !important;
     color: @darkGrey !important;
-    border: 2px solid @darkGrey;
+    border: 2px solid red;
   }
 
   button.small {
