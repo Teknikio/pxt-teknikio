@@ -10,13 +10,7 @@
 			"path": "../../../../codal/codal-nrf52"
 		},
 		{
-			"path": "../../../../codal/codal-mbedos/codal-mbedos"
-		},
-		{
 			"path": "../../../../codal/codal-build/codal"
-		},
-		{
-			"path": "../../../../codal/codal-nrf52840-dk/codal-nrf52840-dk"
 		},
 		{
 			"path": "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Embedded Development/Teknikio/BluebirdFirmware40"
@@ -32,6 +26,12 @@
 		},
 		{
 			"path": "../../../../../Embedded/BluebirdProv"
+		},
+		{
+			"path": "../../../../codal/codal-nrf52840-dk"
+		},
+		{
+			"path": "../../../../TeknikioDocs/Teknikio.github.io"
 		}
 	],
 	"settings": {
