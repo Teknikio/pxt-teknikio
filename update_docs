@@ -1,0 +1,8 @@
+
+date=$(date '+%Y_%m_%d_%H_%M_%S')
+
+git add .
+git commit -m "docs update"
+git branch $date
+git checkout $date
+git push origin $date
