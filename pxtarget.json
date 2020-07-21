@@ -132,13 +132,18 @@
             },
             {
                 "name": "Docs",
-                "path": "https://teknikio.github.io/docs/about"
+                "path": "/about"
+            },
+            {
+              "name": "Reference",
+              "path": "/reference"
             },
             {
               "name": "FAQ",
-              "path": "https://www.teknikio.com/pages/faq"
+              "path": "/faq"
             }
         ],
+        "hasReferenceDocs": true,
         "coloredToolbox": false,
         "monacoToolbox": true,
         "invertedMenu": true,
