@@ -1,8 +1,27 @@
 # Summary
 
 * [About](/about)
+* [Control Center](/about)
 * [FAQ](/faq)
 * [Projects](/projects)
+  <!--  * [Tutorials](/tutorials) 
+    * [Games](/projects/games)
+    * [Rock Paper Scissors](/projects/rock-paper-scissors)
+    * [Coin Flipper](/projects/coin-flipper)
+    * [Radio Games](/projects/radio-games)
+    * [Fashion](/projects/fashion)
+    * [Music](/projects/music)
+    * [Toys](/projects/toys)
+    * [Science](/projects/science)
+    * [Networking with the micro:bit](https://microbit.nominetresearch.uk/networking-book/)
+    * [SparkFun Videos](https://youtu.be/kaNtg1HGXbY?list=PLBcrWxTa5CS0mWJrytvii8aG5KUqMXvSk)
+    * [Logic Lab](/courses/logic-lab)
+    * [Blocks to JavaScript](/courses/blocks-to-javascript)
+    * [SparkFun Inventor's Kit](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-microbit-experiment-guide/introduction-to-the-sparkfun-inventors-kit-for-microbit)
+    * [Kitronik Inventor Kit](https://www.kitronik.co.uk/blog/inventors-kit-experiment-1-help)
+    * [micro:bit of Things](https://sites.google.com/view/microbitofthings)
+-->
+* [Hardware](/about)
 * [GitHub](/github)
 
 ## #support
@@ -12,7 +31,7 @@
 ## #courses
 
 ## #reference
-* [Reference](/reference)
+* [Peripheral Blocks](/reference)
     * [Basic](/reference/basic)
         * [show number](/reference/basic/show-number)
         * [show icon](/reference/basic/show-icon)
@@ -172,7 +191,7 @@
 
 ## Blocks #blocks
 
-* [Blocks](/blocks)
+* [Program Blocks](/blocks)
     * [On Start](/blocks/on-start)
     * [Loops](/blocks/loops)
         * [repeat](/blocks/loops/repeat)
@@ -229,7 +248,6 @@
 ## Miscellaneous #misc
 
 * Miscellaneous
-    * [About](/about)
     * [Support](/support)
     * [Translate](/translate)
     * [Sharing projects](/share)
