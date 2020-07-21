@@ -44,10 +44,6 @@ pxt-teknikio/docs
 
 Do not make any updates to documentation other than inside this folder or your changes/updates will be overwritten during the build process.  
 
-```
-npm run serve
-```
-
 ### Testing changes/updates to documentation
 
 After you have made changes or udpate to the documentation, you can test them by running the local server.  To run the server locally, run the following commands
