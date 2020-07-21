@@ -1,4 +1,4 @@
-# MakeCode for Teknikio BlueBird [![Build Status](https://circleci.com/gh/Teknikio/pxt-teknikio)](https://circleci.com/gh/Teknikio/pxt-teknikio)
+# Instructions for updating pxt-teknikio documentation
 
 This repo contains the editor hosted at https://bluebird-prod.teknikio.com .
 
@@ -6,107 +6,69 @@ This repo contains the editor hosted at https://bluebird-prod.teknikio.com .
 
 ## Local server setup
 
-This setup gives you a local version of the editor and the ability to load packages from your machine. This is the setup to develop new packages.
+This setup gives you a local version of the editor and the ability to test your changes and updates to the documentation.
 
 ### Setup
 
+Install Node if you haven't already
+
 * install [Node.js 8+](https://nodejs.org/en/download/)
-* clone https://github.com/Microsoft/pxt-adafruit to ``pxt-adafruit`` folder
-* go to ``pxt-teknikio`` and run
+
+Clone the pxt-teknikio repository by running the following command
 
 ```
-npm install
+git clone https://github.com/Teknikio/pxt-teknikio.git
+```
+
+Next, we need to be inside the folder to set things up.  Run the following command 
+
+```
+cd pxt-teknikio
+```
+
+Run the set up script that will install any requirements necessary to test locally on your machine.
+
+```
+bash setup_pxt
 ```
 
 Don't forget to periodically ``git pull`` and ``npm install`` to get the latest changes.
 
-### Launching the server
+### Making changes and updates to docuemntation
 
-This command launches a local web server. Note that this web server is meant for development purposes only. It was not designed or secured to be run on a web server.
+The documention is included in 
+
+```
+pxt-teknikio/docs
+```
+
+Do not make any updates to documentation other than inside this folder or your changes/updates will be overwritten during the build process.  
 
 ```
 npm run serve
 ```
 
-### Creating and editing a package
+### Testing changes/updates to documentation
 
-* go to ``/projects`` under the ``pxt-teknikio`` folder
-* clone your package repo, say ``pxt-helloworld``
-* launch the server with ``npm run serve`` from the ``pxt-teknikio`` folder using ``npm serve``
-* create a new project
-* go to **project settings** and click on **Edit settings as text**
-* add an entry in the dependency section that points to your project
-```
-    "dependencies": {
-        "teknikio-bluebird": "*",
-        "helloworld": "file:../pxt-helloworld"
-    },
-```
-* click on the **Blocks** icon to reload the blocks.
+After you have made changes or udpate to the documentation, you can test them by running the local server.  To run the server locally, run the following commands
 
-Once this project is setup, simply reload the editor after making changes on disk.
-
-## Local Dev setup
-
-This setup is needed if you plan to make changes in PXT itself. In most cases, it's a bit of an overkill
-if you are building a package for the Bluebird editor.
-
-* install [Node.js 8+](https://nodejs.org/en/download/)
-* install the PXT command line
-```
-npm install -g pxt
-```
-
-In a common folder,
-
-* clone https://github.com/Microsoft/pxt to ``pxt`` folder
-* clone https://github.com/Microsoft/pxt-common-packages to ``pxt-common-packages`` folder
-* clone https://github.com/Microsoft/pxt-teknikio to ``pxt-teknikio`` folder
-* go to ``pxt`` and run
+The documentation content is generated based on the content of the /docs folder. In order to re-generate the content, it's necessary to clear out the old files using the command below.
 
 ```
-npm install
-npm run build
+pxt clean
 ```
-
-* go to ``pxt-common-packages`` and run
+Next, we run the serve command which will re-generate the docuemntation content and open the browser after it is finished.  
 
 ```
-npm install
-npm link ../pxt
-```
-
-* go to ``pxt-teknikio`` and run
-
-```
-npm install
-npm link ../pxt
-npm link ../pxt-common-packages
-```
-
-### to run the local server
-
-From root github folder,
-
-```
-cd pxt-teknikio
 pxt serve
 ```
 
-### to build and deploy a single package via command line
+### Submitting your changes
+
+After you are happy with your changes and are ready to add them to production, run the update_docs script by running the following command
 
 ```
-cd libs/core
-pxt deploy
+bash update_docs
 ```
 
-## License
-MIT
-
-## Code of Conduct
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## Trademarks
-
-MICROSOFT, the Microsoft Logo, and MAKECODE are registered trademarks of Microsoft Corporation. They can only be used for the purposes described in and in accordance with Microsoft’s Trademark and Brand guidelines published at https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general.aspx. If the use is not covered in Microsoft’s published guidelines or you are not sure, please consult your legal counsel or MakeCode team (makecode@microsoft.com).
+The update_docs script will add your changes, add a commit message indicating there were updates to the documentation, create a new branch based on the current date and time and then push the changes to github.  After running the update_docs script, let one of the developers know you made updates to the documentation so they can merge them into the live website.
