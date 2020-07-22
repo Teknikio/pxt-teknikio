@@ -35,4 +35,7 @@ led.setBrightness(led.brightness() / 2)
 ## See also
 
 [set brightness](/reference/led/set-brightness), [fade in](/reference/led/fade-in), [fade out](/reference/led/fade-out)
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5225e532bb110b7ef3a906f71fa4ebe7c837ef2c
