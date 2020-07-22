@@ -15,7 +15,9 @@ led.brightness();
 This program makes the screen completely bright when it is turned on (if it is not that way already):
 
 ```blocks
-rgb.setBrightness(255)
+if (led.brightness() < 255) {
+    led.setBrightness(255)
+}
 ```
 
 
@@ -35,4 +37,3 @@ led.setBrightness(led.brightness() / 2)
 ## See also
 
 [set brightness](/reference/led/set-brightness), [fade in](/reference/led/fade-in), [fade out](/reference/led/fade-out)
-
