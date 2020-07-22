@@ -58,7 +58,7 @@
       "buildEngine" : "dockercodal",
       "codalTarget": {
         "name": "codal-nrf52840-dk",
-        "url": "https://github.com/Teknikio/codal-nrf52840-dk",
+        "url": "https://github.com/Teknikio/codal-bluebird",
         "branch": "master",
         "type": "git"
       },
@@ -132,11 +132,15 @@
             },
             {
                 "name": "Docs",
-                "path": "/docs"
+                "path": "/about"
+            },
+            {
+              "name": "Reference",
+              "path": "/reference"
             },
             {
               "name": "FAQ",
-              "path": "https://www.teknikio.com/pages/faq"
+              "path": "/faq"
             }
         ],
         "coloredToolbox": false,
