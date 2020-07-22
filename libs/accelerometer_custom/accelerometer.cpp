@@ -200,7 +200,6 @@ int acceleration(Dimension dimension) {
 int temperature() {
     auto acc = getAccelerometer();
     if (!acc) return 0;
-    //int ab = (int)(((float)acc->getTemperature())*0.0053);
     //acc->requestUpdate();
     return acc->getTemperature();
     // auto thermo = getWTemp();
