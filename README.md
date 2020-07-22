@@ -18,7 +18,7 @@ This setup gives you a local version of the editor and the ability to load packa
 npm install
 ```
 
-Don't forget to periodically ``git pull`` and ``npm install`` to get the latest changes.
+Don't forget to periodically ``git pull`` and ``npm install`` to get the latest changes...
 
 ### Launching the server
 
