@@ -2,9 +2,6 @@ date=$(date '+%Y_%m_%d_%H_%M_%S')
 
 pxt clean
 pxt staticpkg
-
-date=$(date '+%Y_%m_%d_%H_%M_%S')
-
 git add .
 git commit -m "docs update"
 git branch $date
