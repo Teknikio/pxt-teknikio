@@ -143,7 +143,6 @@
               "path": "/faq"
             }
         ],
-        "hasReferenceDocs": true,
         "coloredToolbox": false,
         "monacoToolbox": true,
         "invertedMenu": true,
