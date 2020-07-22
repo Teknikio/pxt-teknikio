@@ -1,5 +1,6 @@
 # Summary
 
+<<<<<<< HEAD
 
 * [About](/about)
 * [Control Center](/about)
@@ -24,6 +25,11 @@
 -->
 * [Hardware](/about)
 * [GitHub](/github)
+=======
+* [About](https://teknikio.github.io/docs/about)
+* [FAQ](https://teknikio.github.io/docs/faq)
+* [Projects](https://teknikio.github.io/docs/projects)
+>>>>>>> joe_develop
 
 ## #support
 
@@ -32,7 +38,10 @@
 ## #courses
 
 ## #reference
+<<<<<<< HEAD
 
+=======
+>>>>>>> joe_develop
 * [Reference](https://teknikio.github.io/docs/reference.html)
     * [Basic](https://teknikio.github.io/docs/reference/basic)
         * [show number](https://teknikio.github.io/docs/reference/basic/show-number)
