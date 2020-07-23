@@ -1,4 +1,4 @@
-![](/static/bb/device/header1.jpg)
+![](/static/bb/about_cover.png)
 
 # About
 
