@@ -1,7 +1,7 @@
 # Summary
 
 * [About](/about)
-* [Control Center](/about)
+* [Control Center](/controlcenter)
 * [FAQ](/faq)
 * [Projects](/projects)
   <!--  * [Tutorials](/tutorials)
@@ -21,7 +21,7 @@
     * [Kitronik Inventor Kit](https://www.kitronik.co.uk/blog/inventors-kit-experiment-1-help)
     * [micro:bit of Things](https://sites.google.com/view/microbitofthings)
 -->
-* [Hardware](/about)
+* [Hardware](/hardware)
 * [GitHub](/github)
 
 ## #support
