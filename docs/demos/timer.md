@@ -29,7 +29,7 @@ Feel free to skip these steps if you are only interested in learning the program
 
 ## Part 2: Take measurements in the Control Center
 
-1) Connect Bluebird to Control Center (see here for [help](controlcenter)) and take note of the Accelerometer readings.
+1) Connect Bluebird to Control Center (see here for [help](/controlcenter)) and take note of the Accelerometer readings.
 
 2) Fill out the chart below to record your data.
 Eg. Top  | Strawberry Smoothie | 10 minutes |  Z=1
@@ -41,7 +41,7 @@ Eg. Top  | Strawberry Smoothie | 10 minutes |  Z=1
 |Left||||
 |Right||||
 |Back||||
-|Bottom |STOP TIMER |---||
+|Bottom |STOP TIMER |---|||
 
 
 ##  Part 3: Program the Timer

@@ -19,10 +19,11 @@ On the upper left of the Tools submenu Bluebird status will say: “NOT CONNECTE
 
 ![](/static/bb/projects/connect.png)
 
-2) The connected Bluebird should have an LED glowing Blue and your screen will show an active Blue board and the graphs will start to stream live data!
+3) The connected Bluebird should have an LED glowing Blue and your screen will show an active Blue board and the graphs will start to stream live data!
 
-3) 1) Scroll down the sensor reading to the Light Sensor
+4) Scroll down the sensor reading to the Light Sensor
 Watch what occurs when the light in the room is on and then the light in the room is off.
+![](/static/bb/projects/.png)
 
 ##  Part 3: Program your Night Light
 
