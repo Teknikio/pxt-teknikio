@@ -78,8 +78,8 @@ The Bluebird integrates an analog ambient light sensor. This sensor is placed ne
 
 | Item  |     Details     |  
 |----------|-------------|
-|Type|Analog Output|
-Sensing range |0 - 4000 Lux|
+|Type| Analog Output|
+|Sensing range |0 - 4000 Lux|
 |Resolution |Continuous|
 |More Info |ALS-PT19-315C/L177/TR8|
 

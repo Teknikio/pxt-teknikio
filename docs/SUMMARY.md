@@ -2,8 +2,7 @@
 
 * [About](/about)
 * [Control Center](/controlcenter)
-* [FAQ](/faq)
-* [Projects](/projects)
+* [Examples](/examples)
   <!--  * [Tutorials](/tutorials)
     * [Games](/projects/games)
     * [Rock Paper Scissors](/projects/rock-paper-scissors)
@@ -24,14 +23,10 @@
 * [Hardware](/hardware)
 * [GitHub](/github)
 
-## #support
 
-## #examples
-
-## #courses
 
 ## #reference
-* [Peripheral Blocks](/reference)
+* [Hardware Blocks](/reference)
     * [Basic](/reference/basic)
         * [show number](/reference/basic/show-number)
         * [show icon](/reference/basic/show-icon)
@@ -234,13 +229,5 @@
 
 ## #other
 
-## Miscellaneous #misc
-
-* Miscellaneous
-    * [Support](/support)
-    * [Translate](/translate)
-    * [Sharing projects](/share)
-    * [Offline support](/offline)
-    * [Save](/save)
-
-## Developers #devs
+* [FAQ](/faq)
+* [Support](/support)

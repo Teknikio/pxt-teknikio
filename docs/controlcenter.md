@@ -13,6 +13,8 @@ For outputs you will see a pop-up configuration window that allows you to set th
 
 ![](/static/getting-started/controlcenter2.jpeg)
 
+Try clicking on the music button, you should see a playable keyboard! If you play these keys you will hear the notes played on the speaker of your board.
+
 The graphs have additional buttons where you can customize the units or axis that you are viewing. For example, on the accelerometer graph you can choose the x, y, z axis or some combination of all 3!
 For the temperature graph you can display the data in Farenheit or Celsius.
  [insert picture of graph zoom]

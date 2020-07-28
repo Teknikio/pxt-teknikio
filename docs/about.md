@@ -29,8 +29,8 @@ Depending on the platform you are using, following the guides below to get start
 * [Arduino IDE](https://docs.google.com/presentation/d/1aYCl8GMwqa82yhmZYFZRAFoSpRtjT8LwkdEfhVQePGM/edit?usp=sharing)
 
 ## Web Dashboard: [Control Center](/)
-![](/static/bb/Tools - Control Center1.png)
-The first "tool" that you have in the menu is the Control Center. Here you can see incoming data from the sensor on the board, change the LED color and play tones on the speaker! You can also save and record data to your account if you are signed in. Learn more about accounts here.
+The first "tool" that you have in the menu is the [Control Center](/controlcenter). Here you can see incoming data from the sensor on the board, change the LED color and play tones on the speaker! You can also save and record data to your account if you are signed in. Learn more about accounts here.
+
 
 
 ## ~
@@ -89,7 +89,7 @@ input.onButtonPressed(Button.B, () => {
 
 ## Resources!
 
-We recommend you browse these docs to learn more about the web platform. We have loads of [inventions](https://tekniverse.teknikio.com/resources/inventions), tutorials, and [courses for educators](https://tekniverse.teknikio.com/resources/classes) to help you dig deeper into coding, IoT, design, digital justice and more!
+We recommend you browse these docs to learn more about the web platform. We have loads of [inventions](https://tekniverse.teknikio.com/resources/inventions), [tutorials](/Projects), and [courses for educators](https://tekniverse.teknikio.com/resources/classes) to help you dig deeper into coding, IoT, design, digital justice and more!
 
 
 <!--## C++ Runtime
