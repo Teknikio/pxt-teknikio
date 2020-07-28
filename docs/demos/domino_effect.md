@@ -49,6 +49,22 @@ These two blocks of code will turn on the first LEDboard which is connected to I
 
 7) Now, we want to turn OFF all the LEDs after they have been ON for 5 seconds. Open the Pins menu and drag in the [digital write pin ‘A1’ to ‘LOW’] block. Drag in underneath the [pause ‘5000’ ms] block. Repeat this action for pins A2 and A3. Your final code should look something like this:
 
+```blocks
+forever(function () {
+   if (input.lightLevel() < 50) {
+       pins.A1.digitalWrite(true)
+       pause(1000)
+       pins.A2.digitalWrite(true)
+       pause(1000)
+       pins.A3.digitalWrite(true)
+       pause(5000)
+       pins.A1.digitalWrite(false)
+       pins.A2.digitalWrite(false)
+       pins.A3.digitalWrite(false)
+   }
+});
+```
+
 ## Part 3 Upload your code to Bluebird
 
 1) Go to the Javascript window and right-click your mouse to reveal more options. Select Download.

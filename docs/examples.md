@@ -30,7 +30,7 @@ If you’re feeling stuck, check out our demo projects below. The following proj
 [
     {
         "name": "Pushup Counter",
-        "url": "/demos/siren",
+        "url": "/demos/pushupcounter",
         "imageUrl": "/static/bb/demos/pushupcounter.jpg"
     },
     {
@@ -57,7 +57,7 @@ If you’re feeling stuck, check out our demo projects below. The following proj
   },
   {
       "name": "Domino Effect",
-      "url": "/projects/domino_effect",
+      "url": "/demos/domino_effect",
       "imageUrl": "/static/bb/demos/domino-effect.jpg"
   },
   {
