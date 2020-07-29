@@ -1,12 +1,8 @@
 # Summary
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-* [About](/about)
-* [Control Center](/about)
-* [FAQ](/faq)
 * [Projects](/projects)
+* [About](https://teknikio.github.io/docs/about)
+* [FAQ](https://teknikio.github.io/docs/faq)
+* [Projects](https://teknikio.github.io/docs/projects)
   <!--  * [Tutorials](/tutorials) 
     * [Games](/projects/games)
     * [Rock Paper Scissors](/projects/rock-paper-scissors)
@@ -23,19 +19,6 @@
     * [SparkFun Inventor's Kit](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-microbit-experiment-guide/introduction-to-the-sparkfun-inventors-kit-for-microbit)
     * [Kitronik Inventor Kit](https://www.kitronik.co.uk/blog/inventors-kit-experiment-1-help)
     * [micro:bit of Things](https://sites.google.com/view/microbitofthings)
--->
-* [Hardware](/about)
-* [GitHub](/github)
-=======
-* [About](https://teknikio.github.io/docs/about)
-* [FAQ](https://teknikio.github.io/docs/faq)
-* [Projects](https://teknikio.github.io/docs/projects)
->>>>>>> joe_develop
-=======
-* [About](https://teknikio.github.io/docs/about)
-* [FAQ](https://teknikio.github.io/docs/faq)
-* [Projects](https://teknikio.github.io/docs/projects)
->>>>>>> 5225e532bb110b7ef3a906f71fa4ebe7c837ef2c
 
 ## #support
 
@@ -44,13 +27,6 @@
 ## #courses
 
 ## #reference
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> joe_develop
-=======
->>>>>>> 5225e532bb110b7ef3a906f71fa4ebe7c837ef2c
 * [Reference](https://teknikio.github.io/docs/reference.html)
     * [Basic](https://teknikio.github.io/docs/reference/basic)
         * [show number](https://teknikio.github.io/docs/reference/basic/show-number)
