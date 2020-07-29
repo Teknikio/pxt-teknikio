@@ -1,11 +1,28 @@
+date=$(date '+%Y_%m_%d_%H_%M_%S')
 
 pxt clean
 pxt staticpkg
-
-date=$(date '+%Y_%m_%d_%H_%M_%S')
-
 git add .
 git commit -m "docs update"
+git branch $date
+git checkout $date
+git push origin $date
+
+cd ..
+if [ ! -d Teknikio.github.io ]; then
+  git clone https://github.com/Teknikio/Teknikio.github.io.git
+else
+  cd Teknikio.github.io
+  git pull origin master
+  cd ..
+fi
+
+cd pxt-teknikio
+rsync -av --progress built/packaged/docs/. ../Teknikio.github.io/docs/ 
+
+cd ../Teknikio.github.io
+git add .
+git commit -m "doc updates"
 git branch $date
 git checkout $date
 git push origin $date

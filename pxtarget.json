@@ -128,22 +128,21 @@
         "docMenu": [
             {
                 "name": "About",
-                "path": "/about"
+                "path": "https://teknikio.github.io/docs/about"
             },
             {
                 "name": "Docs",
-                "path": "/about"
+                "path": "https://teknikio.github.io/docs/about"
             },
             {
               "name": "Reference",
-              "path": "/reference"
+              "path": "https://teknikio.github.io/docs/reference"
             },
             {
               "name": "FAQ",
-              "path": "/faq"
+              "path": "https://teknikio.github.io/docs/faq"
             }
         ],
-        "hasReferenceDocs": true,
         "coloredToolbox": false,
         "monacoToolbox": true,
         "invertedMenu": true,
