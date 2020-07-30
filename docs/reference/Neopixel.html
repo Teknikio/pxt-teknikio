@@ -1714,19 +1714,20 @@
 					</button>
 					
     <div class="ui text">
-        <h1 id="calibrate-compass">Calibrate Compass</h1><p>Runs the compass calibration sequence.</p>
-<pre><code class="lang-sig">input.calibrateCompass();</code></pre>
-<h2 id="calibration">Calibration</h2><p>The calibration will ask you to draw a circle or fill the LED screen by tilting the
-micro:bit.</p>
-<p>The compass calibration is stored in memory by the micro:bit, so next time you press the reset button or remove and replace the power the calibration will be remembered.</p>
-<p>When you flash a new program to your micro:bit via USB, this memory is cleared so you will have to re-calibrate it.</p>
-<p>If you are calibrating or using the compass near metal, it might
-confuse the micro:bit.</p>
-<h2 id="example">Example</h2><p>This example runs the calibration when the user presses <strong>A+B</strong> buttons.</p>
-<pre><code class="lang-blocks">input.onButtonPressed(Button.AB, () =&gt; {
-    input.calibrateCompass();
-})</code></pre>
-<h2 id="see-also">See also</h2><p><a  rel="nofollow noopener" href="/docs/reference/input/compass-heading.html">compass heading</a></p>
+        <h1 id="led">Led</h1><p>Control of the LED screen.</p>
+<pre><code class="lang-cards">led.plot(0, 0);
+led.unplot(0, 0);
+led.point(0, 0);
+led.toggle(0, 0);
+led.brightness();
+led.plotBrightness(0, 0, 255)
+led.setBrightness(255);
+led.stopAnimation();
+led.plotBarGraph(0, 0);
+led.setDisplayMode(DisplayMode.BlackAndWhite);
+led.enable(false)</code></pre>
+<h2 id="see-also">See Also</h2><p><a  rel="nofollow noopener" href="/docs/reference/led/plot.html">plot</a>, <a  rel="nofollow noopener" href="/docs/reference/led/unplot.html">unplot</a>, <a  rel="nofollow noopener" href="/docs/reference/led/point.html">point</a>, <a  rel="nofollow noopener" href="/docs/reference/led/brightness.html">brightness</a>, <a  rel="nofollow noopener" href="/docs/reference/led/set-brightness.html">setBrightness</a>, <a  rel="nofollow noopener" href="/docs/reference/led/stop-animation.html">stopAnimation</a>, <a  rel="nofollow noopener" href="/docs/reference/led/plot-bar-graph.html">plotBarGraph</a>, <a  rel="nofollow noopener" href="/docs/reference/led/toggle.html">toggle</a>, <a  rel="nofollow noopener" href="/docs/reference/led/set-display-mode.html">setDisplayMode</a>, <a  rel="nofollow noopener" href="/docs/reference/led/enable.html">enabled</a>,
+<a  rel="nofollow noopener" href="/docs/reference/led/plot-brightness.html">plotBrightness</a>,</p>
 
     </div>
 
