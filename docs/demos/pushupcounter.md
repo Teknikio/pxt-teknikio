@@ -1,99 +1,61 @@
-# Hot Potato
+# Push-up Counter
 
-## Introduction @unplugged
 
-In this game, you will start a timer with a random countdown of a number of seconds. When the timer is off, the game is over and whoever is holding the potato has lost!
-Watch the tutorial on the [MakeCode YouTube channel](https://youtu.be/xLEy1B_gWKY).
+Learn how to program your Bluebird to act as a push-up counter. Make a wearable armband that counts the number of push-ups you do and alerts you when you've reached your goal by blinking an LED and playing a sound.
 
-## Step 1
 
-Add an event to run code when ``||input:button A is pressed||``.
+# Coding Concepts:
+Input (Accelerometer), Output (LED, Sound), If-Then Statements
 
-```blocks
-input.onButtonPressed(Button.A, function () {
-})
-```
 
-## Step 2
+## Part 1: Make the Push-up Counter
 
-Make a ``||variables:timer||`` variable and ``||variables:set||`` it to
-a ``||math:random value||`` between ``5`` and ``15``.
+Feel free to skip these steps if you are only interested in learning the programming concepts.
 
-The value of ``||variables:timer||`` represents the number of seconds left before someone is caught holding the potato.
+1)To make the Bluebird holder, trace your Bluebird onto a piece of cardboard. Then draw another outline about half and inch out from it. Cut out the shape along with the hole in the middle. Take the cutout you just made and trace it on another piece of cardboard. Cut along the tracing to create the backing.
 
-```blocks
-let timer = 0
-input.onButtonPressed(Button.A, function () {
-    // @highlight
-    timer = randint(5, 15)
-})
-```
+![](/static/bb/projects/.png)
+2) Glue the two pieces together to make the holder for your Bluebird. Once the glue is dry, paint the holder any color you like.
+![](/static/bb/projects/.png)
 
-## Step 3
 
-Add code to ``||basic:show||`` that the game started.
+3) Make the arm straps for your pushup counter. Cut two strips about 6 inches long by 1.5 inches thick out of foam, felt, or even an old t-shirt. Then connect the ends of the strips to the back of the Bluebird holder as shown. You can glue, staple, or sew on the ends.
+
+![](/static/bb/projects/.png)
+
+4) If you have velcro, you can cut out two strips of it and attach it to either end of the straps. Make sure one piece is on the front side and one is on the back side as shown. If you don’t have velcro, you can also use button snaps. Finally, make sure your Bluebird fits snugly inside its holder and the straps fit nicely around your arm.
+![](/static/bb/projects/.png)
+
+##  Part 2: Program your Push-up Counter
+
+
+1) Open the Pins menu and drag in the ``||basic:on_Start||`` block. This is setting up for actions to happen upon starting up your Bluebird.
 
 ```blocks
-let timer = 0
-input.onButtonPressed(Button.A, function () {
-    timer = randint(5, 15)
-    // @highlight
-    basic.showIcon(IconNames.Chessboard)
-})
-```
+input.onLightConditionChanged(LightCondition.Dark, function () {
+   rgb.setColor(0x00ffff)
+   });
+   ```
 
-## Step 4
+2) Open the Variables menu and select ``||variables:make_a_variable||``. Name your variable “count”, as it will help us count the number of pushups we have done. Now drag in the [set ‘count’ to 0] block and nest it under ``||basic:start||``.
 
-Put in a loop to repeat code ``||loops:while||``  ``||variables:timer||`` ``||logic:is positive||``. When `timer` is negative, the game is over.
+
+
+3) Open the Logic blocks menu and drag in the [if ‘true’ then] block. Nest it in the [on start] block. This states that if true, then perform  _____ action.
 
 
 ```blocks
-let timer = 0
-input.onButtonPressed(Button.A, function () {
-    timer = randint(5, 15)
-    basic.showIcon(IconNames.Chessboard)
-    // @highlight
-    while (timer > 0) {
-    }
+input.onLightConditionChanged(LightCondition.Dark, function () {
+   rgb.setColor(0x00ffff)
 })
+input.setLightThreshold(LightCondition.Dark, 80)
+rgb.setBrightness(125)
+});
 ```
 
-## Step 5
+## Part 3: Upload your code to Bluebird
 
-Inside the ``||loops:while||`` loop, add code to ``||variables:decrease||`` the timer ``||basic:every second||``.
+Click the orange Download button under the simulator. A pop-up menu will appear on your screen. Download the file and follow the instructions on the pop-up. For steps on how to do this, check out the end of the [Siren Tutorial](/demos/siren).
 
-```blocks
-let timer = 0
-input.onButtonPressed(Button.A, function () {
-    timer = randint(5, 15)
-    basic.showIcon(IconNames.Chessboard)
-    while (timer > 0) {
-        // @highlight
-        timer += -1
-        // @highlight
-        basic.pause(1000)
-    }
-})
-```
 
-## Step 5
-
-**After** the ``||loops:while||`` loop is done, add code to ``||basic:show||`` that the game is over.
-
-```blocks
-let timer = 0
-input.onButtonPressed(Button.A, function () {
-    timer = randint(5, 15)
-    basic.showIcon(IconNames.Chessboard)
-    while (timer > 0) {
-        timer += -1
-        basic.pause(1000)
-    }
-    // @highlight
-    basic.showIcon(IconNames.Skull)
-})
-```
-
-## Step 6
-
-`|Download|` your code to your @boardname@, tape it to a potato and play the game with your friends!
+## Awesome! You have created a push-up counter with Bluebird.

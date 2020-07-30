@@ -1,183 +1,104 @@
-# Hot or Cold
+# Sunset Cube
 
-## @description A Hot-or-Cold treasure hunt game
 
-## ~avatar avatar
+Get familiar with using the math and variable blocks on tekniverse by making a sunset cube. Shake this cube to start a sunset light sequence!
 
-Find the hidden @boardname@ before the other players!
 
-## ~
+# Coding Concepts:
+Math Blocks, Outputs (LED), Loops, Variables
 
-https://youtu.be/nbRfNug-RkY
 
-## Beacons
+## Part 1: Build the Cube
 
-In this game, players are looking for a hidden @boardname@ that emits a radio signal. 
-Hidden @boardname@s are called **beacons**.
+1) Choose your foods and follow this [PDF](https://drive.google.com/file/d/1ZtjzpGcUbavmv6g7bzCTchvu33Es9XkF/view?usp=sharing) of directions to fold a cube to place your Bluebird inside.
 
-### Setting up the radio
 
-We set the radio group to ``1`` and all the players use the same group. 
-The @boardname@ transmits its serial number (that's a unique number that identifies it)
-so that players can tell one beacon apart from another. Also, the power of the antenna is reduced to shorten the range of transmission.
+2) Make the Bluebird holder. Take a piece of cardboard and place Bluebird on it. Using a pen poke 4 holes where the middle four connector pins are located. Take four metal studs, and place the Bluebird on the cardboard. Align the pinholes of Bluebird with the poked holes on the cardboard and use the metal studs to go through the Bluebird and cardboard. Bend the studs so that the two pieces are held together tightly.
 
-```block
-radio.setGroup(1)
-radio.setTransmitSerialNumber(true)
-radio.setTransmitPower(6)
-```
-
-### Beacon gotta beam
-
-The beacon just needs to send a radio message every now and then. So, to pace the transmits and give some visual feedback, we add some ``||basic:show icon||`` blocks to animate the screen.
 
 ```blocks
-basic.forever(() => {
-    radio.sendNumber(0)
-    basic.showIcon(IconNames.Heart)
-    basic.showIcon(IconNames.SmallHeart)
-})
-radio.setGroup(1)
-radio.setTransmitSerialNumber(true)
-radio.setTransmitPower(6)
-```
-
-### Hide the beacons
-
-Download the code to each beacon @boardname@ and hide them!
-
-## Hunters
-
-The hunter @boardname@ looks for beacons. 
-
-### Is the beacon close?
-
-To determine how far away or how close they are, we use the signal strength of each radio packet sent by the beacons. The signal strength ranges from ``-128db`` (weak) to ``-42db`` (very strong). 
-
-```blocks
-let signal = 0;
-radio.onReceivedNumber(function (receivedNumber) {
-    signal = radio.receivedPacket(RadioPacketProperty.SignalStrength)
-    basic.showNumber(signal);
+rgb.setColor(purple, () => {
 });
-radio.setGroup(1)
 ```
 
-Test and record the signal values as you move around a beacon, moving closer and farther away:
+3) Test the code in the Bluebird simulator
 
-| | |
-|-|-|
-| Hot signal value: | ``_________________`` |
-| Warm signal value: | ``_________________`` |
-| Cold signal value: | ``_________________`` |
+4) Go to the Loops block menu. Nest the ``||loops:Pause||`` block next in the forever loop sequence. Anything in the ``||basic:Forever||`` loops run repeatedly at a rate that may make changes too fast to observe (as much as 100 loops per second)! You must add a pause to make sure the lights change at a rate that you can observe.
 
-### Hot or cold?
+Fun fact: Our eyes can perceive the flicker of a LED up to 90Hz (90 on-off cycles per second)
 
-The hunter's screen will display:
+5) Repeat this sequence again with another Neopixel color from the palette.
 
-* ``SmallDiamond``: if the beacon is far (cold).
-* ``Diamond``: if the beacon is relatively close (warm).
-* ``Square``: if the beacon is really close (hot).
+Tip: If you make a mistake, you can drag the block back into the sidebar to dispose of it.
 
-Use the ``signal`` values collected in the previous step to determine when to show each icon.
 
-Here is an example that uses ``-95`` or less for cold, between ``-95`` and ``-80`` for warm, and ``-80`` or above for hot. You can change these values to account for your room setup or conditions of your hiding place.
 
-To make the program more responsive, add a ``||led:stop animation||`` to cancel icon animations when a new beacon packet comes in.
+## Part 2:  Code the LED Color Change
+
+
+1) Add a sound to the loop. Select ``||music:play tone||`` from the Music blocks and select siren from the drop-down sound options.
+
+We start with the [on ____] loop which can be found under the sensors category. Bluebird will watch for changes in the accelerometer so that when the cube is shaken, the sequence of actions in the loop will occur.
+
+
+2) Decide on the starting rgb color. We suggest [red 30 green 160 blue 190] which is a bright light blue color. We also need to set up the starting brightness.
+
 
 ```blocks
-let signal = 0;
-radio.onReceivedNumber(function (receivedNumber) {
-    signal = radio.receivedPacket(RadioPacketProperty.SignalStrength)
-    if (signal < -90) {
-        basic.showIcon(IconNames.SmallDiamond)
-    } else if (signal < -80) {
-        basic.showIcon(IconNames.Diamond)
-    } else {
-        basic.showIcon(IconNames.Square)
-    }
-})
-radio.setGroup(1)
+input.onGesture(Gesture.Shake, function () {
+   rgb.rgb(30, 160, 190)
+   rgb.setBrightness(255)
+});
 ```
 
-Download the code and play the game!
+3) The next step is to make a variable called “red.” This will the stored value of red will increase over time which will make the sky on the cube get more red.
 
-## Expand the game: multiple beacons
 
-We'll making the game more interesting by counting how many beacons the hunting player has seen so far.
 
-### Remember the beacons
+4) Instantiate (set an initial value) red so that it is the starting value. If you are using our suggested starting color [set red to 30].
 
-Do you remember that the beacon was configured to transmit its serial number? We can use this information
-to determine if a beacon is new or if it's one we've seen before.
 
-To do so, we add an **[array](/types/array)** variable that will hold all the beacon serial numbers seen so far.
-
-```block
-let beacons: number[] = [0]
-```
-
-Whenever we receive a new packet, we are going to check if the ``beacons`` array already 
-contains the serial number. If not, we add the serial number at the end of ``beacons`` and increment the ``||game:score||``.
-
-To check if an array contains an certain element, we use the ``||arrays:find index of||`` block which returns ``-1`` if the element is not found.
 
 ```blocks
-let beacons: number[] = [0]
-let signal = 0;
-let serialNumber = 0;
-radio.onReceivedNumber(function (receivedNumber) {
-    signal = radio.receivedPacket(RadioPacketProperty.SignalStrength)
-    serialNumber = radio.receivedPacket(RadioPacketProperty.SerialNumber)
-    if (signal > -50 && beacons.indexOf(serialNumber) < 0) {
-        beacons.push(serialNumber)
-        game.addScore(1)
-        basic.showNumber(game.score())
-    }
-})
+let red = 0
+input.onGesture(Gesture.Shake, function () {
+   rgb.rgb(30, 160, 190)
+   rgb.setBrightness(255)
+   red = 30
+});
 ```
 
-### Show my score
+5) Add another loop. This time, the loop will run a set number of times.
 
-To see the current score, we add an ``||input:on button pressed||`` that displays the score on the screen when the **A** button is pressed.
 
-```block
-input.onButtonPressed(Button.A, () => {
-    basic.showNumber(game.score())
-})
-``` 
+6) Within the [repeat ___ times] loop configure a sequence such that the final code will look like this:
 
-### All together
 
-The hunter code with all th pieces together looks like this now. Download and try it out with multiple beacons!
+* What the first block of the loop does is increase the value of red by 35 every time it repeats. For instance, on the first loop “red” will increase from 30 to 65.
+* The second block of this sequence resets the color. We will place the variable “red” into this rgb block.
+* The third block pauses the loop for one second to set the pace the color change.
 
 ```blocks
-let beacons: number[] = [0];
-let signal = 0;
-let serialNumber = 0;
-radio.onReceivedNumber(function (receivedNumber) {
-    signal = radio.receivedPacket(RadioPacketProperty.SignalStrength)
-    serialNumber = radio.receivedPacket(RadioPacketProperty.SerialNumber)
-    led.stopAnimation();
-    if (signal < -95) {
-        basic.showIcon(IconNames.SmallDiamond)
-    } else if (signal < -80) {
-        basic.showIcon(IconNames.Diamond)
-    } else {
-        basic.showIcon(IconNames.Square)
-        if (signal > -50 && beacons.indexOf(serialNumber) < 0) {
-            beacons.push(serialNumber)
-            game.addScore(1)
-            basic.showNumber(game.score())
-        }
-    }
-})
-input.onButtonPressed(Button.A, () => {
-    basic.showNumber(game.score())
-})
-radio.setGroup(1)
+let red = 0
+input.onGesture(Gesture.Shake, function () {
+   rgb.rgb(30, 160, 190)
+   rgb.setBrightness(255)
+   red = 30
+   for (let index = 0; index < 17; index++) {
+       red = red + 35
+       rgb.rgb(red, 160, 190)
+       pause(1000)
+   }
+});
 ```
 
-```package
-radio
-```
+7) Try adjusting the code to alter the colors of the cube, the pause, and the number of repeated loops that take place to create different visual effects.
+
+![](/static/bb/projects/sunset.gif)
+
+## Part 3: Upload your code to Bluebird
+
+Click the orange Download button under the simulator. A pop-up menu will appear on your screen. Download the file and follow the instructions on the pop-up.
+
+
+## Shake it up! You have made your Sunset cube!

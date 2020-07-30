@@ -1,8 +1,6 @@
 # Siren
 
 
-## Introduction @unplugged
-
 Get familiar with Programming in the block editor! Turn your Bluebird into a siren with a blinking LED and sound. Then learn to customize your siren with color changing and sound.
 
 # Coding Concepts:
@@ -12,7 +10,7 @@ Output (LED, Music), Forever Loops, Pauses
 ## Part 1: Make the LED blink
 
 1) Get familiar with block editor:
-On the [Program](https://tekniverse.teknikio.com/tools/program) tab under the tools menu.
+Open the [Program](https://tekniverse.teknikio.com/tools/program) page under the tools menu.
 
 Take note of the following features:
 The Bluebird simulator on the left
