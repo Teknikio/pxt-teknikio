@@ -32,6 +32,9 @@
 		},
 		{
 			"path": "../../../../TeknikioDocs/Teknikio.github.io"
+		},
+		{
+			"path": "../../../../../CognitoTest/amazon-cognito-auth-js"
 		}
 	],
 	"settings": {
