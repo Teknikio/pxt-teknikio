@@ -25,7 +25,6 @@
 
 ## #examples
 
-
 ## #reference
 * [Reference](https://teknikio.github.io/docs/reference.html)
     * [Basic](https://teknikio.github.io/docs/reference/basic)
