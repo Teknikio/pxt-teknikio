@@ -1,13 +1,4 @@
 # Summary
-<<<<<<< HEAD
-
-
-* [About](/about)
-* [Control Center](/controlcenter)
-* [Examples](/examples)
-* [Hardware](/hardware)
-* [GitHub](/github)
-=======
 * [Projects](/projects)
 * [About](https://teknikio.github.io/docs/about)
 * [FAQ](https://teknikio.github.io/docs/faq)
@@ -28,7 +19,6 @@
     * [SparkFun Inventor's Kit](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-microbit-experiment-guide/introduction-to-the-sparkfun-inventors-kit-for-microbit)
     * [Kitronik Inventor Kit](https://www.kitronik.co.uk/blog/inventors-kit-experiment-1-help)
     * [micro:bit of Things](https://sites.google.com/view/microbitofthings)
->>>>>>> 7e76674b29922369b044575ce214d01e005cf6df
 
 
 ## #support
