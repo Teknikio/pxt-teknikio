@@ -1,4 +1,5 @@
 # Summary
+<<<<<<< HEAD
 
 
 * [About](/about)
@@ -6,6 +7,28 @@
 * [Examples](/examples)
 * [Hardware](/hardware)
 * [GitHub](/github)
+=======
+* [Projects](/projects)
+* [About](https://teknikio.github.io/docs/about)
+* [FAQ](https://teknikio.github.io/docs/faq)
+* [Projects](https://teknikio.github.io/docs/projects)
+  <!--  * [Tutorials](/tutorials) 
+    * [Games](/projects/games)
+    * [Rock Paper Scissors](/projects/rock-paper-scissors)
+    * [Coin Flipper](/projects/coin-flipper)
+    * [Radio Games](/projects/radio-games)
+    * [Fashion](/projects/fashion)
+    * [Music](/projects/music)
+    * [Toys](/projects/toys)
+    * [Science](/projects/science)
+    * [Networking with the micro:bit](https://microbit.nominetresearch.uk/networking-book/)
+    * [SparkFun Videos](https://youtu.be/kaNtg1HGXbY?list=PLBcrWxTa5CS0mWJrytvii8aG5KUqMXvSk)
+    * [Logic Lab](/courses/logic-lab)
+    * [Blocks to JavaScript](/courses/blocks-to-javascript)
+    * [SparkFun Inventor's Kit](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-microbit-experiment-guide/introduction-to-the-sparkfun-inventors-kit-for-microbit)
+    * [Kitronik Inventor Kit](https://www.kitronik.co.uk/blog/inventors-kit-experiment-1-help)
+    * [micro:bit of Things](https://sites.google.com/view/microbitofthings)
+>>>>>>> 7e76674b29922369b044575ce214d01e005cf6df
 
 
 ## #support
@@ -14,7 +37,6 @@
 
 
 ## #reference
-
 * [Reference](https://teknikio.github.io/docs/reference.html)
     * [Basic](https://teknikio.github.io/docs/reference/basic)
         * [show number](https://teknikio.github.io/docs/reference/basic/show-number)
