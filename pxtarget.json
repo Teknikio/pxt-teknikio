@@ -143,6 +143,7 @@
               "path": "https://teknikio.github.io/docs/faq"
             }
         ],
+        "hasReferenceDocs": true,
         "coloredToolbox": false,
         "monacoToolbox": true,
         "invertedMenu": true,

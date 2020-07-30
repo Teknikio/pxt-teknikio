@@ -20,7 +20,6 @@ if (led.brightness() < 255) {
 }
 ```
 
-
 ## Example: change brightness
 
 This program makes the screen brightness 100% (255).  Then it turns on
@@ -37,4 +36,3 @@ led.setBrightness(led.brightness() / 2)
 ## See also
 
 [set brightness](/reference/led/set-brightness), [fade in](/reference/led/fade-in), [fade out](/reference/led/fade-out)
-
