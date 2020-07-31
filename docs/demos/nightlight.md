@@ -1,8 +1,6 @@
 # Night Light
 
 
-## Introduction @unplugged
-
 Get familiar with the Control Center! Apply what you learn and turn your Bluebird into a nightlight that turns on when it gets dark.
 
 # Coding Concepts:
