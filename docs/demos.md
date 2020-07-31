@@ -10,17 +10,17 @@ If you’re feeling stuck, check out our demo projects below. The following proj
 [
     {
         "name": "Siren",
-        "url": "/demos/siren",
+        "url": "/docs/demos/siren",
         "imageUrl": "/static/bb/projects/siren.jpg"
     },
     {
         "name": "Magic Wand",
-        "url": "/demos/magicwand",
+        "url": "/docs/demos/magicwand",
         "imageUrl": "/static/bb/projects/magic_wand.jpg"
     },
     {
         "name": "Night Light",
-        "url": "/demos/nightlight",
+        "url": "/docs/demos/nightlight",
         "imageUrl": "/static/bb/projects/nightlight.jpg"
     }
     ]
@@ -30,18 +30,18 @@ If you’re feeling stuck, check out our demo projects below. The following proj
 [
     {
         "name": "Pushup Counter",
-        "url": "/demos/pushupcounter",
+        "url": "/docs/demos/pushupcounter",
         "imageUrl": "/static/bb/projects/pushupcounter.jpg"
     },
     {
       "name": "Smart Timer Cube",
-      "url": "/demos/timer",
+      "url": "/docs/demos/timer",
       "imageUrl": "/static/bb/projects/smart_timer_cube.jpg"
     },
 
     {
         "name": "Sunset Mountain",
-        "url": "/demos/sunsetmountain",
+        "url": "/docs/demos/sunsetmountain",
         "imageUrl": "/static/bb/projects/sunsetmountain.jpg"
     }
     ]
@@ -52,17 +52,17 @@ If you’re feeling stuck, check out our demo projects below. The following proj
 [
     {
       "name": "Conductor's Baton",
-      "url": "/demos/baton",
+      "url": "/docs/demos/baton",
       "imageUrl": "/static/bb/projects/baton.jpg"
   },
   {
       "name": "Domino Effect",
-      "url": "/demos/domino_effect",
+      "url": "/docs/demos/domino_effect",
       "imageUrl": "/static/bb/projects/domino-effect.jpg"
   },
   {
       "name": "Simon Says",
-      "url": "/demos/simonsays",
+      "url": "/docs/demos/simonsays",
       "imageUrl": "/static/bb/projects/simon_says.jpg"
     }
     ]

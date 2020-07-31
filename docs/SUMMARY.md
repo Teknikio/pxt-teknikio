@@ -220,5 +220,5 @@
 
 ## #other
 
-* [FAQ](https://teknikio.github.io/faq)
-* [Support](https://teknikio.github.io/support)
+* [FAQ](https://teknikio.github.io/docs/faq)
+* [Support](https://teknikio.github.io/docs/support)
