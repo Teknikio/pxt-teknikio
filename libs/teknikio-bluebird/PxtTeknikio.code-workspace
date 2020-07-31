@@ -1,0 +1,40 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../codal/codal-core"
+		},
+		{
+			"path": "../../../../codal/codal-nrf52"
+		},
+		{
+			"path": "../../../../codal/codal-build/codal"
+		},
+		{
+			"path": "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/Embedded Development/Teknikio/BluebirdFirmware40"
+		},
+		{
+			"path": "../../../../../Embedded/Customers/Teknikio/Adafruit_nRF52_Bootloader"
+		},
+		{
+			"path": "../../../../TeknikioWebBlue/WebFrontEnd"
+		},
+		{
+			"path": "../../../../Maker/pxt-maker"
+		},
+		{
+			"path": "../../../../../Embedded/BluebirdProv"
+		},
+		{
+			"path": "../../../../codal/codal-nrf52840-dk"
+		},
+		{
+			"path": "../../../../TeknikioDocs/Teknikio.github.io"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "./node_modules/typescript/lib"
+	}
+}

@@ -30,6 +30,14 @@ declare namespace input {
     function acceleration(dimension: Dimension): int32;
 
     /**
+     * Get the temperature in Celsius or Fahrenheit degrees.
+     */
+    //% blockId=device_temperature block="temperature in c"
+    //% parts="accelerometer"
+    //% weight=26 shim=input::temperature
+    function temperature(): int32;
+
+    /**
      * The pitch or roll of the device, rotation along the ``x-axis`` or ``y-axis``, in degrees.
      * @param kind TODO
      */
