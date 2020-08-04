@@ -18,7 +18,7 @@ else
 fi
 
 cd pxt-teknikio
-rsync -av --progress built/packaged/. ../Teknikio.github.io/testDocs
+rsync -av --progress built/packaged/. ../Teknikio.github.io/docsTest
 
 cd ../Teknikio.github.io
 git add .
