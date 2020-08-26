@@ -3,6 +3,7 @@
 
 Get familiar with using the math and variable blocks on tekniverse by making a sunset cube. Shake this cube to start a sunset light sequence!
 
+![](/static/bb/projects/sunset.gif)
 
 # Coding Concepts:
 Math Blocks, Outputs (LED), Loops, Variables

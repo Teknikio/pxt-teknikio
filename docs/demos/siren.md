@@ -22,21 +22,23 @@ The block/javascript view, help button, and setting options on the white top bar
 2) Go to the LED block menu. Nest the ``||rgb:Set Neopixel Color||`` block into the forever loop. Use the color palette to select a color. For this example, we will use purple.
 
 ```blocks
-rgb.setColor(purple, () => {
-});
+rgb.setColor(0x7f00ff);
 ```
 
 3) Test the code in the Bluebird simulator
 
 4) Go to the Loops block menu. Nest the ``||loops:Pause||`` block next in the forever loop sequence. Anything in the ``||basic:Forever||`` loops run repeatedly at a rate that may make changes too fast to observe (as much as 100 loops per second)! You must add a pause to make sure the lights change at a rate that you can observe.
 
+## ~ hint
 Fun fact: Our eyes can perceive the flicker of a LED up to 90Hz (90 on-off cycles per second)
+## ~
 
 5) Repeat this sequence again with another Neopixel color from the palette.
 
+## ~ hint
 Tip: If you make a mistake, you can drag the block back into the sidebar to dispose of it.
+## ~
 
-![](/static/bb/.png)
 
 ## Part 2: Add Sound
 
@@ -62,6 +64,9 @@ forever(function () {
 ## Part 3: Upload your code to Bluebird
 
 Click the orange Download button under the simulator. A pop-up menu will appear on your screen. Download the file and follow the instructions on the pop-up.
+
+
+![](/static/download/download.png)
 
 
 ## Congrats! You have created a siren with Bluebird.

@@ -1,14 +1,12 @@
 # Domino Effect
 
-## @description A beginner-intermediate maker activity, building a guitar with the @boardname@  
 
-## ~avatar avatar
 
 Learn how to turn on a series of lights in sequence when activated. This demo project will address wiring and programming external inputs and outputs to Bluebird. This can be adapted to project ideas like smart street lights that light up in sequence when triggered.
 
-## ~
 
-![](/static/bluebird/.png)
+![](/static/bb/projects/domino-effect.jpg)
+
 
 ## Coding Concepts:
 Input (Light Sensor), External Outputs (LED), If-Then Statements
@@ -28,12 +26,12 @@ For each LEDboard, connect the blue (B) pad on the LEDboard to the appropriate I
 
 1) The [forever] block should already be in the web editor once you open it. Open the Logic menu and drag in the [if ‘true’ then] block and nest it in the [forever]block.
 
-2) Open the Logic menu and find the [0 < 0] block under Comparisons. Drag it into the [if ‘true’ then] block to replace ‘true’. By doing so, we are stating that if __ is less than __, then perform _____ action.
+2) Open the Logic menu and find the [0 < 0] block under Comparisons. Drag it into the ``|if ‘true’ then]`` block to replace ‘true’. By doing so, we are stating that if __ is less than __, then perform _____ action.
 
 3) Open the Sensors block menu and find the [light sensor] block. Drag it over the first ‘0’ value to replace it. The light sensor reading returns a value between 0 (completely dark) and 255 (very bright). We want our LEDs to activate in sequence when something passes over Bluebird’s light sensor. Therefore, replace the second ‘0’ value with the number 50 so that the event is triggered when the light sensor reading is less than 50 (very dark).
 
 
-4) Open the Pins menu and drag in the [digital write pin ‘A1’ to ‘LOW’] block. Nest it in the [if then] block and change the ‘LOW’ switch to ‘HIGH’. Then open the Loops menu and drag in the [pause ‘100’ ms] block. Place it under the [digital write pin ‘A1’ to ‘HIGH’] block. In relation to the LEDs, ‘LOW’ means OFF and ‘HIGH’ means ON. Open the dropdown menu beside ‘100’ and select ‘1 second’, the ‘100’ should be replaced with ‘1000’.
+4) Open the Pins menu and drag in the [digital write pin ‘A1’ to ‘LOW’] block. Nest it in the [if then] block and change the ‘LOW’ switch to ‘HIGH’. Then open the Loops menu and drag in the [pause ‘100’ ms] block. Place it under the ``||[digital write pin ‘A1’ to ‘HIGH’] ``|| block. In relation to the LEDs, ‘LOW’ means OFF and ‘HIGH’ means ON. Open the dropdown menu beside ‘100’ and select ‘1 second’, the ‘100’ should be replaced with ‘1000’.
 
 These two blocks of code will turn on the first LEDboard which is connected to I/O pin 1, then pause for 1 second. We are programming the pause to create a 1 second delay between the first and second lights turning on.
 

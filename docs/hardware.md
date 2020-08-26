@@ -1,5 +1,6 @@
 # Bluebird Hardware Overview
-The Bluebird hardware is built around the nRF52840 chipset.  The nRF52840 combines network and application processing into a single chipset and includes support for a variety of on-chip peripherals.  Bluebird leverages the nRF52840’s integrated USB 2.0 controller for both drag-and-drop programming and debugging without requiring any additional hardware. Bluebird includes a 6-axis accelerometer, light/color sensor, piezo speaker, Neopixel LED, and temperature sensor.  
+The Bluebird hardware is built around the nRF52840 chipset.  The nRF52840 combines network and application processing into a single chipset and includes support for a variety of on-chip peripherals.  Bluebird leverages the nRF52840’s integrated USB 2.0 controller for both drag-and-drop programming and debugging without requiring any additional hardware. Bluebird includes a 6-axis accelerometer, light/color sensor, piezo speaker, Neopixel LED, and temperature sensor.
+ 
 Two key pieces of information to help understand the internals of the Bluebird is schematic, which shows the detailed component data and connectivity of the device.
 
 ![](/static/bluebird/bluebirdspec.png)
