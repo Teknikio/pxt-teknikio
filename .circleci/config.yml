@@ -32,31 +32,13 @@ deploy: &deploy
         container-image-name-updates: "container=${AWS_RESOURCE_NAME_PREFIX}-service-${ENV},image-and-tag=${AWS_ECR_ACCOUNT_URL}/${AWS_RESOURCE_NAME_PREFIX}-${ENV}:${CIRCLE_SHA1}"
         verify-revision-is-deployed: true
 
-build_docs: &build_docs
-  <<: *defaults
-  steps:
-    - checkout
-    - run: npm install
-    - run: bash update_docs
-
 jobs:
-  build_docs:
-    <<: *build_docs
   deploy-int:
     <<: *deploy
   deploy-prod:
     <<: *deploy
 
 workflows:
-  build_deploy_docs:
-    jobs:
-      - build_docs:
-          context: integration
-          filters:
-            branches:
-              only:
-                - master
-                - docs_footer
   build_and_deploy:
     jobs:
       - deploy-int:
@@ -65,7 +47,6 @@ workflows:
             branches:
               only:
                 - master
-                - docs_footer
       - deploy-prod:
           context: production
           filters:
