@@ -36,6 +36,7 @@ build_docs: &build_docs
   <<: *defaults
   steps:
     - checkout
+    - run: npm install
     - run: bash update_docs
 
 jobs:
