@@ -49,7 +49,7 @@ jobs:
 workflows:
   build_deploy_docs:
     jobs:
-      - build_docs-docs:
+      - build_docs:
           context: integration
           filters:
             branches:
