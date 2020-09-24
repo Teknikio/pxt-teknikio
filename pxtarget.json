@@ -24,8 +24,8 @@
         "libs/storage",
         "libs/serial",
         "libs/jacdac",
-        "libs/teknikio-bluebird",
         "libs/core---nrf52",
+        "libs/teknikio-bluebird",
         "libs/mixer---nrf52"
     ],
     "serial": {
@@ -59,7 +59,7 @@
       "codalTarget": {
         "name": "codal-nrf52840-dk",
         "url": "https://github.com/Teknikio/codal-bluebird",
-        "branch": "master",
+        "branch": "update/bluebird_specific",
         "type": "git"
       },
       "codalBinary": "NRF52840_DK",

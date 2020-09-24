@@ -31,10 +31,21 @@
 			"path": "../../../../codal/codal-nrf52840-dk"
 		},
 		{
-			"path": "../../../../TeknikioDocs/Teknikio.github.io"
+			"path": "../../../Teknikio.github.io"
+		},
+		{
+			"path": "../../../../../CrossPlatform/bmmpr/bmmprMobile"
+		},
+		{
+			"path": "../../../Teknikio_nRF52_Arduino"
 		}
 	],
 	"settings": {
-		"typescript.tsdk": "./node_modules/typescript/lib"
+		"typescript.tsdk": "./node_modules/typescript/lib",
+		"files.associations": {
+			"memory": "cpp",
+			"istream": "cpp",
+			"functional": "cpp"
+		}
 	}
 }

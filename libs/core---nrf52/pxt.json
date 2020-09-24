@@ -10,6 +10,7 @@
         "codal.cpp",
         "usb.cpp",
         "pxt.h",
+        "led.h",
         "platform.h",
         "platform.cpp",
         "pxtcore.h",
@@ -38,10 +39,13 @@
         "timer.ts",
         "light.cpp",
         "light.h",
+        "icons.jres",
         "keyvaluestorage.cpp",
         "keyvaluestorage.ts",
         "leveldetector.ts",
-        "pxtparts.json"
+        "pxtparts.json",
+        "led.cpp",
+        "led.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -67,6 +71,8 @@
     "dalDTS": {
         "includeDirs": [
             "libraries/codal-core/inc",
+            "libraries/codal-nrf52840-dk/inc",
+            "libraries/codal-nrf52840-dk/model",
             "pxtapp"
         ],
         "excludePrefix": [
