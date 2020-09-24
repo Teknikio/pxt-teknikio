@@ -3,7 +3,8 @@
     "description": "",
     "dependencies": {
         "teknikio-bluebird": "file:../teknikio-bluebird",
-        "light": "file:../../node_modules/pxt-common-packages/libs/light"
+        "light": "file:../../node_modules/pxt-common-packages/libs/light",
+        "core---nrf52": "file:../core---nrf52"
     },
     "files": [
         "main.blocks",

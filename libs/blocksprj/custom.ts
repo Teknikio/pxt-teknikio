@@ -77,5 +77,9 @@ namespace rgb {
     light.setAll(((red & 0xFF) << 16) | ((green & 0xFF) << 8) | (blue & 0xFF));
   }
 
+}
+
+//% color=#8169E6 weight=35 icon="\uf00a" block="LED Matrix"
+namespace led {
 
 }
