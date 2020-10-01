@@ -34,5 +34,5 @@ lib/
 _locales/
 
 .idea/
-.terraform/*
-.tfvars
+.terraforms/*
+terraform.tfvars
