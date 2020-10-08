@@ -24,6 +24,7 @@
         "libs/storage",
         "libs/serial",
         "libs/jacdac",
+        "libs/display",
         "libs/core---nrf52",
         "libs/teknikio-bluebird",
         "libs/mixer---nrf52"
@@ -85,7 +86,7 @@
           "useNewFunctions": true
         },
         "onStartWeight": 100,
-        "onStartNamespace": "pins",
+        "onStartNamespace": "loops",
         "onStartColor": "#40bf4a",
         "bannedCategories": [
           "light"
