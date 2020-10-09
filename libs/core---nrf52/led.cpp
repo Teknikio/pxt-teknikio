@@ -5,7 +5,7 @@
 namespace pxt {
 
   TeknikioDevice teknikioDevice;
-
+  
   void initTeknikio() {
     teknikioDevice.init();
   }
