@@ -59,8 +59,7 @@
         "jacdac": "file:../jacdac",
         "lightsensor": "file:../lightsensor",
         "switch": "file:../switch",
-        "mixer---nrf52": "file:../mixer---nrf52",
-        "display": "file:../display"
+        "mixer---nrf52": "file:../mixer---nrf52"
     },
     "yotta": {
         "config": {

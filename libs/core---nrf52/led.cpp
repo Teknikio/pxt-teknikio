@@ -1,4 +1,3 @@
-#include "pxt.h"
 #include "led.h"
 
 
@@ -10,7 +9,6 @@ namespace pxt {
     teknikioDevice.init();
   }
 }
-
 
 //% color=#7600A8 weight=101 icon="\uf205"
 namespace led {
@@ -43,7 +41,7 @@ namespace led {
     //% x.min=0 x.max=4 y.min=0 y.max=5
     //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
     void plot(int x, int y) {
-      teknikioDevice.display.image.setPixelValue(x, y, 0xff);
+      teknikioDevice.display.image.setPixelValue(x, y, 255);
     }
 
 
@@ -73,6 +71,10 @@ namespace led {
     //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
     //% advanced=true
     int pointBrightness(int x, int y) {
-      return teknikioDevice.display.image.getPixelValue(x, y);
+      return 255;
     }
 }
+
+
+// 
+
