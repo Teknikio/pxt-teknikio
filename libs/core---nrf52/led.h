@@ -1,6 +1,7 @@
 #include "pxt.h"
 #include "pxtbase.h"
 #include "TeknikioDevice.h"
+#include "pxt.h"
 //#include "MicroBitImage.h"
 
 namespace pxt {

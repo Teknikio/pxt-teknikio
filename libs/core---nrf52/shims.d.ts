@@ -347,7 +347,7 @@ declare namespace configStorage {
 
 
 
-//% color=#7600A8 weight=101 icon="\uf205"
+    //% color=#7600A8 weight=101 icon="\uf205"
 declare namespace led {
 
     /**

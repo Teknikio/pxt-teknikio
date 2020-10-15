@@ -24,6 +24,7 @@
         "libs/storage",
         "libs/serial",
         "libs/jacdac",
+        "libs/display",
         "libs/core---nrf52",
         "libs/teknikio-bluebird",
         "libs/mixer---nrf52"
