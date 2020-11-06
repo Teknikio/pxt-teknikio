@@ -83,3 +83,6 @@ namespace rgb {
 namespace led {
 
 }
+
+namespace servos {
+}
