@@ -8,7 +8,8 @@
         "jacdac": "file:../jacdac",
         "accelerometer": "file:../accelerometer",
         "lightsensor": "file:../lightsensor",
-        "serial": "file:../serial"
+        "serial": "file:../serial",
+        "servos": "file:../servo"
     },
     "files": [
         "README.md",
