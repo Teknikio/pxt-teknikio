@@ -5,6 +5,7 @@
 #include "CoordinateSystem.h"
 #include "Accelerometer.h"
 
+
 enum class Dimension {
     //% block=x
     X = 0,
@@ -110,7 +111,9 @@ enum class Gesture {
 };
 
 // defined in accelhw.cpp
+
 namespace pxt {
+
 codal::Accelerometer *getAccelerometer();
 
 void initAccelRandom() {
@@ -133,6 +136,12 @@ void initAccelRandom() {
 } // namespace pxt
 
 namespace input {
+    enum class TemperatureUnit {
+    //% block="°C"
+    Celsius,
+    //% block="°F"
+    Fahrenheit
+};
 /**
  * Do something when a gesture happens (like shaking the board).
  * @param gesture the type of gesture to track, eg: Gesture.Shake
@@ -194,14 +203,16 @@ int acceleration(Dimension dimension) {
 /**
  * Get the temperature in Celsius or Fahrenheit degrees.
  */
-//% blockId=device_temperature block="temperature in c"
+//% blockId=device_temperature block="temperature in %unit"
 //% parts="accelerometer"
 //% weight=26
-int temperature() {
+int temperature(TemperatureUnit unit){ 
     auto acc = getAccelerometer();
     if (!acc) return 0;
     //acc->requestUpdate();
-    return acc->getTemperature();
+    int temp = acc->getTemperature();
+    if (unit == TemperatureUnit::Celsius) return temp;
+    else return (temp * 18) / 10 + 32;
     // auto thermo = getWTemp();
     // // default to 21 if not present
     // int value = (NULL != thermo) ? thermo->sensor.getValue() : 21;

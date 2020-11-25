@@ -38,6 +38,12 @@
 		},
 		{
 			"path": "../../../Teknikio_nRF52_Arduino"
+		},
+		{
+			"path": "../../../../../CodeChallenge/Code-Builder-Challenge/code_builder_v02"
+		},
+		{
+			"path": "../../../../../../.Trash/InternalFileSytem"
 		}
 	],
 	"settings": {
