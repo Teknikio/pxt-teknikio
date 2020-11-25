@@ -29,6 +29,7 @@
         "pinled",
         "jacdac",
         "neopixel",
-        "accelerometer"
+        "accelerometer",
+        "servo"
     ]
 }
