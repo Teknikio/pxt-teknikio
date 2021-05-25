@@ -9,7 +9,8 @@
         "servo": "file:../servo",
         "accelerometer": "file:../accelerometer",
         "lightsensor": "file:../lightsensor",
-        "serial": "file:../serial"
+        "serial": "file:../serial",
+        "servos": "file:../servo"
     },
     "files": [
         "README.md",
@@ -28,6 +29,7 @@
         "music",
         "pinled",
         "neopixel",
-        "accelerometer"
+        "accelerometer",
+        "servo"
     ]
 }

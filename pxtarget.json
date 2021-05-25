@@ -14,6 +14,7 @@
         "libs/color",
         "libs/light",
         "libs/touch",
+        "libs/servo",
         "libs/switch",
         "libs/pulse",
         "libs/mouse",
