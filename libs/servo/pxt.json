@@ -1,3 +1,9 @@
 {
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/servo"
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/servo",
+    "files": [
+        "README.md",
+        "servo.ts",
+        "ns.ts",
+        "targetoverrides.ts"
+    ]
 }

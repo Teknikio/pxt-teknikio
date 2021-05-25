@@ -385,6 +385,7 @@ declare namespace led {
     //% block="show leds" icon="\uf00a"
     //% parts="ledmatrix" interval.defl=400 shim=basic::showLeds
     function showLeds(leds: string, interval?: int32): void;
+
 }
 
 // Auto-generated. Do not edit. Really.
