@@ -5,13 +5,17 @@ declare namespace pins {
     //% fixedInstance shim=pxt::getPin(PIN_A2)
     const A2: AnalogInPin;
     //% fixedInstance shim=pxt::getPin(PIN_A3)
-    const A3: PwmOnlyPin;
+    const A3: PwmPin;
     //% fixedInstance shim=pxt::getPin(PIN_A4)
-    const A4: PwmOnlyPin;
+    const A4: PwmPin;
     //% fixedInstance shim=pxt::getPin(PIN_A5)
     const A5: PwmPin;
     //% fixedInstance shim=pxt::getPin(PIN_A6)
     const A6: PwmPin;
+    //% fixedInstance shim=pxt::getPin(PIN_D16)
+    const SERVO_LEFT: PwmOnlyPin;
+    //% fixedInstance shim=pxt::getPin(PIN_D17)
+    const SERVO_RIGHT: PwmOnlyPin;
 
     //% fixedInstance shim=pxt::getPin(PIN_D7)
     const D7: DigitalInOutPin;
@@ -43,4 +47,8 @@ declare namespace rgb {
 
 declare namespace sensors {
 
+}
+
+declare namespace servos {
+    
 }
