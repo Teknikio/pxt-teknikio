@@ -6,6 +6,7 @@
         "mixer---nrf52": "file:../mixer---nrf52",
         "pulse": "file:../pulse",
         "jacdac": "file:../jacdac",
+        "servo": "file:../servo",
         "accelerometer": "file:../accelerometer",
         "lightsensor": "file:../lightsensor",
         "serial": "file:../serial"
@@ -26,7 +27,6 @@
         "pina1",
         "music",
         "pinled",
-        "jacdac",
         "neopixel",
         "accelerometer"
     ]
