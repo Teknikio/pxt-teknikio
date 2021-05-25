@@ -19,12 +19,6 @@
 			"path": "../../../../../Embedded/Customers/Teknikio/Adafruit_nRF52_Bootloader"
 		},
 		{
-			"path": "../../../../TeknikioWebBlue/WebFrontEnd"
-		},
-		{
-			"path": "../../../../Maker/pxt-maker"
-		},
-		{
 			"path": "../../../../../Embedded/BluebirdProv"
 		},
 		{
@@ -34,16 +28,9 @@
 			"path": "../../../Teknikio.github.io"
 		},
 		{
-			"path": "../../../../../CrossPlatform/bmmpr/bmmprMobile"
-		},
-		{
 			"path": "../../../Teknikio_nRF52_Arduino"
 		},
 		{
-			"path": "../../../../../CodeChallenge/Code-Builder-Challenge/code_builder_v02"
-		},
-		{
-			"path": "../../../../../../.Trash/InternalFileSytem"
 		}
 	],
 	"settings": {
@@ -53,5 +40,84 @@
 			"istream": "cpp",
 			"functional": "cpp"
 		}
+	},
+	"launch": {
+		"configurations": [
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "pxt-teknikio:index.handler (nodejs12.x)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "updateCollaboratorStatusTopic",
+					"lambdaHandler": "index.handler"
+				},
+				"lambda": {
+					"runtime": "nodejs12.x",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "pxt-teknikio:index.handler (nodejs12.x)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "updateBluebirdStatus",
+					"lambdaHandler": "index.handler"
+				},
+				"lambda": {
+					"runtime": "nodejs12.x",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "pxt-teknikio:index.handler (nodejs12.x)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "bluebirdIoTActivity",
+					"lambdaHandler": "index.handler"
+				},
+				"lambda": {
+					"runtime": "nodejs12.x",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "pxt-teknikio:index.handler (nodejs12.x)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "checkLastBluebirdUpdate",
+					"lambdaHandler": "index.handler"
+				},
+				"lambda": {
+					"runtime": "nodejs12.x",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "pxt-teknikio:index.handler (nodejs12.x)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "bluebirdSQSActivityProcessor",
+					"lambdaHandler": "index.handler"
+				},
+				"lambda": {
+					"runtime": "nodejs12.x",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			}
+		]
 	}
 }

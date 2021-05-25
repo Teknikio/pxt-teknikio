@@ -17,14 +17,13 @@
         "libs/servo",
         "libs/switch",
         "libs/pulse",
-        "libs/cable",
-        "libs/infrared",
         "libs/mouse",
         "libs/keyboard",
         "libs/gamepad",
         "libs/storage",
         "libs/serial",
         "libs/jacdac",
+        "libs/servo",
         "libs/core---nrf52",
         "libs/teknikio-bluebird",
         "libs/mixer---nrf52"
@@ -56,7 +55,7 @@
       "uf2Family": "0xada52840"
     },
     "compileService": {
-      "buildEngine" : "dockercodal",
+      "buildEngine" : "codal",
       "codalTarget": {
         "name": "codal-nrf52840-dk",
         "url": "https://github.com/Teknikio/codal-bluebird",
@@ -89,7 +88,8 @@
         "onStartNamespace": "pins",
         "onStartColor": "#40bf4a",
         "bannedCategories": [
-          "light"
+          "light",
+          "jacdac"
         ]
     },
     "simulator": {

@@ -1,10 +1,12 @@
 #include "Display.h"
 #include "TeknikioDevice.h"
+#include "pxtbase.h"
+
 //#include "MicroBitImage.h"
 
 namespace pxt {
 
-extern TeknikioDevice teknikioDevice;
+extern TeknikioDevice bluebird;
 
 void initTeknikio();
 
