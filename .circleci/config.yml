@@ -42,7 +42,7 @@ workflows:
   build_and_deploy:
     jobs:
       - deploy-int:
-          context: integration
+          context: production
           filters:
             branches:
               only:
