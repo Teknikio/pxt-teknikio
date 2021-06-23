@@ -345,4 +345,46 @@ declare namespace configStorage {
     function clear(): void;
 }
 
+//% color=#8169E6 weight=35 icon="\uf205"
+declare namespace led {
+
+    /**
+     * Turn on the specified LED using x, y coordinates (x is horizontal, y is vertical). (0,0) is upper left.
+     * @param x the horizontal coordinate of the LED starting at 0
+     * @param y the vertical coordinate of the LED starting at 0
+     */
+    //% help=led/plot weight=78
+    //% blockId=device_plot block="plot|x %x|y %y" blockGap=8
+    //% parts="ledmatrix"
+    //% x.min=0 x.max=4 y.min=0 y.max=4
+    //% x.fieldOptions.precision=1 y.fieldOptions.precision=1 shim=led::plot
+    function plot(x: int32, y: int32): void;
+
+    /**
+     * Turn off the specified LED using x, y coordinates (x is horizontal, y is vertical). (0,0) is upper left.
+     * @param x the horizontal coordinate of the LED
+     * @param y the vertical coordinate of the LED
+     */
+    //% help=led/unplot weight=77
+    //% blockId=device_unplot block="unplot|x %x|y %y" blockGap=8
+    //% parts="ledmatrix"
+    //% x.min=0 x.max=4 y.min=0 y.max=4
+    //% x.fieldOptions.precision=1 y.fieldOptions.precision=1 shim=led::unplot
+    function unplot(x: int32, y: int32): void;
+
+
+    /**
+     * Draws an image on the LED screen.
+     * @param leds the pattern of LED to turn on/off
+     * @param interval time in milliseconds to pause after drawing
+     */
+    //% help=basic/show-leds
+    //% weight=95 blockGap=8
+    //% imageLiteral=1 async
+    //% blockId=device_show_leds
+    //% block="show leds" icon="\uf00a"
+    //% parts="ledmatrix" interval.defl=400 shim=basic::showLeds
+    function showLeds(leds: string, interval?: int32): void;
+}
+
 // Auto-generated. Do not edit. Really.

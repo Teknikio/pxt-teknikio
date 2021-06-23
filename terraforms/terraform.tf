@@ -65,4 +65,3 @@ resource "aws_cloudformation_stack" "ecs_service" {
     # will be deployed with the nginx image when created
   }
 }
-
