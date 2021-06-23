@@ -50,6 +50,9 @@
 		},
 		{
 			"path": "../../../../../Embedded/Customers/Safeguard/SafeguardSDK17/compass_pro"
+		},
+		{
+			"path": "../../../../Customers/Teknikio/pxt-microbit"
 		}
 	],
 	"settings": {
