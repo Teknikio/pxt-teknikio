@@ -23,10 +23,11 @@
         "libs/serial",
         "libs/jacdac",
         "libs/servo",
-        "libs/radio",
         "libs/core---nrf52",
         "libs/teknikio-bluebird",
-        "libs/mixer---nrf52"
+        "libs/mixer---nrf52",
+        "libs/radio-broadcast",
+        "libs/radio"
     ],
     "serial": {
       "useHF2": true,

@@ -19,6 +19,7 @@ namespace pxsim {
      */
     export class DalBoard extends CoreBoard
         implements MusicBoard,
+        RadioBoard,
         LightBoard,
         CapTouchBoard,
         AccelerometerBoard,
@@ -30,6 +31,7 @@ namespace pxsim {
         InfraredBoard,
         LCDBoard {
         // state & update logic for component services
+        radioState: RadioState;
         viewHost: visuals.BoardHost;
         view: SVGElement;
         edgeConnectorState: EdgeConnectorState;
@@ -112,6 +114,11 @@ namespace pxsim {
 
             // TODO we need this.buttonState set for pxtcore.getButtonByPin(), but
             // this should be probably merged with buttonpair somehow
+            this.builtinParts["radio"] = this.radioState = new RadioState(runtime, {
+                ID_RADIO: DAL.DEVICE_ID_RADIO,
+                RADIO_EVT_DATAGRAM: 1 /*DAL.DEVICE_RADIO_EVT_DATAGRAM*/
+            });
+
             this.builtinParts["pinbuttons"] = this.builtinParts["buttons"]
                 = this.buttonState = new CommonButtonState();
             this.builtinParts["touch"] = this.touchButtonState = new TouchButtonState(pinList);
