@@ -53,6 +53,9 @@
 		},
 		{
 			"path": "../../../../Customers/Teknikio/pxt-microbit"
+		},
+		{
+			"path": "../../../../Customers/Teknikio/pxt-maker"
 		}
 	],
 	"settings": {
