@@ -9,6 +9,8 @@
         "servo": "file:../servo",
         "accelerometer": "file:../accelerometer",
         "lightsensor": "file:../lightsensor",
+        "radio-broadcast": "file:../radio-broadcast",
+        "radio": "file:../radio",
         "serial": "file:../serial"
     },
     "files": [
