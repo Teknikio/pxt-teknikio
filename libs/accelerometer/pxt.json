@@ -2,8 +2,7 @@
     "name": "accelerometer",
     "description": "The accelerometer library",
     "dependencies": {
-        "core": "file:../core",
-        "jacdac": "file:../jacdac"
+        "core": "file:../core"
     },
     "files": [
         "README.md",
@@ -15,8 +14,7 @@
         "enums.d.ts",
         "ns.ts",
         "pxtparts.json",
-        "part.svg",
-        "jacdac.ts"
+        "part.svg"
     ],
     "testFiles": [
         "test.ts"

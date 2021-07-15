@@ -2,16 +2,14 @@
     "name": "switch",
     "description": "A slide switch",
     "dependencies": {
-        "core": "file:../core",
-        "jacdac": "file:../jacdac"
+        "core": "file:../core"
     },
     "files": [
         "README.md",
         "switch.cpp",
         "ns.ts",
         "shims.d.ts",
-        "enums.d.ts",
-        "jacdac.ts"
+        "enums.d.ts"
     ],
     "public": true,
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/switch"

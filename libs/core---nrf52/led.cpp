@@ -1,10 +1,9 @@
 #include "pxt.h"
-#include "led.h"
-
+#include "pxtbase.h"
 
 namespace pxt {
 
-TeknikioDevice bluebird;
+  TeknikioDevice bluebird;
 
   void initTeknikio() {
     bluebird.init();
@@ -14,7 +13,8 @@ TeknikioDevice bluebird;
 
 //% color=#7600A8 weight=101 icon="\uf205"
 namespace led {
-
+    
+    extern TeknikioDevice bluebird;
     typedef uint32_t ImageLiteral_;
     /**
      * Draws an image on the LED screen.
