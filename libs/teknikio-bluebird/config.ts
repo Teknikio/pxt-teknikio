@@ -1,6 +1,7 @@
 namespace config {
     export const PIN_NEOPIXEL = DAL.P1_15;
     export const NUM_NEOPIXELS = 1;
+    export const PIN_LIGHT = DAL.P0_28;
 
     export const PIN_A0 = DAL.P1_14; // no AIN
     export const PIN_A1 = DAL.P0_29;
@@ -9,6 +10,7 @@ namespace config {
     export const PIN_A4 = DAL.P0_3;
     export const PIN_A5 = DAL.P0_5;
     export const PIN_A6 = DAL.P0_4;
+    export const PIN_A7 = PIN_LIGHT;
 
     export const PIN_D7 = DAL.P0_6;
     export const PIN_D8 = DAL.P1_9;
@@ -25,7 +27,7 @@ namespace config {
     export const PIN_FLASH_MOSI = PIN_D12;
     export const PIN_FLASH_SCK = PIN_D13;
 
-    export const PIN_LIGHT = DAL.P0_28;
+    
     export const PIN_JACK_SND = PIN_A0;
     export const PIN_RX = PIN_D7;
     export const PIN_TX = PIN_D8;

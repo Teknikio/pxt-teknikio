@@ -29,6 +29,7 @@
         "music",
         "pinled",
         "neopixel",
+        "lightsensor",
         "accelerometer"
     ]
 }
