@@ -13,8 +13,6 @@ namespace pxt {
 
 using namespace pxt;
 
-
-
 //% color=#7600A8 weight=101 icon="\uf205"
 namespace led {
 
