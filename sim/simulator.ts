@@ -165,7 +165,6 @@ namespace pxsim {
             this.builtinVisuals["screen"] = () => new visuals.ScreenView();
             this.builtinPartVisuals["screen"] = (xy: visuals.Coord) => visuals.mkScreenPart(xy);
 
-
             const neopixelPinCfg = getConfig(DAL.CFG_PIN_NEOPIXEL) ||
                 getConfig(DAL.CFG_PIN_DOTSTAR_DATA);
             if (neopixelPinCfg !== null)
