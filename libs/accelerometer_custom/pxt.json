@@ -11,8 +11,7 @@
         "enums.d.ts",
         "ns.ts",
         "pxtparts.json",
-        "part.svg",
-        "jacdac.ts"
+        "part.svg"
     ],
     "testFiles": [
         "test.ts"
