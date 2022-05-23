@@ -1,4 +1,5 @@
 /// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
+/// <reference path="../node_modules/pxt-core/localtypings/pxtarget.d.ts"/>
 
 namespace pxsim {
 
@@ -24,11 +25,9 @@ namespace pxsim {
         CapTouchBoard,
         AccelerometerBoard,
         StorageBoard,
-        JacDacBoard,
         LightSensorBoard,
         MicrophoneBoard,
         ScreenBoard,
-        InfraredBoard,
         LCDBoard {
         // state & update logic for component services
         radioState: RadioState;
@@ -43,16 +42,14 @@ namespace pxsim {
         touchButtonState: TouchButtonState;
         accelerometerState: AccelerometerState;
         storageState: StorageState;
-        jacdacState: JacDacState;
         microphoneState: AnalogSensorState;
         screenState: ScreenState;
-        irState: InfraredState;
         lcdState: LCDState;
 
         constructor(public boardDefinition: BoardDefinition) {
             super();
 
-            this.bus = new EventBus(runtime);
+            //this.bus = new EventBus(runtime);
 
             const pinList: number[] = []
             const servos: Map<number> = {}
@@ -106,15 +103,13 @@ namespace pxsim {
             //this.lightState = {};
             this.microphoneState = new AnalogSensorState(DAL.DEVICE_ID_MICROPHONE, 52, 120, 75, 96);
             this.storageState = new StorageState();
-            this.jacdacState = new JacDacState(this);
             this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR, 0, 255, 128 / 4, 896 / 4);
-            this.irState = new InfraredState();
             this.lcdState = new LCDState();
             this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
 
             // TODO we need this.buttonState set for pxtcore.getButtonByPin(), but
             // this should be probably merged with buttonpair somehow
-            this.builtinParts["radio"] = this.radioState = new RadioState(runtime, {
+            this.builtinParts["radio"] = this.radioState = new RadioState(runtime, this, {
                 ID_RADIO: DAL.DEVICE_ID_RADIO,
                 RADIO_EVT_DATAGRAM: 1 /*DAL.DEVICE_RADIO_EVT_DATAGRAM*/
             });
@@ -137,11 +132,11 @@ namespace pxsim {
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
 
             this.builtinParts["neopixel"] = (pin: Pin) => { return this.neopixelState(pin.id); };
-            this.builtinVisuals["neopixel"] = () => new visuals.NeoPixelView();
+            this.builtinVisuals["neopixel"] = () => new visuals.NeoPixelView(parsePinString);
             this.builtinPartVisuals["neopixel"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
 
             this.builtinParts["dotstar"] = (pin: Pin) => { return this.neopixelState(pin.id); };
-            this.builtinVisuals["dotstar"] = () => new visuals.NeoPixelView();
+            this.builtinVisuals["dotstar"] = () => new visuals.NeoPixelView(parsePinString);
             this.builtinPartVisuals["dotstar"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
 
             this.builtinParts["lcd"] =  this.lcdState;
@@ -149,7 +144,7 @@ namespace pxsim {
             this.builtinPartVisuals["lcd"] = (xy: visuals.Coord) => visuals.mkLCDPart(xy);
 
             this.builtinParts["pixels"] = (pin: Pin) => { return this.neopixelState(undefined); };
-            this.builtinVisuals["pixels"] = () => new visuals.NeoPixelView();
+            this.builtinVisuals["pixels"] = () => new visuals.NeoPixelView(parsePinString);
             this.builtinPartVisuals["pixels"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
 
             this.builtinPartVisuals["buttons"] = (xy: visuals.Coord) => visuals.mkBtnSvg(xy);
@@ -169,7 +164,6 @@ namespace pxsim {
 
             this.builtinVisuals["screen"] = () => new visuals.ScreenView();
             this.builtinPartVisuals["screen"] = (xy: visuals.Coord) => visuals.mkScreenPart(xy);
-
 
             const neopixelPinCfg = getConfig(DAL.CFG_PIN_NEOPIXEL) ||
                 getConfig(DAL.CFG_PIN_DOTSTAR_DATA);
@@ -195,10 +189,6 @@ namespace pxsim {
                 case "radiopacket":
                     let packet = <SimulatorRadioPacketMessage>msg;
                     //this.radioState.recievePacket(packet);
-                    break;
-                case "irpacket":
-                    let irpacket = <SimulatorInfraredPacketMessage>msg;
-                    this.irState.receive(irpacket.packet);
                     break;
             }
         }

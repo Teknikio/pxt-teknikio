@@ -33,8 +33,6 @@ declare namespace pins {
     const D14: DigitalInOutPin;
     //% fixedInstance shim=pxt::getPin(PIN_D15)
     const LIGHT_ENABLE: DigitalInOutPin;
-    //% fixedInstance shim=pxt::getPin(PIN_LIGHT)
-    const LIGHT: AnalogInPin;
 
     //% fixedInstance shim=pxt::getPin(PIN_NEOPIXEL)
     const NEOPIXEL: DigitalInOutPin;

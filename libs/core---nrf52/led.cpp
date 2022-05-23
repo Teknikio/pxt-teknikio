@@ -1,16 +1,17 @@
 #include "pxt.h"
-#include "led.h"
+#include "pxtbase.h"
+#include "TeknikioDevice.h"
 
 
-namespace pxt {
-
-TeknikioDevice bluebird;
+extern TeknikioDevice bluebird;
+namespace pxt { 
 
   void initTeknikio() {
     bluebird.init();
   }
 }
 
+using namespace pxt;
 
 //% color=#7600A8 weight=101 icon="\uf205"
 namespace led {
@@ -43,7 +44,7 @@ namespace led {
     //% x.min=0 x.max=4 y.min=0 y.max=5
     //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
     void plot(int x, int y) {
-      bluebird.display.image.setPixelValue(x, y, 0xff);
+      //bluebird.display.image.setPixelValue(x, y, 0xff);
     }
 
 
@@ -58,7 +59,7 @@ namespace led {
     //% x.min=0 x.max=4 y.min=0 y.max=5
     //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
     void unplot(int x, int y) {
-      bluebird.display.image.setPixelValue(x, y, 0);
+      //bluebird.display.image.setPixelValue(x, y, 0);
     }
 
         /**
@@ -73,6 +74,6 @@ namespace led {
     //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
     //% advanced=true
     int pointBrightness(int x, int y) {
-      return bluebird.display.image.getPixelValue(x, y);
+      return 5;//bluebird.display.image.getPixelValue(x, y);
     }
 }

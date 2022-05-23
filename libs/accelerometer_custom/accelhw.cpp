@@ -14,13 +14,6 @@
 #define PXT_DEFAULT_ACCELEROMETER -1
 #endif
 
-#ifndef PXT_SUPPORT_LIS3DH
-#define PXT_SUPPORT_LIS3DH 1
-#endif
-#if PXT_SUPPORT_LIS3DH
-#include "LIS3DH.h"
-#endif
-
 #ifndef PXT_SUPPORT_MMA8653
 #define PXT_SUPPORT_MMA8653 0
 #endif
@@ -35,13 +28,6 @@
 #include "MMA8453.h"
 #endif
 
-#ifndef PXT_SUPPORT_FXOS8700
-#define PXT_SUPPORT_FXOS8700 0
-#endif
-#if PXT_SUPPORT_FXOS8700
-#include "FXOS8700Accelerometer.h"
-#endif
-
 #ifndef PXT_SUPPORT_MSA300
 #define PXT_SUPPORT_MSA300 0
 #endif
@@ -50,7 +36,7 @@
 #endif
 
 #ifndef PXT_SUPPORT_MPU6050
-#define PXT_SUPPORT_MPU6050 0
+#define PXT_SUPPORT_MPU6050 1
 #endif
 #if PXT_SUPPORT_MPU6050
 #include "MPU6050.h"
@@ -146,26 +132,11 @@ private:
 	int detectAccelerometer(codal::I2C* i2c){
 		uint8_t data;
 		int result;
-
-#if PXT_SUPPORT_LIS3DH
-		result = i2c->readRegister(ACCELEROMETER_TYPE_LIS3DH, LIS3DH_WHOAMI, &data, 1);
-		if (result ==0)
-			return ACCELEROMETER_TYPE_LIS3DH;
-		result = i2c->readRegister(ACCELEROMETER_TYPE_LIS3DH_ALT, LIS3DH_WHOAMI, &data, 1);
-		if (result ==0)
-			return ACCELEROMETER_TYPE_LIS3DH_ALT;
-#endif
 			
 #if PXT_SUPPORT_MMA8453
 		result = i2c->readRegister(ACCELEROMETER_TYPE_MMA8453, MMA8653_WHOAMI/*MMA8453 is similar to MMA8653*/ , &data, 1);
 		if (result ==0)
 			return ACCELEROMETER_TYPE_MMA8453;
-#endif
-
-#if PXT_SUPPORT_FXOS8700
-		result = i2c->readRegister(ACCELEROMETER_TYPE_FXOS8700, FXOS8700_WHO_AM_I, &data, 1);
-		if (result ==0)
-			return ACCELEROMETER_TYPE_FXOS8700;
 #endif
 		
 #if PXT_SUPPORT_MMA8653
@@ -191,21 +162,10 @@ private:
 
     codal::Accelerometer* instantiateAccelerometer(int accType, codal::I2C* i2c) {
         switch (accType) {
-#if PXT_SUPPORT_LIS3DH
-        case ACCELEROMETER_TYPE_LIS3DH:
-        case ACCELEROMETER_TYPE_LIS3DH_ALT:
-            return new LIS3DH(*i2c, *LOOKUP_PIN(ACCELEROMETER_INT), space, accType);
-#endif
+
 #if PXT_SUPPORT_MSA300
         case ACCELEROMETER_TYPE_MSA300:
             return new MSA300(*i2c, *LOOKUP_PIN(ACCELEROMETER_INT), space);
-#endif
-#if PXT_SUPPORT_FXOS8700
-        case ACCELEROMETER_TYPE_FXOS8700: {
-            // TODO: singleton when exposing gyro
-            auto fox = new FXOS8700(*i2c, *LOOKUP_PIN(ACCELEROMETER_INT));
-            return new FXOS8700Accelerometer(*fox, space);
-        }
 #endif
 #if PXT_SUPPORT_MMA8653
         case ACCELEROMETER_TYPE_MMA8653:
@@ -226,11 +186,19 @@ private:
 
 };
 
-SINGLETON_IF_PIN(WAccel, ACCELEROMETER_INT);
+//SINGLETON_IF_PIN(WAccel, ACCELEROMETER_INT);
+static WAccel *instAcc;
 
 codal::Accelerometer *getAccelerometer() {
-    auto wacc = getWAccel();
-    return wacc ? wacc->acc : NULL;
+    // auto wacc = getWAccel();
+    // return wacc ? wacc->acc : NULL;
+    if (instAcc)
+         return instAcc->acc;
+     if (LOOKUP_PIN(ACCELEROMETER_INT) || LOOKUP_PIN(ACCELEROMETER_SDA)) {
+         instAcc = new WAccel();
+         return instAcc->acc;
+     }
+     return NULL;
 }
 
 } // namespace pxt
